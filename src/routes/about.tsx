@@ -82,12 +82,13 @@ function AboutPage() {
             <p className="label-mono">Founder</p>
             <div className="mt-8 grid gap-10 border border-border bg-surface p-8 md:grid-cols-[200px_1fr] md:p-12">
               <div>
-                <div
-                  aria-hidden="true"
-                  className="flex h-32 w-32 items-center justify-center border border-border-strong font-display text-3xl text-primary"
-                >
-                  SM
-                </div>
+                <img
+                  src="/sbusiso-mdingi-founder.jpg"
+                  alt="Sbusiso Mdingi, founder of Sequrin"
+                  width={400}
+                  height={400}
+                  className="h-32 w-32 border border-border-strong object-cover"
+                />
                 <p className="mt-5 font-display text-xl">Sbusiso Mdingi</p>
                 <p className="label-mono mt-2">Founder</p>
               </div>
