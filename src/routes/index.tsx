@@ -19,10 +19,10 @@ export const Route = createFileRoute("/")({
           "Sequrin is building infrastructure to help healthcare claims-integrity teams detect signals, investigate connected activity and collaborate responsibly.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://sequrin.tech/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://sequrin.tech/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -33,6 +33,10 @@ export const Route = createFileRoute("/")({
           alternateName: "Secure Integrity Network",
           url: "https://sequrin.tech",
           email: "sbusiso@sequrin.tech",
+          founder: {
+            "@type": "Person",
+            name: "Sbusiso Mdingi",
+          },
           description:
             "Sequrin is an early-stage healthcare claims-integrity technology product being developed for medical schemes and authorised claims-integrity teams.",
         }),
@@ -61,7 +65,7 @@ const capabilities = [
   {
     id: "04",
     title: "Controlled Collaboration",
-    body: "Being designed to support governed sharing of relevant integrity information between authorised participants, preserving accountability and organisational boundaries.",
+    body: "Sequrin is being designed to support governed sharing of relevant integrity information between authorised participants while preserving accountability and organisational boundaries.",
   },
 ];
 
@@ -182,7 +186,7 @@ function HomePage() {
               ))}
               <div className="bg-background p-6 sm:col-span-2">
                 <p className="text-sm leading-relaxed">
-                  Seen together, these can reveal a pattern that warrants closer examination —{" "}
+                  Seen together, these can reveal a pattern that warrants closer examination:{" "}
                   <span className="text-primary">a question worth investigating.</span>
                 </p>
               </div>
@@ -224,7 +228,7 @@ function HomePage() {
             <ol className="mt-14 grid gap-px border border-border bg-border md:grid-cols-4">
               {[
                 ["Detection", "Models, rules and network analysis run over governed data."],
-                ["Signal", "An output is a prompt to look closer — not a finding of fraud."],
+                ["Signal", "An output is a prompt to look closer, not a finding of fraud."],
                 ["Investigation", "Evidence, relationships and context are examined by people."],
                 ["Human decision", "Consequential outcomes remain with accountable processes."],
               ].map(([t, b], i) => (
@@ -299,7 +303,7 @@ function HomePage() {
                 <p>
                   Sequrin is being built toward infrastructure that can support this broader
                   claims-integrity view. This is the concept behind the name:{" "}
-                  <span className="text-foreground">Sequrin</span>, pronounced “Securing” —{" "}
+                  <span className="text-foreground">Sequrin</span>, pronounced “Securing”, meaning{" "}
                   <span className="text-foreground">Secure Integrity Network</span>.
                 </p>
                 <p className="border-l border-primary pl-4 text-sm">
