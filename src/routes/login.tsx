@@ -15,11 +15,11 @@ export const Route = createFileRoute("/login")({
         content: "Sign in to your organisation's Sequrin claims-integrity workspace.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/login" },
+      { property: "og:url", content: "https://sequrin.tech/login" },
       { name: "robots", content: "noindex" },
       { name: "twitter:card", content: "summary" },
     ],
-    links: [{ rel: "canonical", href: "/login" }],
+    links: [{ rel: "canonical", href: "https://sequrin.tech/login" }],
   }),
   component: LoginPage,
 });
