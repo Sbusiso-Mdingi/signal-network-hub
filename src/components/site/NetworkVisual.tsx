@@ -68,14 +68,16 @@ export function NetworkVisual({ className = "" }: { className?: string }) {
       ))}
       <g>
         {edges.map(([a, b], i) => {
+          const na = nodes[a]!;
+          const nb = nodes[b]!;
           const highlight = a === 4 || b === 4;
           return (
             <line
               key={i}
-              x1={nodes[a].x}
-              y1={nodes[a].y}
-              x2={nodes[b].x}
-              y2={nodes[b].y}
+              x1={na.x}
+              y1={na.y}
+              x2={nb.x}
+              y2={nb.y}
               stroke={highlight ? "var(--color-primary)" : "var(--color-border-strong)"}
               strokeWidth={highlight ? 1.4 : 1}
               strokeOpacity={highlight ? 0.75 : 1}
