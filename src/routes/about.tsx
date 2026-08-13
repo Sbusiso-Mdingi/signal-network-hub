@@ -9,19 +9,18 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Sequrin, pronounced “Securing,” represents Secure Integrity Network — infrastructure being built to help healthcare claims-integrity teams detect signals and investigate connected activity.",
+          "Sequrin, pronounced “Securing,” represents Secure Integrity Network, infrastructure being built to help healthcare claims-integrity teams detect signals and investigate connected activity.",
       },
       { property: "og:title", content: "About Sequrin | Secure Integrity Network" },
       {
         property: "og:description",
-        content:
-          "Why Sequrin is being built, what the name means, and who is behind it.",
+        content: "Why Sequrin is being built, what the name means, and who is behind it.",
       },
       { property: "og:type", content: "article" },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: "https://sequrin.tech/about" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://sequrin.tech/about" }],
   }),
   component: AboutPage,
 });
@@ -50,7 +49,7 @@ function AboutPage() {
           <div className="mx-auto max-w-6xl px-6 py-20">
             <figure className="max-w-3xl">
               <blockquote className="font-display text-3xl leading-snug md:text-4xl">
-                “Detection should create questions worth investigating — not automated verdicts.”
+                “Detection should create questions worth investigating, not automated verdicts.”
               </blockquote>
               <figcaption className="label-mono mt-6">Product philosophy</figcaption>
             </figure>
@@ -95,12 +94,24 @@ function AboutPage() {
               <div className="space-y-5 text-muted-foreground">
                 <p className="leading-relaxed">
                   Sbusiso Mdingi has a background in Actuarial Science, with interests spanning
-                  statistical modelling, healthcare analytics, machine learning and technology.
+                  statistical modelling, quantitative risk, machine learning and network analysis.
+                  His work has focused on using data and analytical methods to understand complex
+                  risk relationships rather than treating individual observations in isolation.
                 </p>
                 <p className="leading-relaxed">
-                  Sequrin grew from an interest in how analytical and network-based methods could
-                  help claims-integrity teams identify and investigate healthcare claims risks that
-                  may be difficult to recognise from isolated records.
+                  Sbusiso founded Sequrin from an interest in how these methods could be applied to
+                  healthcare claims integrity. Claims that appear ordinary individually can form
+                  more meaningful patterns when relationships between providers, members,
+                  facilities, services and time are considered together. Sequrin is being built
+                  around that idea, combining analytical models, deterministic rules and network
+                  intelligence to help claims-integrity teams identify activity worth investigating.
+                </p>
+                <p className="leading-relaxed">
+                  A central principle behind Sequrin is that analytical detection should support
+                  professional judgement rather than replace it. The platform is designed to surface
+                  investigative signals and make complex relationships easier to examine, while
+                  leaving consequential decisions with authorised human investigators and the
+                  organisations responsible for them.
                 </p>
               </div>
             </div>
