@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in | Sequrin</title>
+  <meta name="description" content="Sign in to your organisation's Sequrin claims-integrity workspace.">
+  <meta property="og:site_name" content="Sequrin">
+  <meta property="og:title" content="Sign in | Sequrin">
+  <meta property="og:description" content="Sign in to your organisation's Sequrin claims-integrity workspace.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sequrin.tech/login">
+  <meta name="robots" content="noindex">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://sequrin.tech/login">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <div class="login-shell">
+    <header class="login-header">
+      <div class="container header-inner">
+        <a class="brand" href="../" aria-label="Sequrin home">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor">
+            <path d="M16 4 L26 10 V22 L16 28 L6 22 V10 Z" stroke-width="1.25" opacity=".45"></path>
+            <path d="M16 8.5 L16 16 L22.5 19.5 M16 16 L9.5 19.5" stroke-width="1.25" opacity=".7"></path>
+            <circle cx="16" cy="8.5" r="2.1" fill="currentColor" stroke="none"></circle>
+            <circle cx="22.5" cy="19.5" r="1.7" fill="currentColor" stroke="none" opacity=".8"></circle>
+            <circle cx="9.5" cy="19.5" r="1.7" fill="currentColor" stroke="none" opacity=".8"></circle>
+          </svg>
+          <span class="brand-name">Sequrin</span>
+        </a>
+        <a href="../" style="color:var(--muted);font-size:14px">Back to website</a>
+      </div>
+    </header>
+
+    <main class="login-main">
+      <section class="login-card" aria-labelledby="login-title">
+        <p class="label">Investigator console</p>
+        <h1 id="login-title">Welcome to Sequrin</h1>
+        <p class="body-copy">Sign in to your organisation's Sequrin workspace.</p>
+
+        <div class="status" role="status"><span class="status-dot" aria-hidden="true"></span>The Sequrin application environment is currently unavailable.</div>
+
+        <form class="login-form" onsubmit="return false" aria-describedby="login-status">
+          <div class="field"><label class="label" for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" disabled placeholder="name@organisation.co.za"></div>
+          <div class="field"><label class="label" for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" disabled placeholder="••••••••"></div>
+          <button class="button primary" type="submit" disabled>Sign In</button>
+          <p class="form-note" id="login-status">Sign-in is disabled while the application environment is unavailable. Forgot password recovery will be available alongside it.</p>
+        </form>
+
+        <p class="login-enquiries">Enquiries: <a href="mailto:sbusiso@sequrin.tech">sbusiso@sequrin.tech</a></p>
+      </section>
+    </main>
+
+    <footer class="login-footer"><div class="container">© 2026 Sequrin. Secure Integrity Network.</div></footer>
+  </div>
+</body>
+</html>
