@@ -89,7 +89,7 @@ function HomePage() {
   return (
     <div className="min-h-screen scroll-smooth">
       <SiteHeader />
-      <main>
+      <main id="main" tabIndex={-1}>
         <section className="relative border-b border-border">
           <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 py-20 md:py-28 lg:grid-cols-[1.05fr_1fr]">
             <div>
@@ -197,9 +197,21 @@ function HomePage() {
 
             <div className="mt-10 grid gap-px border border-border bg-border md:grid-cols-4">
               {[
-                ["01", "Connect", "Bring relevant claims and integrity data into a governed analytical context."],
-                ["02", "Detect", "Surface patterns that deserve attention through rules, models and network analysis."],
-                ["03", "Investigate", "Review evidence, relationships and context through an authorised workflow."],
+                [
+                  "01",
+                  "Connect",
+                  "Bring relevant claims and integrity data into a governed analytical context.",
+                ],
+                [
+                  "02",
+                  "Detect",
+                  "Surface patterns that deserve attention through rules, models and network analysis.",
+                ],
+                [
+                  "03",
+                  "Investigate",
+                  "Review evidence, relationships and context through an authorised workflow.",
+                ],
                 ["04", "Decide", "Keep consequential decisions with accountable human processes."],
               ].map(([number, title, body]) => (
                 <div key={number} className="bg-surface p-6">
@@ -239,7 +251,9 @@ function HomePage() {
               ))}
             </div>
             <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Approximately 9 million South Africans depend on medical schemes for access to private healthcare (CMS, 2023/24) — finite pools that stronger integrity processes are designed to help protect.
+              Approximately 9 million South Africans depend on medical schemes for access to private
+              healthcare (CMS, 2023/24). These finite pools are what stronger integrity processes
+              are designed to help protect.
             </p>
             <Link
               to="/impact"

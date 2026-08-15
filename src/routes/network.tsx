@@ -51,33 +51,54 @@ const networkConditions = [
 ];
 
 const path = [
-  ["Now", "Tenant-scoped intelligence", "Connect claims and entities inside one governed organisational workspace."],
-  ["Now", "Human-led investigation", "Turn analytical signals into structured investigations with evidence and review history."],
-  ["Now", "Access and auditability", "Control who can enter sensitive workflows and keep important actions traceable."],
-  ["Direction", "Governed network participation", "Only then extend selected integrity intelligence across authorised organisations under a separate governance model."],
+  [
+    "Now",
+    "Tenant-scoped intelligence",
+    "Connect claims and entities inside one governed organisational workspace.",
+  ],
+  [
+    "Now",
+    "Human-led investigation",
+    "Turn analytical signals into structured investigations with evidence and review history.",
+  ],
+  [
+    "Now",
+    "Access and auditability",
+    "Control who can enter sensitive workflows and keep important actions traceable.",
+  ],
+  [
+    "Direction",
+    "Governed network participation",
+    "Only then extend selected integrity intelligence across authorised organisations under a separate governance model.",
+  ],
 ];
 
 function NetworkDiagram() {
   return (
     <div className="border border-border-strong bg-surface p-5 md:p-7">
-      <svg viewBox="0 0 920 500" role="img" aria-label="Conceptual Secure Integrity Network diagram" className="block h-auto w-full">
+      <svg
+        viewBox="0 0 920 500"
+        role="img"
+        aria-label="Conceptual Secure Integrity Network diagram"
+        className="block h-auto w-full"
+      >
         <defs>
           <radialGradient id="networkGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.17" />
-            <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+            <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.17" />
+            <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
           </radialGradient>
         </defs>
 
         <circle cx="460" cy="250" r="175" fill="url(#networkGlow)" />
 
-        <g stroke="hsl(var(--border))" strokeWidth="1.5" fill="none">
+        <g stroke="var(--border)" strokeWidth="1.5" fill="none">
           <path d="M215 125 C300 125 330 190 385 220" />
           <path d="M215 375 C300 375 330 310 385 280" />
           <path d="M705 125 C620 125 590 190 535 220" />
           <path d="M705 375 C620 375 590 310 535 280" />
         </g>
 
-        <g stroke="hsl(var(--primary))" strokeWidth="2" fill="none" opacity="0.85">
+        <g stroke="var(--primary)" strokeWidth="2" fill="none" opacity="0.85">
           <path d="M385 220 C420 200 500 200 535 220" />
           <path d="M385 280 C420 300 500 300 535 280" />
           <path d="M430 205 L430 295" />
@@ -91,30 +112,72 @@ function NetworkDiagram() {
           ["Scheme D", 685, 335],
         ].map(([label, x, y]) => (
           <g key={String(label)}>
-            <rect x={Number(x)} y={Number(y)} width="140" height="80" rx="8" fill="hsl(var(--card))" stroke="hsl(var(--border))" />
-            <circle cx={Number(x) + 26} cy={Number(y) + 40} r="8" fill="hsl(var(--accent))" />
-            <text x={Number(x) + 46} y={Number(y) + 36} fill="hsl(var(--foreground))" fontSize="15" fontWeight="600">
+            <rect
+              x={Number(x)}
+              y={Number(y)}
+              width="140"
+              height="80"
+              rx="8"
+              fill="var(--card)"
+              stroke="var(--border)"
+            />
+            <circle cx={Number(x) + 26} cy={Number(y) + 40} r="8" fill="var(--accent)" />
+            <text
+              x={Number(x) + 46}
+              y={Number(y) + 36}
+              fill="var(--foreground)"
+              fontSize="15"
+              fontWeight="600"
+            >
               {label}
             </text>
-            <text x={Number(x) + 46} y={Number(y) + 55} fill="hsl(var(--muted-foreground))" fontSize="10">
+            <text
+              x={Number(x) + 46}
+              y={Number(y) + 55}
+              fill="var(--muted-foreground)"
+              fontSize="10"
+            >
               governed boundary
             </text>
           </g>
         ))}
 
         <g>
-          <rect x="355" y="190" width="210" height="120" rx="12" fill="hsl(var(--card))" stroke="hsl(var(--primary))" strokeWidth="1.5" />
-          <circle cx="460" cy="230" r="15" fill="hsl(var(--primary))" fillOpacity="0.16" stroke="hsl(var(--primary))" />
-          <circle cx="460" cy="230" r="5" fill="hsl(var(--primary))" />
-          <text x="460" y="265" textAnchor="middle" fill="hsl(var(--foreground))" fontSize="17" fontWeight="600">
+          <rect
+            x="355"
+            y="190"
+            width="210"
+            height="120"
+            rx="12"
+            fill="var(--card)"
+            stroke="var(--primary)"
+            strokeWidth="1.5"
+          />
+          <circle
+            cx="460"
+            cy="230"
+            r="15"
+            fill="var(--primary)"
+            fillOpacity="0.16"
+            stroke="var(--primary)"
+          />
+          <circle cx="460" cy="230" r="5" fill="var(--primary)" />
+          <text
+            x="460"
+            y="265"
+            textAnchor="middle"
+            fill="var(--foreground)"
+            fontSize="17"
+            fontWeight="600"
+          >
             Secure Integrity Network
           </text>
-          <text x="460" y="285" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="10">
+          <text x="460" y="285" textAnchor="middle" fill="var(--muted-foreground)" fontSize="10">
             governed integrity intelligence
           </text>
         </g>
 
-        <text x="460" y="465" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="10">
+        <text x="460" y="465" textAnchor="middle" fill="var(--muted-foreground)" fontSize="10">
           Conceptual future-state architecture. Not a representation of a live cross-scheme network.
         </text>
       </svg>
@@ -126,18 +189,23 @@ function NetworkPage() {
   return (
     <div className="min-h-screen">
       <SiteHeader />
-      <main>
+      <main id="main" tabIndex={-1}>
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
             <p className="label-mono">Secure Integrity Network</p>
             <h1 className="mt-5 max-w-5xl text-4xl leading-[1.08] md:text-6xl">
-              Integrity risks do not stop at the edge of one claim, one provider or one organisation.
+              Integrity risks do not stop at the edge of one claim, one provider or one
+              organisation.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Sequrin is pronounced “Securing”. Its name comes from Secure Integrity Network, a longer-term direction in which authorised healthcare organisations could understand significant claims-integrity relationships that no single participant can see alone.
+              Sequrin is pronounced “Securing”. Its name comes from Secure Integrity Network, a
+              longer-term direction in which authorised healthcare organisations could understand
+              significant claims-integrity relationships that no single participant can see alone.
             </p>
             <div className="mt-9 border-l border-primary pl-5 text-sm leading-relaxed text-muted-foreground md:max-w-3xl">
-              This is a development direction, not a claim that a national or cross-scheme Sequrin network is currently operating. The product today is focused on the analytical, investigative and governance foundation that responsible collaboration would require.
+              This is a development direction, not a claim that a national or cross-scheme Sequrin
+              network is currently operating. The product today is focused on the analytical,
+              investigative and governance foundation that responsible collaboration would require.
             </div>
           </div>
         </section>
@@ -146,15 +214,23 @@ function NetworkPage() {
           <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:py-24 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
             <div>
               <p className="label-mono text-primary">Why a network?</p>
-              <h2 className="mt-4 text-3xl leading-tight md:text-5xl">A pattern can be invisible when every organisation sees only its own fragment.</h2>
+              <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
+                A pattern can be invisible when every organisation sees only its own fragment.
+              </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                One organisation may see a provider relationship. Another may see a recurring facility pattern. A third may see a separate cluster of unusual claims. Individually, those observations may appear unrelated.
+                One organisation may see a provider relationship. Another may see a recurring
+                facility pattern. A third may see a separate cluster of unusual claims.
+                Individually, those observations may appear unrelated.
               </p>
               <p className="mt-5 leading-relaxed text-muted-foreground">
-                The network idea is that carefully governed integrity intelligence could make important relationships visible without erasing organisational boundaries or turning suspicion into a shared verdict.
+                The network idea is that carefully governed integrity intelligence could make
+                important relationships visible without erasing organisational boundaries or turning
+                suspicion into a shared verdict.
               </p>
               <p className="mt-5 leading-relaxed text-muted-foreground">
-                South Africa has over 70 registered medical schemes (open and restricted), each operating within its own governed boundary — which means a pattern visible across those boundaries may be entirely invisible to any individual participant.
+                South Africa has over 70 registered medical schemes, both open and restricted. Each
+                operates within its own governed boundary. A pattern visible across those boundaries
+                may therefore be entirely invisible to any individual participant.
               </p>
             </div>
             <NetworkDiagram />
@@ -165,7 +241,9 @@ function NetworkPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <div className="max-w-3xl">
               <p className="label-mono">The distinction matters</p>
-              <h2 className="mt-4 text-3xl leading-tight md:text-5xl">A network should connect context, not spread conclusions.</h2>
+              <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
+                A network should connect context, not spread conclusions.
+              </h2>
             </div>
 
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-2">
@@ -187,7 +265,10 @@ function NetworkPage() {
                   <li>Not an automatic fraud registry built from detection scores.</li>
                   <li>Not unrestricted pooling of scheme data.</li>
                   <li>Not a mechanism for automatic claim rejection or payment withholding.</li>
-                  <li>Not a system where one investigator can publish an allegation to every participant.</li>
+                  <li>
+                    Not a system where one investigator can publish an allegation to every
+                    participant.
+                  </li>
                 </ul>
               </article>
             </div>
@@ -197,9 +278,13 @@ function NetworkPage() {
         <section className="border-b border-border bg-surface">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <p className="label-mono text-primary">Governance before scale</p>
-            <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">Cross-organisational intelligence needs a higher bar than an internal investigation.</h2>
+            <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">
+              Cross-organisational intelligence needs a higher bar than an internal investigation.
+            </h2>
             <p className="mt-6 max-w-3xl leading-relaxed text-muted-foreground">
-              The value of a network grows with participation, but so does the consequence of getting access, evidence or publication wrong. Responsible expansion therefore depends on explicit conditions rather than technical connectivity alone.
+              The value of a network grows with participation, but so does the consequence of
+              getting access, evidence or publication wrong. Responsible expansion therefore depends
+              on explicit conditions rather than technical connectivity alone.
             </p>
 
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
@@ -207,12 +292,17 @@ function NetworkPage() {
                 <article key={condition.number} className="bg-background p-7">
                   <p className="label-mono text-primary">{condition.number}</p>
                   <h3 className="mt-4 text-xl">{condition.title}</h3>
-                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{condition.body}</p>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                    {condition.body}
+                  </p>
                 </article>
               ))}
             </div>
 
-            <Link to="/governance" className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline">
+            <Link
+              to="/governance"
+              className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline"
+            >
               Read the governance model →
             </Link>
           </div>
@@ -221,12 +311,22 @@ function NetworkPage() {
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <p className="label-mono">The path</p>
-            <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">The network is not the starting point. It is what the foundation is being built toward.</h2>
+            <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">
+              The network is not the starting point. It is what the foundation is being built
+              toward.
+            </h2>
 
             <div className="mt-12 border-y border-border">
               {path.map(([state, title, body], index) => (
-                <div key={title} className="grid gap-4 border-b border-border py-7 last:border-b-0 md:grid-cols-[90px_260px_1fr] md:items-baseline md:gap-8">
-                  <span className={state === "Direction" ? "label-mono text-primary" : "label-mono"}>{state}</span>
+                <div
+                  key={title}
+                  className="grid gap-4 border-b border-border py-7 last:border-b-0 md:grid-cols-[90px_260px_1fr] md:items-baseline md:gap-8"
+                >
+                  <span
+                    className={state === "Direction" ? "label-mono text-primary" : "label-mono"}
+                  >
+                    {state}
+                  </span>
                   <h3 className="text-xl md:text-2xl">{title}</h3>
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     <span className="mr-3 font-mono text-xs text-primary">0{index + 1}</span>
@@ -242,14 +342,22 @@ function NetworkPage() {
           <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1fr_0.9fr] md:items-start md:py-24">
             <div>
               <p className="label-mono text-primary">Why build toward it?</p>
-              <h2 className="mt-4 text-3xl leading-tight md:text-5xl">Because systemic patterns can require systemic visibility.</h2>
+              <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
+                Because systemic patterns can require systemic visibility.
+              </h2>
             </div>
             <div className="space-y-5 leading-relaxed text-muted-foreground">
               <p>
-                Claims-integrity teams work inside organisational boundaries, but some relationships can span those boundaries. A carefully governed network could help authorised participants recognise recurring structures earlier and investigate them with better context.
+                Claims-integrity teams work inside organisational boundaries, but some relationships
+                can span those boundaries. A carefully governed network could help authorised
+                participants recognise recurring structures earlier and investigate them with better
+                context.
               </p>
               <p>
-                That potential only matters if the network preserves due process, evidence quality, privacy, organisational authority and human accountability. The governance is therefore not an obstacle to the network. It is what would make the network credible.
+                That potential only matters if the network preserves due process, evidence quality,
+                privacy, organisational authority and human accountability. The governance is
+                therefore not an obstacle to the network. It is what would make the network
+                credible.
               </p>
             </div>
           </div>
@@ -259,16 +367,27 @@ function NetworkPage() {
           <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1fr_auto] md:items-end md:py-24">
             <div>
               <p className="label-mono">Build the foundation first</p>
-              <h2 className="mt-4 max-w-3xl text-3xl leading-tight md:text-5xl">Start with one organisation, one governed workflow and evidence that the model adds value.</h2>
+              <h2 className="mt-4 max-w-3xl text-3xl leading-tight md:text-5xl">
+                Start with one organisation, one governed workflow and evidence that the model adds
+                value.
+              </h2>
               <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-                Sequrin's immediate focus is helping medical-scheme claims-integrity teams connect signals, relationships and investigation. Responsible network participation comes later, after the operating and governance foundation is proven.
+                Sequrin's immediate focus is helping medical-scheme claims-integrity teams connect
+                signals, relationships and investigation. Responsible network participation comes
+                later, after the operating and governance foundation is proven.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 md:justify-end">
-              <Link to="/for-medical-schemes" className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90">
+              <Link
+                to="/for-medical-schemes"
+                className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+              >
                 For medical schemes
               </Link>
-              <Link to="/governance" className="rounded-md border border-border-strong px-6 py-3 text-sm transition-colors hover:bg-secondary">
+              <Link
+                to="/governance"
+                className="rounded-md border border-border-strong px-6 py-3 text-sm transition-colors hover:bg-secondary"
+              >
                 Governance
               </Link>
             </div>

@@ -6,11 +6,8 @@ import { Wordmark } from "./Brand";
 const navigation = [
   { label: "Product", to: "/product" },
   { label: "How It Works", to: "/how-it-works" },
-  { label: "Impact", to: "/impact" },
   { label: "For Medical Schemes", to: "/for-medical-schemes" },
   { label: "About", to: "/about" },
-  { label: "Network", to: "/network" },
-  { label: "Governance", to: "/governance" },
 ] as const;
 
 export function SiteHeader() {
@@ -20,7 +17,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Wordmark />
-        <nav className="hidden items-center gap-7 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
           {navigation.map((item) => (
             <Link
               key={item.to}
@@ -40,7 +37,7 @@ export function SiteHeader() {
         </nav>
         <button
           type="button"
-          className="rounded-md border border-border-strong px-3 py-1.5 text-sm md:hidden"
+          className="rounded-md border border-border-strong px-3 py-1.5 text-sm lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((value) => !value)}
@@ -49,7 +46,11 @@ export function SiteHeader() {
         </button>
       </div>
       {open ? (
-        <nav id="mobile-nav" aria-label="Mobile" className="border-t border-border bg-background px-6 py-4 md:hidden">
+        <nav
+          id="mobile-nav"
+          aria-label="Mobile"
+          className="border-t border-border bg-background px-6 py-4 lg:hidden"
+        >
           <div className="flex flex-col gap-4">
             {navigation.map((item) => (
               <Link
@@ -62,7 +63,11 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            <a href={APP_SIGN_IN_URL} className="text-sm text-primary" onClick={() => setOpen(false)}>
+            <a
+              href={APP_SIGN_IN_URL}
+              className="text-sm text-primary"
+              onClick={() => setOpen(false)}
+            >
               Sign In
             </a>
           </div>

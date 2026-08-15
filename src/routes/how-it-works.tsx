@@ -74,7 +74,7 @@ function HowItWorksPage() {
   return (
     <div className="min-h-screen">
       <SiteHeader />
-      <main>
+      <main id="main" tabIndex={-1}>
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
             <p className="label-mono">How it works</p>
@@ -82,7 +82,9 @@ function HowItWorksPage() {
               A signal should start an investigation, not make a decision.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Sequrin separates analytical detection from consequential claims decisions. Data becomes context, analysis becomes a signal, investigators establish evidence, and accountable people remain responsible for what happens next.
+              Sequrin separates analytical detection from consequential claims decisions. Data
+              becomes context, analysis becomes a signal, investigators establish evidence, and
+              accountable people remain responsible for what happens next.
             </p>
             <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
               <span>Tenant-scoped data</span>
@@ -105,7 +107,10 @@ function HowItWorksPage() {
                   Five stages, with a deliberate boundary between detection and decision.
                 </h2>
               </div>
-              <Link to="/product" className="text-sm text-primary underline-offset-4 hover:underline">
+              <Link
+                to="/product"
+                className="text-sm text-primary underline-offset-4 hover:underline"
+              >
                 Explore the product →
               </Link>
             </div>
@@ -118,14 +123,18 @@ function HowItWorksPage() {
                 >
                   <div className="flex items-start justify-between gap-5">
                     <div>
-                      <p className="label-mono text-primary">{step.number} · {step.eyebrow}</p>
+                      <p className="label-mono text-primary">
+                        {step.number} · {step.eyebrow}
+                      </p>
                       <h3 className="mt-4 text-2xl md:text-3xl">{step.title}</h3>
                     </div>
                     <span className="font-data text-4xl font-semibold leading-none text-border-strong md:text-5xl">
                       {step.number}
                     </span>
                   </div>
-                  <p className="mt-5 max-w-2xl leading-relaxed text-muted-foreground">{step.body}</p>
+                  <p className="mt-5 max-w-2xl leading-relaxed text-muted-foreground">
+                    {step.body}
+                  </p>
                   <div className="mt-6 border-t border-border pt-4 text-sm">
                     <span className="label-mono">Output</span>
                     <span className="ml-3 text-foreground">{step.output}</span>
@@ -173,7 +182,10 @@ function HowItWorksPage() {
                     "Approving any future governed network publication or cross-organisation action.",
                   ].map((item) => (
                     <li key={item} className="flex gap-3">
-                      <span aria-hidden="true" className="mt-2.5 h-px w-4 shrink-0 bg-muted-foreground" />
+                      <span
+                        aria-hidden="true"
+                        className="mt-2.5 h-px w-4 shrink-0 bg-muted-foreground"
+                      />
                       {item}
                     </li>
                   ))}
@@ -182,9 +194,13 @@ function HowItWorksPage() {
             </div>
 
             <div className="mt-8 border border-primary/30 bg-primary/5 p-7 md:p-9">
-              <p className="font-display text-2xl leading-snug md:text-3xl">Detection creates a reason to investigate. It does not create a fraud verdict.</p>
+              <p className="font-display text-2xl leading-snug md:text-3xl">
+                Detection creates a reason to investigate. It does not create a fraud verdict.
+              </p>
               <p className="mt-4 max-w-4xl text-sm leading-relaxed text-muted-foreground">
-                This boundary is not a disclaimer added after the fact. It is part of the operating model: analytical capability is separated from payment, sanction and publication authority.
+                This boundary is not a disclaimer added after the fact. It is part of the operating
+                model: analytical capability is separated from payment, sanction and publication
+                authority.
               </p>
             </div>
           </div>
@@ -194,24 +210,53 @@ function HowItWorksPage() {
           <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:py-24 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
             <div>
               <p className="label-mono">From signal to case</p>
-              <h2 className="mt-4 text-3xl leading-tight md:text-5xl">The signal carries context forward.</h2>
+              <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
+                The signal carries context forward.
+              </h2>
               <p className="mt-6 max-w-xl leading-relaxed text-muted-foreground">
-                An investigator should not have to reconstruct the analytical story from scratch. The useful context behind a signal can move with it into the investigation workspace, where evidence and human reasoning take over.
+                An investigator should not have to reconstruct the analytical story from scratch.
+                The useful context behind a signal can move with it into the investigation
+                workspace, where evidence and human reasoning take over.
               </p>
             </div>
 
             <div className="border border-border-strong bg-background">
               {[
-                ["01", "Pattern detected", "An analytical method identifies behaviour that differs from the expected context."],
-                ["02", "Signal generated", "The pattern is captured as an investigative lead with the reason it surfaced."],
-                ["03", "Context assembled", "Relevant claims, entities, chronology and relationships can be brought together for review."],
-                ["04", "Investigator reviews", "An authorised person examines evidence, records notes and determines what further work is justified."],
-                ["05", "Outcome governed", "Any conclusion or consequential action follows the organisation's authorised human process."],
+                [
+                  "01",
+                  "Pattern detected",
+                  "An analytical method identifies behaviour that differs from the expected context.",
+                ],
+                [
+                  "02",
+                  "Signal generated",
+                  "The pattern is captured as an investigative lead with the reason it surfaced.",
+                ],
+                [
+                  "03",
+                  "Context assembled",
+                  "Relevant claims, entities, chronology and relationships can be brought together for review.",
+                ],
+                [
+                  "04",
+                  "Investigator reviews",
+                  "An authorised person examines evidence, records notes and determines what further work is justified.",
+                ],
+                [
+                  "05",
+                  "Outcome governed",
+                  "Any conclusion or consequential action follows the organisation's authorised human process.",
+                ],
               ].map(([number, title, body], index, array) => (
-                <div key={number} className={`grid grid-cols-[64px_1fr] gap-4 p-6 md:grid-cols-[78px_180px_1fr] md:gap-6 ${index < array.length - 1 ? "border-b border-border" : ""}`}>
+                <div
+                  key={number}
+                  className={`grid grid-cols-[64px_1fr] gap-4 p-6 md:grid-cols-[78px_180px_1fr] md:gap-6 ${index < array.length - 1 ? "border-b border-border" : ""}`}
+                >
                   <span className="font-data text-xl font-semibold text-primary">{number}</span>
                   <h3 className="text-lg md:text-xl">{title}</h3>
-                  <p className="col-start-2 text-sm leading-relaxed text-muted-foreground md:col-start-3">{body}</p>
+                  <p className="col-start-2 text-sm leading-relaxed text-muted-foreground md:col-start-3">
+                    {body}
+                  </p>
                 </div>
               ))}
             </div>
@@ -228,11 +273,16 @@ function HowItWorksPage() {
               {governanceControls.map((control) => (
                 <article key={control.title} className="bg-background p-7 md:p-8">
                   <h3 className="text-xl">{control.title}</h3>
-                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{control.body}</p>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                    {control.body}
+                  </p>
                 </article>
               ))}
             </div>
-            <Link to="/governance" className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline">
+            <Link
+              to="/governance"
+              className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline"
+            >
               Read the governance model →
             </Link>
           </div>
@@ -246,9 +296,15 @@ function HowItWorksPage() {
                 Collaboration comes after governance, not before it.
               </h2>
               <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-                Sequrin's broader Secure Integrity Network vision is about responsible integrity intelligence across organisational boundaries where that is appropriate and permitted. It is not an operating national blacklist, and an investigator cannot directly turn a local signal into a shared network notice.
+                Sequrin's broader Secure Integrity Network vision is about responsible integrity
+                intelligence across organisational boundaries where that is appropriate and
+                permitted. It is not an operating national blacklist, and an investigator cannot
+                directly turn a local signal into a shared network notice.
               </p>
-              <Link to="/network" className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline">
+              <Link
+                to="/network"
+                className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline"
+              >
                 Explore the network vision →
               </Link>
             </div>
@@ -262,7 +318,8 @@ function HowItWorksPage() {
                 <p className="mt-3 text-xl">Controlled cross-organisation integrity intelligence</p>
               </div>
               <div className="bg-background p-7 text-sm leading-relaxed text-muted-foreground">
-                Any future sharing model must preserve purpose, authorisation, auditability and organisational accountability.
+                Any future sharing model must preserve purpose, authorisation, auditability and
+                organisational accountability.
               </div>
             </div>
           </div>
@@ -272,16 +329,25 @@ function HowItWorksPage() {
           <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1fr_auto] md:items-end md:py-24">
             <div>
               <p className="label-mono">See the workflow in context</p>
-              <h2 className="mt-4 max-w-3xl text-3xl leading-tight md:text-5xl">From analytical attention to accountable investigation.</h2>
+              <h2 className="mt-4 max-w-3xl text-3xl leading-tight md:text-5xl">
+                From analytical attention to accountable investigation.
+              </h2>
               <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-                Explore the product interface or see how this operating model can fit into a medical scheme's claims-integrity function.
+                Explore the product interface or see how this operating model can fit into a medical
+                scheme's claims-integrity function.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 md:justify-end">
-              <Link to="/product" className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90">
+              <Link
+                to="/product"
+                className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+              >
                 Explore the product
               </Link>
-              <Link to="/for-medical-schemes" className="rounded-md border border-border-strong px-6 py-3 text-sm transition-colors hover:bg-secondary">
+              <Link
+                to="/for-medical-schemes"
+                className="rounded-md border border-border-strong px-6 py-3 text-sm transition-colors hover:bg-secondary"
+              >
                 For medical schemes
               </Link>
             </div>

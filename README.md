@@ -2,7 +2,7 @@
 
 Public marketing website for **Sequrin**, pronounced “Securing”, representing **Secure Integrity Network**.
 
-Sequrin is an early-stage healthcare claims-integrity technology product being developed to help medical schemes and authorised claims-integrity teams surface investigative signals, understand connected activity, and support governed investigations without treating analytical output as an automated fraud verdict.
+Sequrin is an early-stage South African company developing healthcare claims-integrity technology for medical schemes and authorised claims-integrity teams.
 
 ## Public site
 
@@ -12,14 +12,14 @@ Current route structure:
 
 - `/` public overview
 - `/product` product capabilities
-- `/how-it-works` governed workflow
-- `/impact` wider healthcare-resource and capability impact
-- `/for-medical-schemes` medical-scheme value and operating fit
-- `/governance` human oversight, safety and access principles
-- `/network` Secure Integrity Network vision
-- `/about` company, product philosophy, and founder information
-- `/policies` reserved privacy, terms and security policy anchors
-- `/login` compatibility redirect to `https://app.sequrin.tech/sign-in`
+- `/how-it-works` product approach and governed workflow
+- `/for-medical-schemes` controlled evaluation model
+- `/about` company stage, direction and founder
+- `/impact` why claims-integrity capability matters
+- `/governance` human oversight, access and decision boundaries
+- `/network` longer-term Secure Integrity Network direction
+- `/policies` factual notices for the public website
+- `/login` sign-in handoff to `https://app.sequrin.tech/sign-in`
 
 Business contact: **info@sequrin.tech**
 
@@ -32,7 +32,15 @@ Business contact: **info@sequrin.tech**
 
 ## GitHub Pages
 
-The `docs/` directory contains the deployment-ready static version of the public website. It uses relative asset and navigation paths so it can be served from the repository's GitHub Pages project URL during verification and from `sequrin.tech` after the custom domain is connected.
+The `docs/` directory is the production website served by GitHub Pages. Its HTML is generated from the zero-dependency source in `scripts/generate-public-site.mjs` so shared navigation, metadata and footer content stay consistent.
+
+Regenerate and validate the public site with:
+
+```bash
+npm run build:static
+npm run check:static-generated
+npm run validate:static
+```
 
 GitHub Pages should be configured to deploy from:
 
@@ -45,9 +53,9 @@ This repository contains the **public Sequrin website**, not the authenticated S
 
 Public website sign-in actions route to **https://app.sequrin.tech/sign-in**. The public site does not implement a second authentication system.
 
-## Application source
+## Retained application source
 
-The original Lovable-generated application source remains in the repository and uses:
+The original Lovable-generated React implementation remains in the repository for Lovable compatibility. It is not the GitHub Pages deployment source. It uses:
 
 - TypeScript
 - React 19
@@ -55,20 +63,20 @@ The original Lovable-generated application source remains in the repository and 
 - Vite
 - Tailwind CSS
 
-Local development:
+React development:
 
 ```bash
 bun install
 bun run dev
 ```
 
-Production build:
+React production build:
 
 ```bash
 bun run build
 ```
 
-Static prerendering is enabled in `vite.config.ts` for future build-based static deployment if needed.
+Node 22.12 or newer is required for the current Vite toolchain. Static prerendering remains available for the retained React application, but changes intended for the public deployment must also be made through the static-site generator.
 
 ## Repository scope
 

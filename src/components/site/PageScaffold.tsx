@@ -31,13 +31,20 @@ export function PageScaffold({ label, title, intro, sections, note }: PageScaffo
           <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
             <div className="divide-y divide-border border-y border-border">
               {sections.map((section) => (
-                <article key={section.title} className="grid gap-4 py-8 md:grid-cols-[minmax(220px,0.75fr)_minmax(0,1.25fr)] md:gap-12">
+                <article
+                  key={section.title}
+                  className="grid gap-4 py-8 md:grid-cols-[minmax(220px,0.75fr)_minmax(0,1.25fr)] md:gap-12"
+                >
                   <h2 className="text-2xl md:text-3xl">{section.title}</h2>
                   <p className="max-w-2xl leading-relaxed text-muted-foreground">{section.body}</p>
                 </article>
               ))}
             </div>
-            {note ? <p className="mt-10 max-w-3xl border-l border-primary pl-4 text-sm leading-6 text-muted-foreground">{note}</p> : null}
+            {note ? (
+              <p className="mt-10 max-w-3xl border-l border-primary pl-4 text-sm leading-6 text-muted-foreground">
+                {note}
+              </p>
+            ) : null}
           </div>
         </section>
       </main>

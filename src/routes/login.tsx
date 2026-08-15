@@ -28,18 +28,32 @@ function LoginRedirectPage() {
       <header className="border-b border-border">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
           <Link to="/" className="flex items-center gap-3" aria-label="Sequrin home">
-            <span className="text-primary"><SequrinMark className="h-7 w-7" /></span>
+            <span className="text-primary">
+              <SequrinMark className="h-7 w-7" />
+            </span>
             <span className="font-display text-xl">Sequrin</span>
           </Link>
-          <Link to="/" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Back to website</Link>
+          <Link
+            to="/"
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Back to website
+          </Link>
         </div>
       </header>
-      <main className="flex flex-1 items-center justify-center px-6 py-16">
+      <main id="main" tabIndex={-1} className="flex flex-1 items-center justify-center px-6 py-16">
         <div className="w-full max-w-md">
           <p className="label-mono">Secure workforce workspace</p>
           <h1 className="mt-4 text-3xl md:text-4xl">Opening Sequrin sign in</h1>
-          <p className="mt-3 leading-relaxed text-muted-foreground">You are being redirected to the authenticated Sequrin application.</p>
-          <a href={APP_SIGN_IN_URL} className="mt-8 inline-flex rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground">Continue to sign in</a>
+          <p className="mt-3 leading-relaxed text-muted-foreground">
+            You are being redirected to the authenticated Sequrin application.
+          </p>
+          <a
+            href={APP_SIGN_IN_URL}
+            className="mt-8 inline-flex rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground"
+          >
+            Continue to sign in
+          </a>
         </div>
       </main>
     </div>
