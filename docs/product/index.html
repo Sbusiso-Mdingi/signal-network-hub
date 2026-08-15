@@ -20,91 +20,139 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
   <link rel="stylesheet" href="../assets/site.css">
   <style>
-    .product-hero { padding: 92px 0 82px; border-bottom: 1px solid var(--border); }
-    .product-hero h1 { margin-top: 20px; max-width: 900px; }
-    .product-hero .lead { max-width: 780px; }
-    .product-trust { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 34px; color: var(--muted); font-size: 14px; }
-    .product-feature { padding: 88px 0; border-bottom: 1px solid var(--border); }
-    .product-feature.surface { background: var(--surface); }
-    .product-feature-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 52px; align-items: center; }
-    .product-feature-grid.reverse { grid-template-columns: 1.28fr .72fr; }
-    .product-copy h2 { margin-top: 15px; font-size: clamp(34px, 4vw, 50px); }
-    .product-copy p:not(.label) { margin-top: 21px; color: var(--muted); line-height: 1.8; }
-    .product-boundary-note { border-left: 1px solid var(--primary); padding-left: 16px; font-size: 14px; }
-    .product-shot { margin: 0; overflow: hidden; border: 1px solid var(--border-strong); border-radius: var(--radius); background: var(--raised); box-shadow: 0 22px 70px rgba(0,0,0,.24); }
-    .product-shot img { display: block; width: 100%; height: auto; }
-    .product-shot figcaption { border-top: 1px solid var(--border); padding: 11px 14px; color: var(--muted); font-size: 12px; }
-    .product-governance { padding: 88px 0; border-bottom: 1px solid var(--border); }
-    .product-governance-intro { max-width: 780px; }
-    .product-governance-intro h2 { margin-top: 15px; }
-    .product-governance-intro p:last-child { margin-top: 22px; color: var(--muted); line-height: 1.8; }
-    .product-guardrails { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 46px; border: 1px solid var(--border); background: var(--border); }
-    .product-guardrail { background: var(--bg); padding: 29px; }
-    .product-guardrail h3 { font-size: 21px; }
-    .product-guardrail p { margin-top: 12px; color: var(--muted); font-size: 14px; line-height: 1.75; }
-    .product-accountability { margin-top: 34px; border: 1px solid var(--border-strong); background: var(--surface); padding: 32px; }
-    .product-accountability strong { display: block; max-width: 900px; font-size: clamp(24px, 3vw, 34px); line-height: 1.3; }
-    .product-accountability p { margin-top: 17px; max-width: 900px; color: var(--muted); font-size: 14px; line-height: 1.75; }
-    .product-text-link { display: inline-block; margin-top: 22px; color: var(--primary); font-size: 14px; }
-    .product-text-link:hover { text-decoration: underline; text-underline-offset: 4px; }
-    .product-flow { padding: 88px 0; border-bottom: 1px solid var(--border); background: var(--surface); }
-    .product-flow h2 { margin-top: 15px; max-width: 780px; }
-    .product-flow-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 46px; border: 1px solid var(--border); background: var(--border); }
-    .product-flow-item { background: var(--bg); padding: 24px; }
-    .product-flow-item .label { color: var(--primary); }
-    .product-flow-item h3 { margin-top: 12px; font-size: 21px; }
-    .product-flow-item p:last-child { margin-top: 11px; color: var(--muted); font-size: 14px; line-height: 1.7; }
-    .product-cta { padding: 88px 0; border-bottom: 1px solid var(--border); }
-    .product-cta-grid { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: end; }
-    .product-cta h2 { margin-top: 15px; max-width: 800px; }
-    .product-cta-copy { margin-top: 21px; max-width: 670px; color: var(--muted); line-height: 1.8; }
-    .product-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; }
+    .product-hero { position:relative; overflow:hidden; padding:112px 0 96px; border-bottom:1px solid var(--border); }
+    .product-hero::after { content:""; position:absolute; width:520px; height:520px; right:-160px; top:-230px; border-radius:50%; background:radial-gradient(circle, rgba(57,198,231,.16), transparent 68%); pointer-events:none; }
+    .product-hero-grid { display:grid; grid-template-columns:1.04fr .96fr; gap:72px; align-items:center; }
+    .product-hero h1 { margin-top:20px; max-width:860px; }
+    .product-hero .lead { max-width:740px; }
+    .product-trust { display:flex; flex-wrap:wrap; gap:10px; margin-top:34px; }
+    .product-trust span { padding:8px 11px; border:1px solid var(--border); border-radius:999px; background:rgba(255,255,255,.025); color:var(--muted); font:500 11px/1.2 var(--mono); letter-spacing:.05em; text-transform:uppercase; }
+    .product-hero-panel { position:relative; z-index:1; padding:18px; border:1px solid rgba(57,198,231,.24); border-radius:22px; background:linear-gradient(145deg, rgba(15,27,39,.96), rgba(8,18,28,.98)); box-shadow:var(--shadow-lg); }
+    .product-hero-panel-head { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:7px 8px 17px; }
+    .product-hero-panel-head strong { font-size:14px; }
+    .product-status { display:inline-flex; align-items:center; gap:7px; color:var(--muted); font:500 10px/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+    .product-status::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--node); box-shadow:0 0 0 5px rgba(57,199,183,.08); }
+    .product-stack { display:grid; gap:10px; }
+    .product-stack-row { display:grid; grid-template-columns:42px 1fr auto; gap:14px; align-items:center; padding:18px; border:1px solid var(--border); border-radius:14px; background:rgba(255,255,255,.022); }
+    .product-stack-row strong { display:block; font-size:15px; }
+    .product-stack-row p { margin-top:3px; color:var(--muted); font-size:12px; line-height:1.55; }
+    .product-stack-icon { width:34px; height:34px; display:grid; place-items:center; border:1px solid rgba(57,198,231,.24); border-radius:10px; color:var(--primary); font:600 11px/1 var(--mono); background:var(--primary-soft); }
+    .product-stack-state { color:#79d9ed; font:500 10px/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+    .product-boundary { margin-top:10px; padding:16px 18px; border-radius:14px; border:1px solid rgba(57,199,183,.18); background:rgba(57,199,183,.05); color:var(--muted); font-size:13px; line-height:1.65; }
+    .product-boundary strong { color:var(--text); }
+
+    .product-feature { padding:108px 0; border-bottom:1px solid var(--border); }
+    .product-feature.surface { background:linear-gradient(180deg, rgba(255,255,255,.015), transparent 36%), var(--surface); }
+    .product-feature-grid { display:grid; grid-template-columns:.78fr 1.22fr; gap:70px; align-items:center; }
+    .product-feature-grid.reverse { grid-template-columns:1.22fr .78fr; }
+    .product-copy { max-width:500px; }
+    .product-copy h2 { margin-top:15px; font-size:clamp(36px,4vw,52px); }
+    .product-copy p:not(.label) { margin-top:21px; color:var(--muted); line-height:1.8; }
+    .product-boundary-note { position:relative; padding:17px 18px 17px 20px; border:1px solid rgba(57,198,231,.18); border-radius:12px; background:rgba(57,198,231,.045); font-size:14px; }
+    .product-boundary-note::before { content:""; position:absolute; left:0; top:14px; bottom:14px; width:2px; border-radius:2px; background:var(--primary); }
+    .product-shot { position:relative; margin:0; overflow:hidden; border:1px solid var(--border-strong); border-radius:20px; background:var(--raised); box-shadow:0 30px 90px rgba(0,0,0,.30); }
+    .product-shot::before { content:""; display:block; height:34px; border-bottom:1px solid var(--border); background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.012)); }
+    .product-shot::after { content:"•  •  •"; position:absolute; top:7px; left:14px; color:rgba(237,244,247,.36); font-size:13px; letter-spacing:4px; }
+    .product-shot img { display:block; width:100%; height:auto; }
+    .product-shot figcaption { border-top:1px solid var(--border); padding:12px 15px; color:var(--muted); font-size:12px; background:rgba(7,16,25,.72); }
+
+    .product-governance { padding:108px 0; border-bottom:1px solid var(--border); }
+    .product-governance-intro { display:grid; grid-template-columns:.8fr 1.2fr; gap:72px; align-items:end; }
+    .product-governance-intro h2 { margin-top:15px; }
+    .product-governance-intro p:last-child { color:var(--muted); line-height:1.8; max-width:620px; }
+    .product-guardrails { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:52px; }
+    .product-guardrail { position:relative; min-height:220px; padding:28px; border:1px solid var(--border); border-radius:16px; background:linear-gradient(180deg, rgba(255,255,255,.025), rgba(255,255,255,.008)); }
+    .product-guardrail::before { content:""; position:absolute; width:28px; height:2px; left:28px; top:0; background:var(--primary); }
+    .product-guardrail h3 { font-size:20px; }
+    .product-guardrail p { margin-top:12px; color:var(--muted); font-size:14px; line-height:1.75; }
+    .product-accountability { margin-top:18px; display:grid; grid-template-columns:1.25fr .75fr; gap:42px; align-items:end; border:1px solid rgba(57,198,231,.24); border-radius:18px; background:linear-gradient(135deg, rgba(57,198,231,.075), rgba(57,199,183,.025)); padding:34px; }
+    .product-accountability strong { display:block; max-width:840px; font-size:clamp(25px,3vw,35px); line-height:1.28; letter-spacing:-.03em; }
+    .product-accountability p { color:var(--muted); font-size:14px; line-height:1.75; }
+    .product-text-link { display:inline-block; margin-top:16px; color:var(--primary); font-size:14px; }
+    .product-text-link:hover { text-decoration:underline; text-underline-offset:4px; }
+
+    .product-flow { padding:108px 0; border-bottom:1px solid var(--border); background:var(--surface); }
+    .product-flow h2 { margin-top:15px; max-width:780px; }
+    .product-flow-grid { position:relative; display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:48px; }
+    .product-flow-grid::before { content:""; position:absolute; left:10%; right:10%; top:30px; height:1px; background:linear-gradient(90deg, transparent, rgba(57,198,231,.42), transparent); }
+    .product-flow-item { position:relative; min-height:190px; padding:26px; border:1px solid var(--border); border-radius:16px; background:var(--bg); }
+    .product-flow-item .label { position:relative; z-index:1; width:34px; height:34px; display:grid; place-items:center; border:1px solid rgba(57,198,231,.25); border-radius:50%; background:var(--bg); color:var(--primary); letter-spacing:0; }
+    .product-flow-item h3 { margin-top:20px; font-size:21px; }
+    .product-flow-item p:last-child { margin-top:11px; color:var(--muted); font-size:14px; line-height:1.7; }
+
+    .product-cta { padding:100px 0; border-bottom:1px solid var(--border); }
+    .product-cta-grid { display:grid; grid-template-columns:1fr auto; gap:48px; align-items:end; padding:38px; border:1px solid var(--border-strong); border-radius:20px; background:linear-gradient(135deg, rgba(57,198,231,.06), rgba(255,255,255,.015)); box-shadow:var(--shadow-sm); }
+    .product-cta h2 { margin-top:15px; max-width:800px; }
+    .product-cta-copy { margin-top:21px; max-width:670px; color:var(--muted); line-height:1.8; }
+    .product-actions { display:flex; flex-wrap:wrap; gap:12px; justify-content:flex-end; }
+
+    @media (max-width: 1050px) {
+      .product-hero-grid, .product-governance-intro, .product-accountability { grid-template-columns:1fr; }
+      .product-hero-panel { max-width:720px; }
+      .product-guardrails { grid-template-columns:repeat(2,1fr); }
+    }
     @media (max-width: 900px) {
-      .product-feature-grid, .product-feature-grid.reverse { grid-template-columns: 1fr; }
-      .product-feature-grid.reverse .product-copy { order: -1; }
-      .product-flow-grid { grid-template-columns: repeat(2, 1fr); }
-      .product-cta-grid { grid-template-columns: 1fr; }
-      .product-actions { justify-content: flex-start; }
+      .product-feature-grid, .product-feature-grid.reverse { grid-template-columns:1fr; }
+      .product-feature-grid.reverse .product-copy { order:-1; }
+      .product-copy { max-width:680px; }
+      .product-flow-grid { grid-template-columns:repeat(2,1fr); }
+      .product-flow-grid::before { display:none; }
+      .product-cta-grid { grid-template-columns:1fr; }
+      .product-actions { justify-content:flex-start; }
     }
     @media (max-width: 650px) {
-      .product-hero, .product-feature, .product-governance, .product-flow, .product-cta { padding: 64px 0; }
-      .product-guardrails, .product-flow-grid { grid-template-columns: 1fr; }
-      .product-accountability { padding: 24px; }
+      .product-hero, .product-feature, .product-governance, .product-flow, .product-cta { padding:68px 0; }
+      .product-hero-grid { gap:46px; }
+      .product-stack-row { grid-template-columns:38px 1fr; }
+      .product-stack-state { grid-column:2; }
+      .product-guardrails, .product-flow-grid { grid-template-columns:1fr; }
+      .product-accountability, .product-cta-grid { padding:25px; }
     }
   </style>
 </head>
-<body>
+<body class="page-product">
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="scroll-progress" aria-hidden="true"><span></span></div>
 <header class="site-header"><div class="container header-inner"><a class="brand" href="../" aria-label="Sequrin home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor"><path d="M16 4 L26 10 V22 L16 28 L6 22 V10 Z" stroke-width="1.25" opacity=".45"></path><path d="M16 8.5 L16 16 L22.5 19.5 M16 16 L9.5 19.5" stroke-width="1.25" opacity=".7"></path><circle cx="16" cy="8.5" r="2.1" fill="currentColor" stroke="none"></circle><circle cx="22.5" cy="19.5" r="1.7" fill="currentColor" stroke="none" opacity=".8"></circle><circle cx="9.5" cy="19.5" r="1.7" fill="currentColor" stroke="none" opacity=".8"></circle></svg><span class="brand-name">Sequrin</span></a><nav class="desktop-nav" aria-label="Primary"><a href="../product/" aria-current="page">Product</a><a href="../how-it-works/">How It Works</a><a href="../for-medical-schemes/">For Medical Schemes</a><a href="../about/">About</a><a class="nav-signin ext" href="https://app.sequrin.tech/sign-in">Sign In</a></nav><details class="mobile-nav"><summary>Menu</summary><nav class="mobile-panel" aria-label="Mobile"><a href="../product/" onclick="this.closest('details').open=false" aria-current="page">Product</a><a href="../how-it-works/" onclick="this.closest('details').open=false">How It Works</a><a href="../for-medical-schemes/" onclick="this.closest('details').open=false">For Medical Schemes</a><a href="../about/" onclick="this.closest('details').open=false">About</a><a href="https://app.sequrin.tech/sign-in" onclick="this.closest('details').open=false" class="ext">Sign In</a></nav></details></div></header>
 
 <main id="main">
   <section class="product-hero">
-    <div class="container">
-      <p class="label">Product</p>
-      <h1>From isolated claims to connected investigation.</h1>
-      <p class="lead">Sequrin brings signal detection, relationship intelligence and structured investigation into one governed workspace for medical schemes and authorised claims-integrity teams. It helps teams decide what deserves attention without turning analytical output into an automated claims decision.</p>
-      <div class="product-trust"><span>Signals, not verdicts</span><span>•</span><span>Connected investigative context</span><span>•</span><span>Human-led decisions</span></div>
+    <div class="container product-hero-grid">
+      <div>
+        <p class="label">Product</p>
+        <h1>From isolated claims to connected investigation.</h1>
+        <p class="lead">Sequrin brings signal detection, relationship intelligence and structured investigation into one governed workspace for medical schemes and authorised claims-integrity teams. It helps teams decide what deserves attention without turning analytical output into an automated claims decision.</p>
+        <div class="product-trust"><span>Signals, not verdicts</span><span>Connected context</span><span>Human-led decisions</span></div>
+      </div>
+      <aside class="product-hero-panel" aria-label="Sequrin product operating layers">
+        <div class="product-hero-panel-head"><strong>Investigation operating layer</strong><span class="product-status">Governed</span></div>
+        <div class="product-stack">
+          <div class="product-stack-row"><span class="product-stack-icon">01</span><div><strong>Signal intelligence</strong><p>Surface unusual activity and explain why it deserves attention.</p></div><span class="product-stack-state">Detect</span></div>
+          <div class="product-stack-row"><span class="product-stack-icon">02</span><div><strong>Network intelligence</strong><p>Connect claims, providers, members, facilities and chronology.</p></div><span class="product-stack-state">Context</span></div>
+          <div class="product-stack-row"><span class="product-stack-icon">03</span><div><strong>Investigation workspace</strong><p>Carry analytical context into structured, traceable human review.</p></div><span class="product-stack-state">Investigate</span></div>
+        </div>
+        <div class="product-boundary"><strong>Decision boundary:</strong> analytical output can prioritise attention; it does not acquire authority to reject claims, withhold payment or impose sanctions.</div>
+      </aside>
     </div>
   </section>
 
   <section class="product-feature surface">
     <div class="container product-feature-grid">
       <div class="product-copy">
-        <p class="label" style="color:var(--primary)">01 · Signal detection</p>
+        <p class="label accent">01 · Signal detection</p>
         <h2>Surface the activity worth examining.</h2>
         <p>Rules, statistical methods and analytical models can surface unusual activity into a prioritised review queue. Signals help scarce investigative attention move toward patterns that warrant closer examination.</p>
         <p class="product-boundary-note">A signal is an investigative lead. It does not establish misconduct or change the payment status of a claim.</p>
       </div>
-      <figure class="product-shot"><img src="../assets/product/signal-intelligence.webp" width="768" height="459" alt="Illustrative Sequrin signal intelligence workspace showing a prioritised investigation queue and analytical context."><figcaption>Illustrative Sequrin signal-intelligence view using synthetic data.</figcaption></figure>
+      <figure class="product-shot"><img src="../assets/product/signal-intelligence.webp" width="768" height="459" alt="Illustrative Sequrin signal intelligence workspace showing a prioritised investigation queue and analytical context."><figcaption>Signal intelligence · Illustrative Sequrin workspace using synthetic data.</figcaption></figure>
     </div>
   </section>
 
   <section class="product-feature">
     <div class="container product-feature-grid reverse">
-      <figure class="product-shot"><img src="../assets/product/network-intelligence.webp" width="768" height="459" loading="lazy" alt="Illustrative Sequrin network intelligence workspace showing connected provider, member, facility and claim entities."><figcaption>Illustrative Sequrin network-intelligence view using synthetic data.</figcaption></figure>
+      <figure class="product-shot"><img src="../assets/product/network-intelligence.webp" width="768" height="459" loading="lazy" alt="Illustrative Sequrin network intelligence workspace showing connected provider, member, facility and claim entities."><figcaption>Network intelligence · Illustrative Sequrin workspace using synthetic data.</figcaption></figure>
       <div class="product-copy">
-        <p class="label" style="color:var(--primary)">02 · Network intelligence</p>
+        <p class="label accent">02 · Network intelligence</p>
         <h2>See relationships individual records can hide.</h2>
         <p>Sequrin can connect claims, providers, members, facilities, timing and other relevant relationships into investigative context. Investigators can move beyond a single record and examine the structure around it.</p>
         <p class="product-boundary-note">A relationship is context, not proof of misconduct. Network structure helps investigators ask better questions.</p>
@@ -115,25 +163,25 @@
   <section class="product-feature surface">
     <div class="container product-feature-grid">
       <div class="product-copy">
-        <p class="label" style="color:var(--primary)">03 · Investigation workspace</p>
+        <p class="label accent">03 · Investigation workspace</p>
         <h2>Turn a signal into a traceable investigation.</h2>
         <p>Authorised investigators can bring signals, connected entities, evidence and review history into a structured case workspace. The investigation becomes a coherent process rather than a collection of disconnected analytical outputs and notes.</p>
         <p class="product-boundary-note">Investigators establish context and remain responsible for findings and consequential decisions.</p>
       </div>
-      <figure class="product-shot"><img src="../assets/product/investigation-workspace.webp" width="768" height="459" loading="lazy" alt="Illustrative Sequrin investigation workspace showing evidence, signal context, a decision boundary and investigation history."><figcaption>Illustrative Sequrin investigation workspace using synthetic data.</figcaption></figure>
+      <figure class="product-shot"><img src="../assets/product/investigation-workspace.webp" width="768" height="459" loading="lazy" alt="Illustrative Sequrin investigation workspace showing evidence, signal context, a decision boundary and investigation history."><figcaption>Investigation workspace · Illustrative Sequrin workspace using synthetic data.</figcaption></figure>
     </div>
   </section>
 
   <section class="product-governance">
     <div class="container">
-      <div class="product-governance-intro"><p class="label" style="color:var(--primary)">04 · Governance and access</p><h2>The product boundary is part of the product.</h2><p>Claims-integrity tooling handles sensitive information and can influence where investigators focus. Sequrin is designed so analytical capability sits inside explicit access, organisational and decision boundaries.</p></div>
+      <div class="product-governance-intro"><div><p class="label accent">04 · Governance and access</p><h2>The product boundary is part of the product.</h2></div><p>Claims-integrity tooling handles sensitive information and can influence where investigators focus. Sequrin is designed so analytical capability sits inside explicit access, organisational and decision boundaries.</p></div>
       <div class="product-guardrails">
         <article class="product-guardrail"><h3>Signals stay investigative</h3><p>Analytical output can prioritise attention. It does not establish fraud or make a claims decision.</p></article>
         <article class="product-guardrail"><h3>Access stays governed</h3><p>Roles, permissions and organisational boundaries determine who can enter sensitive claims-integrity workflows.</p></article>
         <article class="product-guardrail"><h3>Actions stay accountable</h3><p>Important investigative and administrative activity can remain traceable rather than disappearing into an informal process.</p></article>
         <article class="product-guardrail"><h3>Consequential decisions stay human</h3><p>Sequrin does not reject claims, withhold payment or impose sanctions from a detection result.</p></article>
       </div>
-      <div class="product-accountability"><strong>Detection creates a signal. Investigation establishes context. Humans remain accountable for consequential decisions.</strong><p>A detection result cannot itself reject, delay or withhold a claim, impose a sanction, or publish a shared-network notice. Those boundaries are deliberate parts of how Sequrin is designed to operate.</p><a class="product-text-link" href="../governance/">Explore Sequrin governance →</a></div>
+      <div class="product-accountability"><strong>Detection creates a signal. Investigation establishes context. Humans remain accountable for consequential decisions.</strong><div><p>A detection result cannot itself reject, delay or withhold a claim, impose a sanction, or publish a shared-network notice. Those boundaries are deliberate parts of how Sequrin is designed to operate.</p><a class="product-text-link" href="../governance/">Explore Sequrin governance →</a></div></div>
     </div>
   </section>
 
