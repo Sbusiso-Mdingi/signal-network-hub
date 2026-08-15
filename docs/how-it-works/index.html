@@ -19,119 +19,169 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
   <link rel="stylesheet" href="../assets/site.css">
+  <style>
+    .works-hero { position:relative; overflow:hidden; padding:112px 0 94px; border-bottom:1px solid var(--border); }
+    .works-hero-grid { display:grid; grid-template-columns:1fr .94fr; gap:70px; align-items:center; }
+    .works-hero h1 { margin-top:20px; max-width:840px; }
+    .works-hero .lead { max-width:720px; }
+    .works-map { position:relative; padding:22px; border:1px solid var(--border-strong); border-radius:22px; background:linear-gradient(145deg, rgba(15,27,39,.96), rgba(8,18,28,.98)); box-shadow:var(--shadow-lg); }
+    .works-map::before { content:""; position:absolute; left:44px; top:52px; bottom:52px; width:1px; background:linear-gradient(var(--primary), rgba(57,198,231,.14)); }
+    .works-map-stage { position:relative; display:grid; grid-template-columns:44px 1fr; gap:16px; padding:13px 10px; align-items:start; }
+    .works-map-node { position:relative; z-index:1; width:28px; height:28px; display:grid; place-items:center; margin-top:2px; border:1px solid rgba(57,198,231,.32); border-radius:50%; background:var(--bg); color:var(--primary); font:600 10px/1 var(--mono); }
+    .works-map-stage strong { display:block; font-size:15px; }
+    .works-map-stage p { margin-top:4px; color:var(--muted); font-size:12px; line-height:1.55; }
+    .works-map-stage.boundary { margin:7px 0; padding-top:17px; padding-bottom:17px; border-top:1px dashed rgba(57,198,231,.30); border-bottom:1px dashed rgba(57,198,231,.30); background:rgba(57,198,231,.035); }
+    .works-map-stage.boundary::after { content:"decision boundary"; position:absolute; right:10px; top:-8px; padding:0 7px; background:#0a1420; color:#76d7ed; font:500 9px/1.4 var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+
+    .workflow-section { padding:108px 0; border-bottom:1px solid var(--border); background:var(--surface); }
+    .workflow-intro { display:grid; grid-template-columns:.8fr 1.2fr; gap:70px; align-items:end; }
+    .workflow-intro h2 { margin-top:15px; }
+    .workflow-intro p:last-child { color:var(--muted); line-height:1.8; max-width:640px; }
+    .workflow-rail { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-top:52px; }
+    .workflow-card { position:relative; min-height:255px; padding:26px 24px; border:1px solid var(--border); border-radius:16px; background:var(--bg); }
+    .workflow-card .label { color:var(--primary); }
+    .workflow-card h3 { margin-top:18px; font-size:21px; }
+    .workflow-card p:last-child { margin-top:12px; color:var(--muted); font-size:14px; line-height:1.72; }
+    .workflow-card:nth-child(3) { border-color:rgba(57,198,231,.34); background:linear-gradient(180deg, rgba(57,198,231,.07), rgba(7,16,25,.96)); box-shadow:0 18px 45px rgba(0,0,0,.16); }
+    .workflow-card:nth-child(3)::after { content:"signal ≠ decision"; position:absolute; left:24px; bottom:20px; color:#78d9ed; font:500 9px/1.4 var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+
+    .case-section { padding:108px 0; border-bottom:1px solid var(--border); }
+    .case-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:70px; align-items:center; }
+    .case-shot { margin:0; overflow:hidden; border:1px solid var(--border-strong); border-radius:20px; background:var(--raised); box-shadow:var(--shadow-lg); }
+    .case-shot::before { content:"Investigation workspace"; display:block; padding:11px 15px; border-bottom:1px solid var(--border); color:var(--muted); font:500 10px/1.3 var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+    .case-shot img { display:block; width:100%; height:auto; }
+    .case-shot figcaption { padding:11px 15px; border-top:1px solid var(--border); color:var(--muted); font-size:12px; }
+    .case-copy h2 { margin-top:15px; }
+    .case-copy > p:not(.label) { margin-top:22px; color:var(--muted); line-height:1.8; }
+    .case-milestones { margin-top:30px; display:grid; gap:10px; }
+    .case-milestone { display:grid; grid-template-columns:34px 1fr; gap:13px; padding:14px 15px; border:1px solid var(--border); border-radius:12px; background:rgba(255,255,255,.018); }
+    .case-milestone span { color:var(--primary); font:600 10px/1.5 var(--mono); }
+    .case-milestone strong { display:block; font-size:14px; }
+    .case-milestone p { margin-top:3px; color:var(--muted); font-size:12px; line-height:1.55; }
+
+    .governance-strip { padding:100px 0; border-bottom:1px solid var(--border); background:linear-gradient(135deg, rgba(57,198,231,.035), transparent 48%), var(--surface); }
+    .governance-strip-grid { display:grid; grid-template-columns:.78fr 1.22fr; gap:68px; align-items:start; }
+    .governance-strip h2 { margin-top:15px; }
+    .governance-strip .lead { font-size:16px; }
+    .control-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+    .control-card { min-height:170px; padding:23px; border:1px solid var(--border); border-radius:15px; background:var(--bg); }
+    .control-card span { color:var(--primary); font:600 10px/1 var(--mono); }
+    .control-card strong { display:block; margin-top:18px; font-size:16px; }
+    .control-card p { margin-top:8px; color:var(--muted); font-size:13px; line-height:1.65; }
+
+    .network-direction { padding:100px 0; border-bottom:1px solid var(--border); }
+    .network-direction-grid { display:grid; grid-template-columns:1fr 1fr; gap:68px; align-items:center; }
+    .network-direction h2 { margin-top:15px; }
+    .network-direction .vision-copy { max-width:610px; }
+    .direction-card { padding:28px; border:1px solid var(--border-strong); border-radius:18px; background:linear-gradient(145deg, rgba(255,255,255,.025), rgba(57,198,231,.035)); }
+    .direction-compare { display:grid; grid-template-columns:1fr auto 1fr; gap:18px; align-items:center; }
+    .direction-state { padding:20px; border:1px solid var(--border); border-radius:13px; background:var(--bg); }
+    .direction-state strong { display:block; margin-top:10px; font-size:17px; line-height:1.4; }
+    .direction-arrow { color:var(--primary); font-size:24px; }
+    .direction-card .direction-note { margin-top:20px; }
+
+    .works-cta { padding:96px 0; border-bottom:1px solid var(--border); background:var(--surface); }
+    .works-cta .container { padding:36px; border:1px solid var(--border-strong); border-radius:20px; background:linear-gradient(135deg, rgba(57,198,231,.06), rgba(255,255,255,.015)); }
+    .works-cta h2 { margin-top:15px; max-width:820px; }
+    .works-cta .body-copy { margin-top:20px; max-width:700px; }
+
+    @media (max-width:1050px) {
+      .works-hero-grid, .workflow-intro, .governance-strip-grid, .network-direction-grid { grid-template-columns:1fr; }
+      .works-map { max-width:720px; }
+      .workflow-rail { grid-template-columns:repeat(2,1fr); }
+      .workflow-card:last-child { grid-column:1 / -1; }
+      .control-cards { max-width:820px; }
+    }
+    @media (max-width:900px) {
+      .case-grid { grid-template-columns:1fr; }
+      .case-copy { order:-1; }
+      .control-cards { grid-template-columns:1fr; }
+    }
+    @media (max-width:650px) {
+      .works-hero, .workflow-section, .case-section, .governance-strip, .network-direction, .works-cta { padding:68px 0; }
+      .workflow-rail { grid-template-columns:1fr; }
+      .workflow-card:last-child { grid-column:auto; }
+      .direction-compare { grid-template-columns:1fr; }
+      .direction-arrow { transform:rotate(90deg); justify-self:center; }
+      .works-cta .container { padding:25px; }
+    }
+  </style>
 </head>
-<body>
+<body class="page-how-it-works">
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="scroll-progress" aria-hidden="true"><span></span></div>
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="../" aria-label="Sequrin home">
-      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor"><path d="M16 4 L26 10 V22 L16 28 L6 22 V10 Z" stroke-width="1.25" opacity=".45"></path><path d="M16 8.5 L16 16 L22.5 19.5 M16 16 L9.5 19.5" stroke-width="1.25" opacity=".7"></path><circle cx="16" cy="8.5" r="2.1" fill="currentColor" stroke="none"></circle><circle cx="22.5" cy="19.5" r="1.7" fill="currentColor" stroke="none" opacity=".8"></circle><circle cx="9.5" cy="19.5" r="1.7" fill="currentColor" stroke="none" opacity=".8"></circle></svg>
-      <span class="brand-name">Sequrin</span>
-    </a>
+    <a class="brand" href="../" aria-label="Sequrin home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor"><path d="M16 4 L26 10 V22 L16 28 L6 22 V10 Z" stroke-width="1.25" opacity=".45"></path><path d="M16 8.5 L16 16 L22.5 19.5 M16 16 L9.5 19.5" stroke-width="1.25" opacity=".7"></path><circle cx="16" cy="8.5" r="2.1" fill="currentColor" stroke="none"></circle><circle cx="22.5" cy="19.5" r="1.7" fill="currentColor" stroke="none" opacity=".8"></circle><circle cx="9.5" cy="19.5" r="1.7" fill="currentColor" stroke="none" opacity=".8"></circle></svg><span class="brand-name">Sequrin</span></a>
     <nav class="desktop-nav" aria-label="Primary"><a href="../product/">Product</a><a href="../how-it-works/" aria-current="page">How It Works</a><a href="../for-medical-schemes/">For Medical Schemes</a><a href="../about/">About</a><a class="nav-signin ext" href="https://app.sequrin.tech/sign-in">Sign In</a></nav>
     <details class="mobile-nav"><summary>Menu</summary><nav class="mobile-panel" aria-label="Mobile"><a href="../product/" onclick="this.closest('details').open=false">Product</a><a href="../how-it-works/" onclick="this.closest('details').open=false" aria-current="page">How It Works</a><a href="../for-medical-schemes/" onclick="this.closest('details').open=false">For Medical Schemes</a><a href="../about/" onclick="this.closest('details').open=false">About</a><a href="https://app.sequrin.tech/sign-in" onclick="this.closest('details').open=false" class="ext">Sign In</a></nav></details>
   </div>
 </header>
+
 <main id="main">
-  <section class="section about-hero">
-    <div class="container">
-      <p class="label">How it works</p>
-      <h1>A signal should start an investigation, not make a decision.</h1>
-      <p class="lead">Sequrin separates analytical detection from consequential claims decisions. Data becomes context, analysis becomes a signal, investigators establish evidence, and accountable people remain responsible for what happens next.</p>
-      <p class="direction-note" style="margin-top:32px">Tenant-scoped data · Analytical signals · Human investigation · Governed decisions</p>
+  <section class="works-hero">
+    <div class="container works-hero-grid">
+      <div><p class="label">How it works</p><h1>A signal should start an investigation, not make a decision.</h1><p class="lead">Sequrin separates analytical detection from consequential claims decisions. Data becomes context, analysis becomes a signal, investigators establish evidence, and accountable people remain responsible for what happens next.</p></div>
+      <aside class="works-map" aria-label="Sequrin operating path">
+        <div class="works-map-stage"><span class="works-map-node">01</span><div><strong>Connect</strong><p>Tenant-scoped claims and integrity data enter an analytical context.</p></div></div>
+        <div class="works-map-stage"><span class="works-map-node">02</span><div><strong>Detect</strong><p>Rules, statistics, models and relationships surface unusual activity.</p></div></div>
+        <div class="works-map-stage boundary"><span class="works-map-node">03</span><div><strong>Signal</strong><p>Analytical output becomes an investigative lead—not a finding.</p></div></div>
+        <div class="works-map-stage"><span class="works-map-node">04</span><div><strong>Investigate</strong><p>Authorised people establish evidence, chronology and context.</p></div></div>
+        <div class="works-map-stage"><span class="works-map-node">05</span><div><strong>Decide</strong><p>Consequential outcomes remain with accountable human processes.</p></div></div>
+      </aside>
     </div>
   </section>
 
-  <section class="section surface">
+  <section class="workflow-section">
     <div class="container">
-      <div class="section-heading">
-        <p class="label">The operating path</p>
-        <h2>Five stages, with a deliberate boundary between detection and decision.</h2>
-      </div>
-      <div class="process">
-        <div class="process-row"><span class="process-num">01</span><h3>Connect</h3><p>Relevant claims and integrity data enter a tenant-scoped analytical environment. Organisation, claim, provider, member and other useful identifiers give later analysis a consistent frame of reference.</p></div>
-        <div class="process-row"><span class="process-num">02</span><h3>Detect</h3><p>Rules, statistical methods, models and relationship analysis examine activity for patterns that deserve attention. Different analytical methods can contribute evidence without becoming a decision-maker.</p></div>
-        <div class="process-row"><span class="process-num">03</span><h3>Signal</h3><p>Relevant analytical output becomes an investigative signal. A signal explains why something deserves a closer look and preserves the distinction between suspicion and a finding.</p></div>
-        <div class="process-row"><span class="process-num">04</span><h3>Investigate</h3><p>Authorised investigators review claims, connected entities, chronology, relationships and supporting evidence in a structured workspace.</p></div>
-        <div class="process-row"><span class="process-num">05</span><h3>Decide</h3><p>Consequential conclusions remain with accountable human and organisational processes. Sequrin does not itself reject, delay or withhold a claim, impose a sanction, or publish a shared-network notice.</p></div>
+      <div class="workflow-intro"><div><p class="label">The operating path</p><h2>Five stages, with a deliberate boundary between detection and decision.</h2></div><p>Each stage has a different role. Analytical methods can focus attention and assemble context, but authority does not flow automatically from a model score into a claims outcome.</p></div>
+      <div class="workflow-rail">
+        <article class="workflow-card"><p class="label">01</p><h3>Connect</h3><p>Relevant claims and integrity data enter a tenant-scoped analytical environment. Organisation, claim, provider, member and other useful identifiers give later analysis a consistent frame of reference.</p></article>
+        <article class="workflow-card"><p class="label">02</p><h3>Detect</h3><p>Rules, statistical methods, models and relationship analysis examine activity for patterns that deserve attention. Different analytical methods can contribute evidence without becoming a decision-maker.</p></article>
+        <article class="workflow-card"><p class="label">03</p><h3>Signal</h3><p>Relevant analytical output becomes an investigative signal. A signal explains why something deserves a closer look and preserves the distinction between suspicion and a finding.</p></article>
+        <article class="workflow-card"><p class="label">04</p><h3>Investigate</h3><p>Authorised investigators review claims, connected entities, chronology, relationships and supporting evidence in a structured workspace.</p></article>
+        <article class="workflow-card"><p class="label">05</p><h3>Decide</h3><p>Consequential conclusions remain with accountable human and organisational processes. Sequrin does not itself reject, delay or withhold a claim, impose a sanction, or publish a shared-network notice.</p></article>
       </div>
       <p class="contact-line"><a href="../product/">Explore the product →</a></p>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="split">
-        <div>
-          <p class="label">From signal to case</p>
-          <h2>The signal carries context forward.</h2>
-          <p class="split-copy">An investigator should not have to reconstruct the analytical story from scratch. The useful context behind a signal can move with it into the investigation workspace, where evidence and human reasoning take over.</p>
-        </div>
-        <div class="process" style="margin-top:0">
-          <div class="process-row"><span class="process-num">01</span><h3>Pattern detected</h3><p>An analytical method identifies behaviour that differs from the expected context.</p></div>
-          <div class="process-row"><span class="process-num">02</span><h3>Signal generated</h3><p>The pattern is captured as an investigative lead with the reason it surfaced.</p></div>
-          <div class="process-row"><span class="process-num">03</span><h3>Context assembled</h3><p>Relevant claims, entities, chronology and relationships are brought together for review.</p></div>
-          <div class="process-row"><span class="process-num">04</span><h3>Investigator reviews</h3><p>An authorised person examines evidence, records notes and determines what further work is justified.</p></div>
-          <div class="process-row"><span class="process-num">05</span><h3>Outcome governed</h3><p>Any conclusion or consequential action follows the organisation's authorised human process.</p></div>
-        </div>
+  <section class="case-section">
+    <div class="container case-grid">
+      <figure class="case-shot"><img src="../assets/product/investigation-workspace.webp" width="768" height="459" loading="lazy" alt="Illustrative Sequrin investigation workspace showing evidence, signal context and investigation history."><figcaption>Illustrative investigation workspace using synthetic data.</figcaption></figure>
+      <div class="case-copy"><p class="label">From signal to case</p><h2>The signal carries context forward.</h2><p>An investigator should not have to reconstruct the analytical story from scratch. The useful context behind a signal can move with it into the investigation workspace, where evidence and human reasoning take over.</p><div class="case-milestones">
+        <div class="case-milestone"><span>01</span><div><strong>Pattern detected</strong><p>Behaviour differs from the expected context.</p></div></div>
+        <div class="case-milestone"><span>02</span><div><strong>Signal and context assembled</strong><p>The reason, claims, entities and chronology travel together.</p></div></div>
+        <div class="case-milestone"><span>03</span><div><strong>Investigator reviews</strong><p>An authorised person examines evidence and records the investigative history.</p></div></div>
+        <div class="case-milestone"><span>04</span><div><strong>Outcome governed</strong><p>Any consequential action follows the organisation's authorised process.</p></div></div>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="governance-strip">
+    <div class="container governance-strip-grid">
+      <div><p class="label">Governance built in</p><h2>Access and accountability stay explicit throughout the workflow.</h2><p class="lead">Organisation boundaries, delegated roles and traceable actions govern who can enter sensitive workflows and what they are authorised to do.</p><p class="contact-line"><a href="../governance/">Read the governance model →</a></p></div>
+      <div class="control-cards">
+        <article class="control-card"><span>01</span><strong>Tenant scope</strong><p>Operational data and workflow access stay bounded to the relevant organisation.</p></article>
+        <article class="control-card"><span>02</span><strong>Delegated authority</strong><p>Signing in is not the same as inheriting every investigative or administrative permission.</p></article>
+        <article class="control-card"><span>03</span><strong>Traceable action</strong><p>Important investigative and administrative activity can remain reviewable and auditable.</p></article>
       </div>
     </div>
   </section>
 
-  <section class="section surface">
-    <div class="container">
-      <div class="section-heading">
-        <p class="label">Governance built in</p>
-        <h2>Access and accountability stay explicit throughout the workflow.</h2>
-        <p class="lead">Organisation boundaries, delegated roles and traceable actions govern who can enter sensitive workflows and what they are authorised to do. The detailed decision, access and publication boundaries live in the governance model.</p>
-      </div>
-      <p class="contact-line"><a href="../governance/">Read the governance model →</a></p>
+  <section class="network-direction">
+    <div class="container network-direction-grid">
+      <div><p class="label">Longer-term network direction</p><h2>Collaboration comes after governance, not before it.</h2><div class="vision-copy"><p>Sequrin's broader Secure Integrity Network vision is about responsible integrity intelligence across organisational boundaries where that is appropriate and permitted.</p><p>It is not an operating national blacklist, and an investigator cannot directly turn a local signal into a shared network notice.</p></div><p class="contact-line"><a href="../network/">Explore the network vision →</a></p></div>
+      <div class="direction-card"><div class="direction-compare"><div class="direction-state"><p class="label accent">Today</p><strong>Tenant-scoped analysis and investigation</strong></div><span class="direction-arrow">→</span><div class="direction-state"><p class="label">Future direction</p><strong>Controlled cross-organisation integrity intelligence</strong></div></div><p class="direction-note">Any future sharing model must preserve purpose, authorisation, auditability and organisational accountability.</p></div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container vision-grid">
-      <div>
-        <p class="label">Longer-term network direction</p>
-        <h2>Collaboration comes after governance, not before it.</h2>
-        <div class="vision-copy">
-          <p>Sequrin's broader Secure Integrity Network vision is about responsible integrity intelligence across organisational boundaries where that is appropriate and permitted.</p>
-          <p>It is not an operating national blacklist, and an investigator cannot directly turn a local signal into a shared network notice.</p>
-        </div>
-        <p class="contact-line"><a href="../network/">Explore the network vision →</a></p>
-      </div>
-      <div class="matrix">
-        <div class="matrix-item"><p class="label accent">Today</p><p style="font-size:20px;color:var(--text)">Tenant-scoped analysis and investigation</p></div>
-        <div class="matrix-item"><p class="label">Governed future direction</p><p style="font-size:20px;color:var(--text)">Controlled cross-organisation integrity intelligence</p></div>
-      </div>
-      <p class="direction-note" style="margin-top:20px">Any future sharing model must preserve purpose, authorisation, auditability and organisational accountability.</p>
-    </div>
-  </section>
-
-  <section class="section surface cta">
-    <div class="container">
-      <p class="label">See the workflow in context</p>
-      <h2>From analytical attention to accountable investigation.</h2>
-      <p class="body-copy">See how this operating model can fit into a medical scheme's claims-integrity function, or explore the product interface in more detail.</p>
-      <div class="actions">
-        <a class="button primary" href="../for-medical-schemes/">For medical schemes</a>
-        <a class="button secondary" href="../product/">Explore the product</a>
-      </div>
-    </div>
+  <section class="works-cta">
+    <div class="container"><p class="label">See the workflow in context</p><h2>From analytical attention to accountable investigation.</h2><p class="body-copy">See how this operating model can fit into a medical scheme's claims-integrity function, or explore the product interface in more detail.</p><div class="actions"><a class="button primary" href="../for-medical-schemes/">For medical schemes</a><a class="button secondary" href="../product/">Explore the product</a></div></div>
   </section>
 </main>
-<footer class="site-footer">
-  <div class="container footer-main">
-    <div class="footer-brand">
-      <a class="brand" href="../"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor"><path d="M16 4 L26 10 V22 L16 28 L6 22 V10 Z" stroke-width="1.25" opacity=".45"></path><path d="M16 8.5 L16 16 L22.5 19.5 M16 16 L9.5 19.5" stroke-width="1.25" opacity=".7"></path><circle cx="16" cy="8.5" r="2.1" fill="currentColor" stroke="none"></circle><circle cx="22.5" cy="19.5" r="1.7" fill="currentColor" stroke="none" opacity=".8"></circle><circle cx="9.5" cy="19.5" r="1.7" fill="currentColor" stroke="none" opacity=".8"></circle></svg><span class="brand-name">Sequrin</span></a>
-      <p class="label">Secure Integrity Network</p>
-    </div>
-    <nav class="footer-nav" aria-label="Footer"><a href="../product/">Product</a><a href="../how-it-works/">How It Works</a><a href="../impact/">Impact</a><a href="../for-medical-schemes/">For Medical Schemes</a><a href="../network/">Secure Integrity Network</a><a href="../governance/">Governance</a><a href="../about/">About</a><a href="https://app.sequrin.tech/sign-in" class="ext">Sign In</a></nav>
-    <div class="footer-contact"><p class="label">Contact</p><a href="mailto:info@sequrin.tech" class="ext">info@sequrin.tech</a><p style="margin-top:18px;font-size:12px"><a href="../policies/#privacy">Privacy</a> · <a href="../policies/#terms">Terms</a> · <a href="../policies/#security">Security</a></p></div>
-  </div>
-  <div class="footer-bottom"><div class="container footer-bottom-inner"><a class="back-to-top" href="#main">&uarr; Back to top</a><span>© 2026 Sequrin. All rights reserved.</span></div></div>
-</footer>
+
+<footer class="site-footer"><div class="container footer-main"><div class="footer-brand"><a class="brand" href="../"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor"><path d="M16 4 L26 10 V22 L16 28 L6 22 V10 Z" stroke-width="1.25" opacity=".45"></path><path d="M16 8.5 L16 16 L22.5 19.5 M16 16 L9.5 19.5" stroke-width="1.25" opacity=".7"></path><circle cx="16" cy="8.5" r="2.1" fill="currentColor" stroke="none"></circle><circle cx="22.5" cy="19.5" r="1.7" fill="currentColor" stroke="none" opacity=".8"></circle><circle cx="9.5" cy="19.5" r="1.7" fill="currentColor" stroke="none" opacity=".8"></circle></svg><span class="brand-name">Sequrin</span></a><p class="label">Secure Integrity Network</p></div><nav class="footer-nav" aria-label="Footer"><a href="../product/">Product</a><a href="../how-it-works/">How It Works</a><a href="../impact/">Impact</a><a href="../for-medical-schemes/">For Medical Schemes</a><a href="../network/">Secure Integrity Network</a><a href="../governance/">Governance</a><a href="../about/">About</a><a href="https://app.sequrin.tech/sign-in" class="ext">Sign In</a></nav><div class="footer-contact"><p class="label">Contact</p><a href="mailto:info@sequrin.tech" class="ext">info@sequrin.tech</a><p style="margin-top:18px;font-size:12px"><a href="../policies/#privacy">Privacy</a> · <a href="../policies/#terms">Terms</a> · <a href="../policies/#security">Security</a></p></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><a class="back-to-top" href="#main">&uarr; Back to top</a><span>© 2026 Sequrin. All rights reserved.</span></div></div></footer>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>
