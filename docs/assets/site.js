@@ -1,17 +1,6 @@
-/* Sequrin site enhancements: navigation focus + scroll progress + section reveal. No dependencies. */
+/* Sequrin site enhancements: scroll progress + section reveal. No dependencies. */
 (function () {
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* Keep the masthead focused on the current buyer journey. Depth pages remain in the footer and contextual links. */
-  var secondaryPrimaryNavPaths = {
-    '/impact/': true,
-    '/network/': true,
-    '/governance/': true
-  };
-  var primaryNavLinks = document.querySelectorAll('.desktop-nav a, .mobile-panel a');
-  Array.prototype.forEach.call(primaryNavLinks, function (link) {
-    if (secondaryPrimaryNavPaths[link.pathname]) link.remove();
-  });
 
   /* Scroll progress bar */
   var bar = document.querySelector('.scroll-progress span');
