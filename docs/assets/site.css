@@ -247,3 +247,80 @@ p { margin: 0; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+/* ---------- Polish layer: skip link, progress, reveal, hovers, print ---------- */
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 200;
+  transform: translateY(-160%);
+  background: var(--primary);
+  color: var(--primary-dark);
+  font: 600 14px/1 var(--sans);
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  transition: transform .18s ease;
+}
+.skip-link:focus-visible { transform: translateY(0); color: var(--primary-dark); }
+
+.scroll-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 2px;
+  z-index: 120;
+  pointer-events: none;
+}
+.scroll-progress span {
+  display: block;
+  height: 100%;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  will-change: transform;
+}
+
+.reveal { opacity: 0; transform: translateY(14px); }
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  transition: opacity .3s ease-out, transform .3s ease-out;
+}
+
+.matrix-item, .capability, .principle, .step, .process-row {
+  transition: background .2s ease, border-color .2s ease;
+}
+.matrix-item:hover, .capability:hover, .principle:hover, .step:hover, .process-row:hover {
+  background: var(--raised);
+  border-color: var(--border-strong);
+}
+
+.mobile-panel a[aria-current="page"] {
+  color: var(--text);
+  box-shadow: inset 2px 0 0 var(--primary);
+}
+
+a.ext::after {
+  content: "\2197";
+  display: inline-block;
+  margin-left: .3em;
+  font-size: .85em;
+  opacity: .65;
+}
+a.ext:hover::after { opacity: 1; }
+.brand.ext::after, .button.ext::after { content: none; }
+
+.footer-bottom-inner { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; }
+.back-to-top { color: var(--muted); font-size: 12px; }
+.back-to-top:hover { color: var(--text); }
+
+@media print {
+  .site-header, .mobile-nav, .scroll-progress, .skip-link, .back-to-top, .actions, .visual-frame { display: none !important; }
+  html, body { background: #fff !important; color: #111 !important; }
+  .section, .hero { padding: 18px 0 !important; border-color: #ccc !important; background: #fff !important; }
+  h1, h2, h3, .lead, .body-copy, .label, p, li, a { color: #111 !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .site-footer { border-top: 1px solid #ccc; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 10px; color: #555; }
+}
