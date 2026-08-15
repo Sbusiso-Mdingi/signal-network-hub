@@ -7,17 +7,17 @@ import { APP_SIGN_IN_URL, PUBLIC_CONTACT_EMAIL, PUBLIC_CONTACT_MAILTO } from "@/
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sequrin | Healthcare Claims Integrity Network" },
+      { title: "Sequrin | Healthcare Claims Integrity" },
       {
         name: "description",
         content:
-          "Sequrin is building infrastructure to help healthcare claims-integrity teams detect signals, investigate connected activity and collaborate responsibly.",
+          "Sequrin is a healthcare claims-integrity platform designed to help medical schemes and authorised integrity teams connect analytical signals, relationships and investigative context.",
       },
-      { property: "og:title", content: "Sequrin | Healthcare Claims Integrity Network" },
+      { property: "og:title", content: "Sequrin | Healthcare Claims Integrity" },
       {
         property: "og:description",
         content:
-          "Sequrin is building infrastructure to help healthcare claims-integrity teams detect signals, investigate connected activity and collaborate responsibly.",
+          "Connect analytical signals, relationships and investigative context so suspicious activity can be examined as a pattern, not just a collection of isolated claims.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://sequrin.tech/" },
@@ -39,7 +39,7 @@ export const Route = createFileRoute("/")({
             name: "Sbusiso Mdingi",
           },
           description:
-            "Sequrin is an early-stage healthcare claims-integrity technology product being developed for medical schemes and authorised claims-integrity teams.",
+            "Sequrin is a healthcare claims-integrity technology platform designed for medical schemes and authorised claims-integrity teams.",
         }),
       },
     ],
@@ -50,69 +50,38 @@ export const Route = createFileRoute("/")({
 const capabilities = [
   {
     id: "01",
-    title: "Signal Detection",
-    body: "Statistical models, analytical methods and deterministic rules can surface unusual activity for investigation. Each result is an investigative signal, never a verdict.",
+    title: "Signal detection",
+    body: "Statistical methods, models and deterministic rules surface unusual activity as investigative signals, not verdicts.",
   },
   {
     id: "02",
-    title: "Network Intelligence",
-    body: "Relationships between claims, providers, members, facilities and organisations can reveal patterns that individual records may hide.",
+    title: "Network intelligence",
+    body: "Relationships between claims, providers, members, facilities and events help reveal patterns that individual records may hide.",
   },
   {
     id: "03",
-    title: "Investigation Workspace",
-    body: "Claims-integrity teams can examine signals, evidence and connected entities through a structured investigative workflow.",
+    title: "Investigation workspace",
+    body: "Authorised teams can examine evidence, connected entities and investigative context through a structured workflow.",
   },
   {
     id: "04",
-    title: "Controlled Collaboration",
-    body: "Sequrin is being designed to support governed sharing of relevant integrity information between authorised participants while preserving accountability and organisational boundaries.",
+    title: "Governance and access",
+    body: "Roles, permissions, organisational boundaries and auditable administration keep sensitive integrity work controlled and accountable.",
   },
 ];
 
-const stages = [
+const impactPoints = [
   {
-    n: "1",
-    title: "Connect",
-    body: "Relevant claims and integrity data enter a governed analytical environment.",
+    title: "Protect finite healthcare resources",
+    body: "Avoidable claims leakage places pressure on the same pools that fund member care. Better integrity capability helps schemes protect those resources.",
   },
   {
-    n: "2",
-    title: "Detect",
-    body: "Rules, statistical methods, models and network analysis identify patterns worth examining.",
+    title: "Focus investigative capacity",
+    body: "Connected context can help scarce investigative time move toward patterns that warrant closer attention instead of treating every record in isolation.",
   },
   {
-    n: "3",
-    title: "Investigate",
-    body: "Authorised investigators review evidence, relationships and contextual information.",
-  },
-  {
-    n: "4",
-    title: "Collaborate",
-    body: "Where appropriate, governed integrity information can support responsible cross-organisational awareness.",
-  },
-];
-
-const principles = [
-  {
-    title: "Human oversight",
-    body: "Analytical signals support investigators rather than replacing accountable human decision-making.",
-  },
-  {
-    title: "Evidence before conclusions",
-    body: "A suspicious pattern is something to investigate, not proof of misconduct.",
-  },
-  {
-    title: "Governed access",
-    body: "Sensitive claims-integrity information should only be available to appropriately authorised users.",
-  },
-  {
-    title: "Auditability",
-    body: "Important investigative and administrative actions should be traceable.",
-  },
-  {
-    title: "Responsible collaboration",
-    body: "Cross-organisational information sharing should occur through controlled, accountable processes.",
+    title: "Strengthen local capability",
+    body: "A stronger claims-integrity operating layer can support more specialised analytical, investigative and technical capability across healthcare.",
   },
 ];
 
@@ -129,16 +98,17 @@ function HomePage() {
                 Claims integrity works better when patterns connect.
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                Sequrin is being built to help healthcare claims-integrity teams identify signals,
-                investigate connected activity and understand relationships that isolated claims
-                may not reveal.
+                Sequrin is a healthcare claims-integrity platform designed for medical schemes and
+                authorised integrity teams. It connects analytical signals, relationships and
+                investigative context so suspicious activity can be examined as a pattern, not just
+                a collection of isolated claims.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-4">
                 <Link
                   to="/product"
                   className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
                 >
-                  Explore Sequrin
+                  Explore the product
                 </Link>
                 <a
                   href={APP_SIGN_IN_URL}
@@ -147,9 +117,13 @@ function HomePage() {
                   Sign In
                 </a>
               </div>
-              <p className="label-mono mt-10 max-w-md leading-relaxed">
-                For medical schemes and authorised claims-integrity teams
-              </p>
+              <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
+                <span>Signals, not verdicts</span>
+                <span aria-hidden="true">•</span>
+                <span>Human-led investigation</span>
+                <span aria-hidden="true">•</span>
+                <span>Governed access</span>
+              </div>
             </div>
             <div className="border border-border bg-surface p-4">
               <NetworkVisual className="w-full" />
@@ -158,234 +132,241 @@ function HomePage() {
         </section>
 
         <section className="border-b border-border bg-surface">
-          <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:py-24 lg:grid-cols-[1fr_1.1fr]">
+          <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:py-24 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
               <p className="label-mono">The problem</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                The signal is often bigger than a single claim.
+                A claim can look ordinary on its own.
               </h2>
               <p className="mt-6 max-w-lg leading-relaxed text-muted-foreground">
-                Investigations frequently take place within fragmented datasets and organisational
-                boundaries. A single claim may look entirely ordinary on its own.
+                Risk often emerges through recurrence, timing, shared entities and network
+                relationships. Sequrin helps investigators move from isolated records to connected
+                context without turning an analytical signal into a conclusion.
               </p>
             </div>
             <div className="grid gap-px border border-border bg-border sm:grid-cols-2">
               {[
-                ["Claim", "Ordinary in isolation"],
-                ["Provider", "Repeated referral pattern"],
-                ["Member", "Recurring across providers"],
-                ["Facility", "Shared submission window"],
-                ["Timing", "Clustered, near-duplicate"],
-                ["Behaviour", "Deviation from peer group"],
-              ].map(([k, v]) => (
-                <div key={k} className="bg-background p-6">
-                  <p className="label-mono">{k}</p>
-                  <p className="mt-3 text-sm text-muted-foreground">{v}</p>
+                ["Claim", "Looks routine in isolation"],
+                ["Provider", "Appears across related activity"],
+                ["Member", "Connects multiple events"],
+                ["Facility", "Shares repeated relationships"],
+                ["Timing", "Reveals clustering or recurrence"],
+                ["Network", "Turns separate records into context"],
+              ].map(([key, value]) => (
+                <div key={key} className="bg-background p-6">
+                  <p className="label-mono">{key}</p>
+                  <p className="mt-3 text-sm text-muted-foreground">{value}</p>
                 </div>
               ))}
               <div className="bg-background p-6 sm:col-span-2">
                 <p className="text-sm leading-relaxed">
-                  Seen together, these can reveal a pattern that warrants closer examination:{" "}
-                  <span className="text-primary">a question worth investigating.</span>
+                  The value is not declaring misconduct. It is seeing the broader pattern early
+                  enough to ask a better investigative question.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="product" className="scroll-mt-16 border-b border-border">
+        <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-            <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
               <div>
-                <p className="label-mono">Product</p>
-                <h2 className="mt-4 max-w-2xl text-3xl leading-tight md:text-5xl">
-                  Four capabilities, built around investigation.
+                <p className="label-mono">The product</p>
+                <h2 className="mt-4 max-w-3xl text-3xl leading-tight md:text-5xl">
+                  One operating layer for connected claims-integrity work.
                 </h2>
               </div>
+              <Link
+                to="/product"
+                className="text-sm text-primary underline-offset-4 hover:underline"
+              >
+                Explore the product →
+              </Link>
             </div>
+
             <div className="mt-14 grid gap-px border border-border bg-border md:grid-cols-2">
-              {capabilities.map((c) => (
-                <article key={c.id} className="bg-background p-8 md:p-10">
-                  <p className="label-mono">{c.id}</p>
-                  <h3 className="mt-4 text-2xl">{c.title}</h3>
-                  <p className="mt-4 leading-relaxed text-muted-foreground">{c.body}</p>
+              {capabilities.map((capability) => (
+                <article key={capability.id} className="bg-background p-8 md:p-10">
+                  <p className="label-mono">{capability.id}</p>
+                  <h3 className="mt-4 text-2xl">{capability.title}</h3>
+                  <p className="mt-4 leading-relaxed text-muted-foreground">{capability.body}</p>
                 </article>
               ))}
             </div>
-            <Link to="/product" className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline">Explore the product →</Link>
+
+            <div className="mt-10 grid gap-px border border-border bg-border md:grid-cols-4">
+              {[
+                ["01", "Connect", "Bring relevant claims and integrity data into a governed analytical context."],
+                ["02", "Detect", "Surface patterns that deserve attention through rules, models and network analysis."],
+                ["03", "Investigate", "Review evidence, relationships and context through an authorised workflow."],
+                ["04", "Decide", "Keep consequential decisions with accountable human processes."],
+              ].map(([number, title, body]) => (
+                <div key={number} className="bg-surface p-6">
+                  <p className="label-mono text-primary">{number}</p>
+                  <h3 className="mt-3 text-xl">{title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{body}</p>
+                </div>
+              ))}
+            </div>
+            <Link
+              to="/how-it-works"
+              className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline"
+            >
+              See how Sequrin works →
+            </Link>
           </div>
         </section>
 
         <section className="border-b border-border bg-surface">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-            <p className="label-mono">Human oversight</p>
+            <p className="label-mono">Why it matters</p>
             <h2 className="mt-4 max-w-3xl text-3xl leading-tight md:text-5xl">
-              Built for investigation, not automated judgement.
+              Better integrity capability protects more than a claims process.
             </h2>
+            <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
+              Claims leakage, fragmented investigation and limited analytical capacity all compete
+              with finite healthcare resources. Sequrin is designed to strengthen the operating
+              capability behind claims integrity.
+            </p>
 
-            <ol className="mt-14 grid gap-px border border-border bg-border md:grid-cols-4">
-              {[
-                ["Detection", "Models, rules and network analysis run over governed data."],
-                ["Signal", "An output is a prompt to look closer, not a finding of fraud."],
-                ["Investigation", "Evidence, relationships and context are examined by people."],
-                ["Human decision", "Consequential outcomes remain with accountable processes."],
-              ].map(([t, b], i) => (
-                <li key={t} className="bg-background p-8">
-                  <span className="label-mono text-primary">Step {i + 1}</span>
-                  <h3 className="mt-3 text-xl">{t}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{b}</p>
-                </li>
+            <div className="mt-14 grid gap-px border border-border bg-border md:grid-cols-3">
+              {impactPoints.map((point) => (
+                <article key={point.title} className="bg-background p-8">
+                  <h3 className="text-2xl">{point.title}</h3>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{point.body}</p>
+                </article>
               ))}
-            </ol>
+            </div>
+            <Link
+              to="/impact"
+              className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline"
+            >
+              Explore the wider impact →
+            </Link>
+          </div>
+        </section>
 
-            <div className="mt-12 grid gap-8 border-t border-border pt-10 md:grid-cols-2">
+        <section className="border-b border-border">
+          <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:py-24 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <p className="label-mono">Accountable by design</p>
+              <h2 className="mt-4 text-3xl leading-tight md:text-5xl">Signals are not verdicts.</h2>
+              <p className="mt-6 max-w-lg leading-relaxed text-muted-foreground">
+                Sequrin helps people investigate. It does not replace the judgement, evidence or
+                accountability required for consequential claims decisions.
+              </p>
+              <Link
+                to="/governance"
+                className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline"
+              >
+                Read about governance →
+              </Link>
+            </div>
+            <div className="border border-border bg-surface p-8 md:p-10">
               <p className="font-display text-2xl leading-snug md:text-3xl">
                 Detection creates a signal. Investigation establishes context. Humans remain
                 responsible for consequential decisions.
               </p>
-              <ul className="space-y-3 text-muted-foreground">
+              <ul className="mt-8 space-y-4 text-muted-foreground">
                 {[
-                  "Suspicious does not mean fraudulent.",
-                  "Analytical models help prioritise questions, not assign guilt.",
-                  "Evidence and context must be investigated before conclusions.",
+                  "Suspicious activity is a reason to investigate, not a finding of fraud.",
                   "Sequrin does not reject claims, withhold payment or impose sanctions.",
-                ].map((t) => (
-                  <li key={t} className="flex gap-3 leading-relaxed">
+                  "Sensitive integrity work remains subject to governed access and organisational boundaries.",
+                  "Important investigative and administrative actions should remain auditable.",
+                ].map((item) => (
+                  <li key={item} className="flex gap-3 leading-relaxed">
                     <span aria-hidden="true" className="mt-2.5 h-px w-4 shrink-0 bg-primary" />
-                    {t}
+                    {item}
                   </li>
                 ))}
               </ul>
             </div>
-            <Link to="/governance" className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline">Read about governance →</Link>
-          </div>
-        </section>
-
-        <section id="how-it-works" className="scroll-mt-16 border-b border-border">
-          <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-            <p className="label-mono">How Sequrin works</p>
-            <h2 className="mt-4 max-w-2xl text-3xl leading-tight md:text-5xl">
-              A governed path from data to decision.
-            </h2>
-
-            <div className="mt-14 space-y-px border-y border-border bg-border">
-              {stages.map((s) => (
-                <div
-                  key={s.n}
-                  className="grid gap-6 bg-background px-1 py-8 md:grid-cols-[80px_240px_1fr] md:items-baseline"
-                >
-                  <span className="font-display text-4xl text-primary">{s.n}</span>
-                  <h3 className="text-2xl">{s.title}</h3>
-                  <p className="max-w-2xl leading-relaxed text-muted-foreground">{s.body}</p>
-                </div>
-              ))}
-            </div>
-            <Link to="/how-it-works" className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline">See the workflow →</Link>
           </div>
         </section>
 
         <section className="border-b border-border bg-surface">
-          <div className="mx-auto grid max-w-6xl gap-14 px-6 py-20 md:py-24 lg:grid-cols-2 lg:items-center">
+          <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div>
               <p className="label-mono">Secure Integrity Network</p>
-              <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                From isolated signals to shared integrity intelligence.
+              <h2 className="mt-4 max-w-2xl text-3xl leading-tight md:text-5xl">
+                The long-term direction behind the name Sequrin.
               </h2>
-              <div className="mt-6 space-y-5 leading-relaxed text-muted-foreground">
+              <div className="mt-6 max-w-2xl space-y-5 leading-relaxed text-muted-foreground">
                 <p>
-                  Individual organisations naturally have visibility into their own claims
-                  environment. Some potentially significant relationships, however, may only become
-                  apparent when appropriately governed information can be understood across
-                  organisational boundaries.
+                  Today, Sequrin is focused on helping authorised teams understand claims-integrity
+                  activity within a governed operating environment.
                 </p>
                 <p>
-                  Sequrin is being built toward infrastructure that can support this broader
-                  claims-integrity view. This is the concept behind the name:{" "}
-                  <span className="text-foreground">Sequrin</span>, pronounced “Securing”, meaning{" "}
-                  <span className="text-foreground">Secure Integrity Network</span>.
+                  The broader vision is a Secure Integrity Network: infrastructure for responsible,
+                  governed integrity intelligence across organisational boundaries where that is
+                  appropriate and permitted.
                 </p>
                 <p className="border-l border-primary pl-4 text-sm">
-                  This is a development direction, not an operating national network. Current work
-                  is focused on the analytical and investigative product.
+                  This is a development direction, not an operating national network or shared
+                  blacklist.
                 </p>
-                <Link to="/network" className="inline-flex text-sm text-primary underline-offset-4 hover:underline">Explore the network vision →</Link>
+              </div>
+              <Link
+                to="/network"
+                className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline"
+              >
+                Explore the network vision →
+              </Link>
+            </div>
+            <div className="grid gap-px border border-border bg-border">
+              <div className="bg-background p-8">
+                <p className="label-mono">Sequr</p>
+                <p className="mt-3 font-display text-3xl">Secure</p>
+              </div>
+              <div className="bg-background p-8">
+                <p className="label-mono">IN</p>
+                <p className="mt-3 font-display text-3xl">Integrity Network</p>
+              </div>
+              <div className="bg-background p-8">
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  Sequrin is pronounced “Securing”. The name reflects the idea of protecting
+                  healthcare integrity through connected, governed intelligence.
+                </p>
               </div>
             </div>
-            <div className="border border-border bg-background p-4">
-              <NetworkVisual className="w-full" />
-            </div>
           </div>
         </section>
 
         <section className="border-b border-border">
-          <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1fr_1.4fr]">
+          <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1fr_auto] md:items-end md:py-24">
             <div>
-              <p className="label-mono">Intended users</p>
-              <h2 className="mt-4 text-3xl md:text-4xl">Who Sequrin is for.</h2>
+              <p className="label-mono">For medical schemes</p>
+              <h2 className="mt-4 max-w-3xl text-3xl leading-tight md:text-5xl">
+                See where Sequrin fits into your claims-integrity operation.
+              </h2>
+              <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
+                Explore the product, understand the operating model, or get in touch to discuss a
+                controlled introduction using appropriate data and governance boundaries.
+              </p>
+              <p className="mt-6 text-sm text-muted-foreground">
+                <a
+                  href={PUBLIC_CONTACT_MAILTO}
+                  className="text-foreground underline-offset-4 hover:underline"
+                >
+                  {PUBLIC_CONTACT_EMAIL}
+                </a>
+              </p>
             </div>
-            <ul className="grid gap-px self-start border border-border bg-border sm:grid-cols-2">
-              {[
-                "Medical schemes",
-                "Claims-integrity teams",
-                "Forensic investigation teams",
-                "Healthcare administrators",
-                "Other authorised healthcare claims stakeholders",
-              ].map((u) => (
-                <li key={u} className="bg-background p-6 text-sm">
-                  {u}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        <section id="principles" className="scroll-mt-16 border-b border-border bg-surface">
-          <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-            <p className="label-mono">Product principles</p>
-            <h2 className="mt-4 max-w-2xl text-3xl leading-tight md:text-5xl">
-              Principles that shape the architecture.
-            </h2>
-            <dl className="mt-14 grid gap-px border border-border bg-border md:grid-cols-3">
-              {principles.map((p) => (
-                <div key={p.title} className="bg-background p-8">
-                  <dt className="text-xl">{p.title}</dt>
-                  <dd className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.body}</dd>
-                </div>
-              ))}
-              <div className="hidden bg-background p-8 md:block" aria-hidden="true" />
-            </dl>
-          </div>
-        </section>
-
-        <section className="border-b border-border">
-          <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-            <h2 className="max-w-3xl text-3xl leading-tight md:text-5xl">
-              Building stronger infrastructure for claims integrity.
-            </h2>
-            <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-              Sequrin is an early-stage technology product being developed for the healthcare
-              claims-integrity environment. For product, partnership, pilot or other business
-              enquiries, get in touch directly.
-            </p>
-            <div className="mt-9 flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap gap-4 md:justify-end">
               <Link
-                to="/about"
+                to="/for-medical-schemes"
                 className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
               >
-                Learn about Sequrin
+                For medical schemes
               </Link>
               <a
                 href={PUBLIC_CONTACT_MAILTO}
                 className="rounded-md border border-border-strong px-6 py-3 text-sm transition-colors hover:bg-secondary"
               >
-                Contact
+                Contact Sequrin
               </a>
             </div>
-            <p className="mt-8 text-sm text-muted-foreground">
-              <a href={PUBLIC_CONTACT_MAILTO} className="text-foreground underline-offset-4 hover:underline">
-                {PUBLIC_CONTACT_EMAIL}
-              </a>
-            </p>
           </div>
         </section>
       </main>
