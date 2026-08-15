@@ -130,6 +130,9 @@ function ImpactPage() {
               <p className="mt-6 leading-relaxed text-muted-foreground">
                 Medical-scheme resources are finite. When avoidable claims leakage is absorbed by the same funding system that pays for legitimate care, it competes with the purpose those resources were collected to serve.
               </p>
+              <p className="mt-5 leading-relaxed text-muted-foreground">
+                South Africa's medical scheme sector covers approximately 9 million beneficiaries (CMS, 2023/24) — roughly one in six South Africans — making the stewardship of those pooled resources a matter of broad social consequence.
+              </p>
             </div>
 
             <div className="border border-border-strong bg-surface p-7 md:p-9">
@@ -155,6 +158,9 @@ function ImpactPage() {
               </p>
               <p className="mt-5 leading-relaxed text-muted-foreground">
                 The objective is straightforward: help more of the available pool reach its intended purpose rather than being lost to activity that a proper investigation could have identified and addressed.
+              </p>
+              <p className="mt-5 leading-relaxed text-muted-foreground">
+                The SIU estimated fraud, waste and abuse across the broader South African health sector at approximately R39 billion per year (SIU, 2022) — a figure that spans public and private health expenditure and is not a scheme-specific claims-fraud total, but it illustrates the scale of the structural problem that stronger integrity processes are designed to address.
               </p>
             </div>
 

@@ -91,7 +91,7 @@ function ForMedicalSchemesPage() {
                 An integrity layer around your existing claims operation.
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Sequrin is not positioned as a replacement for a medical scheme's core administration, payment or clinical systems. Its role is to help claims-integrity teams connect analytical attention to structured investigation while preserving the scheme's own operational authority.
+                Sequrin is not positioned as a replacement for a medical scheme's core administration, payment or clinical systems. Its role is to help claims-integrity teams connect analytical attention to structured investigation while preserving the scheme's own operational authority. The sector collectively covers approximately 9 million beneficiaries (CMS, 2023/24), so even incremental improvements to claims-integrity operations can have meaningful effects when aggregated across that scale.
               </p>
             </div>
 

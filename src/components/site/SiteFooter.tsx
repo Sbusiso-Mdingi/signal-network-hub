@@ -44,7 +44,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-border">
-        <p className="mx-auto max-w-6xl px-6 py-6 text-xs text-muted-foreground">© 2026 Sequrin. All rights reserved.</p>
+        <p className="mx-auto max-w-6xl px-6 py-6 text-xs text-muted-foreground">© {new Date().getFullYear()} Sequrin. All rights reserved.</p>
       </div>
     </footer>
   );

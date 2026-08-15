@@ -238,6 +238,9 @@ function HomePage() {
                 </article>
               ))}
             </div>
+            <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              Approximately 9 million South Africans depend on medical schemes for access to private healthcare (CMS, 2023/24) — finite pools that stronger integrity processes are designed to help protect.
+            </p>
             <Link
               to="/impact"
               className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline"

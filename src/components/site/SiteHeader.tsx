@@ -9,6 +9,8 @@ const navigation = [
   { label: "Impact", to: "/impact" },
   { label: "For Medical Schemes", to: "/for-medical-schemes" },
   { label: "About", to: "/about" },
+  { label: "Network", to: "/network" },
+  { label: "Governance", to: "/governance" },
 ] as const;
 
 export function SiteHeader() {
@@ -24,7 +26,7 @@ export function SiteHeader() {
               key={item.to}
               to={item.to}
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-              activeProps={{ className: "text-sm text-foreground" }}
+              activeProps={{ className: "text-sm text-foreground border-b border-primary pb-0.5" }}
             >
               {item.label}
             </Link>
@@ -55,6 +57,7 @@ export function SiteHeader() {
                 to={item.to}
                 onClick={() => setOpen(false)}
                 className="text-sm text-muted-foreground hover:text-foreground"
+                activeProps={{ className: "text-sm text-primary" }}
               >
                 {item.label}
               </Link>

@@ -120,7 +120,7 @@ function AboutPage() {
               <p className="text-lg leading-relaxed text-foreground">
                 Sequrin is being built in South Africa, where healthcare affordability, finite scheme
                 resources and the quality of claims-integrity operations have direct consequences for
-                members and the sustainability of healthcare financing.
+                members and the sustainability of healthcare financing. The sector covers approximately 9 million beneficiaries, but membership has stagnated near that level for nearly a decade (CMS, 2023/24; Alexander Forbes Medical Aid Insights 2022/2023), making efficient stewardship of existing resources more important than expansion.
               </p>
               <p className="leading-relaxed">
                 That local starting point matters. The aim is to build serious analytical and

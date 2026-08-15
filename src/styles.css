@@ -109,6 +109,10 @@
   color: var(--color-muted-foreground);
 }
 
+@utility font-data {
+  font-family: var(--font-mono);
+}
+
 @utility hairline-grid {
   background-image:
     linear-gradient(to right, var(--color-border) 1px, transparent 1px),

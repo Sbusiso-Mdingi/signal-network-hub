@@ -153,6 +153,9 @@ function NetworkPage() {
               <p className="mt-5 leading-relaxed text-muted-foreground">
                 The network idea is that carefully governed integrity intelligence could make important relationships visible without erasing organisational boundaries or turning suspicion into a shared verdict.
               </p>
+              <p className="mt-5 leading-relaxed text-muted-foreground">
+                South Africa has over 70 registered medical schemes (open and restricted), each operating within its own governed boundary — which means a pattern visible across those boundaries may be entirely invisible to any individual participant.
+              </p>
             </div>
             <NetworkDiagram />
           </div>
