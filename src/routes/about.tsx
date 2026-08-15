@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
+import { PUBLIC_CONTACT_EMAIL, PUBLIC_CONTACT_MAILTO } from "@/lib/siteLinks";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -129,10 +130,10 @@ function AboutPage() {
             </div>
             <div className="flex flex-wrap items-center gap-4">
               <a
-                href="mailto:sbusiso@sequrin.tech"
+                href={PUBLIC_CONTACT_MAILTO}
                 className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
               >
-                sbusiso@sequrin.tech
+                {PUBLIC_CONTACT_EMAIL}
               </a>
               <Link
                 to="/"

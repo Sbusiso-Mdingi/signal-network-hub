@@ -11,88 +11,101 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as ForMedicalSchemesRouteImport } from './routes/for-medical-schemes'
+import { Route as GovernanceRouteImport } from './routes/governance'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as ImpactRouteImport } from './routes/impact'
 import { Route as LoginRouteImport } from './routes/login'
+import { Route as NetworkRouteImport } from './routes/network'
+import { Route as PoliciesRouteImport } from './routes/policies'
+import { Route as ProductRouteImport } from './routes/product'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LoginRoute = LoginRouteImport.update({
-  id: '/login',
-  path: '/login',
-  getParentRoute: () => rootRouteImport,
-} as any)
+const IndexRoute = IndexRouteImport.update({ id: '/', path: '/', getParentRoute: () => rootRouteImport } as any)
+const AboutRoute = AboutRouteImport.update({ id: '/about', path: '/about', getParentRoute: () => rootRouteImport } as any)
+const ForMedicalSchemesRoute = ForMedicalSchemesRouteImport.update({ id: '/for-medical-schemes', path: '/for-medical-schemes', getParentRoute: () => rootRouteImport } as any)
+const GovernanceRoute = GovernanceRouteImport.update({ id: '/governance', path: '/governance', getParentRoute: () => rootRouteImport } as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({ id: '/how-it-works', path: '/how-it-works', getParentRoute: () => rootRouteImport } as any)
+const ImpactRoute = ImpactRouteImport.update({ id: '/impact', path: '/impact', getParentRoute: () => rootRouteImport } as any)
+const LoginRoute = LoginRouteImport.update({ id: '/login', path: '/login', getParentRoute: () => rootRouteImport } as any)
+const NetworkRoute = NetworkRouteImport.update({ id: '/network', path: '/network', getParentRoute: () => rootRouteImport } as any)
+const PoliciesRoute = PoliciesRouteImport.update({ id: '/policies', path: '/policies', getParentRoute: () => rootRouteImport } as any)
+const ProductRoute = ProductRouteImport.update({ id: '/product', path: '/product', getParentRoute: () => rootRouteImport } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/for-medical-schemes': typeof ForMedicalSchemesRoute
+  '/governance': typeof GovernanceRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/impact': typeof ImpactRoute
   '/login': typeof LoginRoute
+  '/network': typeof NetworkRoute
+  '/policies': typeof PoliciesRoute
+  '/product': typeof ProductRoute
 }
-export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/login': typeof LoginRoute
-}
+export interface FileRoutesByTo extends FileRoutesByFullPath {}
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/for-medical-schemes': typeof ForMedicalSchemesRoute
+  '/governance': typeof GovernanceRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/impact': typeof ImpactRoute
   '/login': typeof LoginRoute
+  '/network': typeof NetworkRoute
+  '/policies': typeof PoliciesRoute
+  '/product': typeof ProductRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/login'
+  fullPaths: '/' | '/about' | '/for-medical-schemes' | '/governance' | '/how-it-works' | '/impact' | '/login' | '/network' | '/policies' | '/product'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/login'
-  id: '__root__' | '/' | '/about' | '/login'
+  to: '/' | '/about' | '/for-medical-schemes' | '/governance' | '/how-it-works' | '/impact' | '/login' | '/network' | '/policies' | '/product'
+  id: '__root__' | '/' | '/about' | '/for-medical-schemes' | '/governance' | '/how-it-works' | '/impact' | '/login' | '/network' | '/policies' | '/product'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ForMedicalSchemesRoute: typeof ForMedicalSchemesRoute
+  GovernanceRoute: typeof GovernanceRoute
+  HowItWorksRoute: typeof HowItWorksRoute
+  ImpactRoute: typeof ImpactRoute
   LoginRoute: typeof LoginRoute
+  NetworkRoute: typeof NetworkRoute
+  PoliciesRoute: typeof PoliciesRoute
+  ProductRoute: typeof ProductRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginRouteImport
-      parentRoute: typeof rootRouteImport
-    }
+    '/': { id: '/'; path: '/'; fullPath: '/'; preLoaderRoute: typeof IndexRouteImport; parentRoute: typeof rootRouteImport }
+    '/about': { id: '/about'; path: '/about'; fullPath: '/about'; preLoaderRoute: typeof AboutRouteImport; parentRoute: typeof rootRouteImport }
+    '/for-medical-schemes': { id: '/for-medical-schemes'; path: '/for-medical-schemes'; fullPath: '/for-medical-schemes'; preLoaderRoute: typeof ForMedicalSchemesRouteImport; parentRoute: typeof rootRouteImport }
+    '/governance': { id: '/governance'; path: '/governance'; fullPath: '/governance'; preLoaderRoute: typeof GovernanceRouteImport; parentRoute: typeof rootRouteImport }
+    '/how-it-works': { id: '/how-it-works'; path: '/how-it-works'; fullPath: '/how-it-works'; preLoaderRoute: typeof HowItWorksRouteImport; parentRoute: typeof rootRouteImport }
+    '/impact': { id: '/impact'; path: '/impact'; fullPath: '/impact'; preLoaderRoute: typeof ImpactRouteImport; parentRoute: typeof rootRouteImport }
+    '/login': { id: '/login'; path: '/login'; fullPath: '/login'; preLoaderRoute: typeof LoginRouteImport; parentRoute: typeof rootRouteImport }
+    '/network': { id: '/network'; path: '/network'; fullPath: '/network'; preLoaderRoute: typeof NetworkRouteImport; parentRoute: typeof rootRouteImport }
+    '/policies': { id: '/policies'; path: '/policies'; fullPath: '/policies'; preLoaderRoute: typeof PoliciesRouteImport; parentRoute: typeof rootRouteImport }
+    '/product': { id: '/product'; path: '/product'; fullPath: '/product'; preLoaderRoute: typeof ProductRouteImport; parentRoute: typeof rootRouteImport }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
-  LoginRoute: LoginRoute,
+  IndexRoute,
+  AboutRoute,
+  ForMedicalSchemesRoute,
+  GovernanceRoute,
+  HowItWorksRoute,
+  ImpactRoute,
+  LoginRoute,
+  NetworkRoute,
+  PoliciesRoute,
+  ProductRoute,
 }
-export const routeTree = rootRouteImport
-  ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>()
+export const routeTree = rootRouteImport._addFileChildren(rootRouteChildren)._addFileTypes<FileRouteTypes>()
 
 import type { getRouter } from './router.tsx'
 import type { startInstance } from './start.ts'
