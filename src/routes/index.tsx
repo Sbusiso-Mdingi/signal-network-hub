@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { NetworkVisual } from "@/components/site/NetworkVisual";
+import { APP_SIGN_IN_URL, PUBLIC_CONTACT_EMAIL, PUBLIC_CONTACT_MAILTO } from "@/lib/siteLinks";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,7 +33,7 @@ export const Route = createFileRoute("/")({
           name: "Sequrin",
           alternateName: "Secure Integrity Network",
           url: "https://sequrin.tech",
-          email: "sbusiso@sequrin.tech",
+          email: PUBLIC_CONTACT_EMAIL,
           founder: {
             "@type": "Person",
             name: "Sbusiso Mdingi",
@@ -120,7 +121,6 @@ function HomePage() {
     <div className="min-h-screen scroll-smooth">
       <SiteHeader />
       <main>
-        {/* Hero */}
         <section className="relative border-b border-border">
           <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 py-20 md:py-28 lg:grid-cols-[1.05fr_1fr]">
             <div>
@@ -134,18 +134,18 @@ function HomePage() {
                 may not reveal.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-4">
-                <a
-                  href="#product"
+                <Link
+                  to="/product"
                   className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
                 >
                   Explore Sequrin
-                </a>
-                <Link
-                  to="/login"
+                </Link>
+                <a
+                  href={APP_SIGN_IN_URL}
                   className="rounded-md border border-border-strong px-6 py-3 text-sm transition-colors hover:bg-secondary"
                 >
                   Sign In
-                </Link>
+                </a>
               </div>
               <p className="label-mono mt-10 max-w-md leading-relaxed">
                 For medical schemes and authorised claims-integrity teams
@@ -157,7 +157,6 @@ function HomePage() {
           </div>
         </section>
 
-        {/* Problem */}
         <section className="border-b border-border bg-surface">
           <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:py-24 lg:grid-cols-[1fr_1.1fr]">
             <div>
@@ -194,7 +193,6 @@ function HomePage() {
           </div>
         </section>
 
-        {/* Product */}
         <section id="product" className="scroll-mt-16 border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -214,10 +212,10 @@ function HomePage() {
                 </article>
               ))}
             </div>
+            <Link to="/product" className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline">Explore the product →</Link>
           </div>
         </section>
 
-        {/* Safety */}
         <section className="border-b border-border bg-surface">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <p className="label-mono">Human oversight</p>
@@ -259,10 +257,10 @@ function HomePage() {
                 ))}
               </ul>
             </div>
+            <Link to="/governance" className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline">Read about governance →</Link>
           </div>
         </section>
 
-        {/* How it works */}
         <section id="how-it-works" className="scroll-mt-16 border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <p className="label-mono">How Sequrin works</p>
@@ -282,10 +280,10 @@ function HomePage() {
                 </div>
               ))}
             </div>
+            <Link to="/how-it-works" className="mt-8 inline-flex text-sm text-primary underline-offset-4 hover:underline">See the workflow →</Link>
           </div>
         </section>
 
-        {/* Network vision */}
         <section className="border-b border-border bg-surface">
           <div className="mx-auto grid max-w-6xl gap-14 px-6 py-20 md:py-24 lg:grid-cols-2 lg:items-center">
             <div>
@@ -310,6 +308,7 @@ function HomePage() {
                   This is a development direction, not an operating national network. Current work
                   is focused on the analytical and investigative product.
                 </p>
+                <Link to="/network" className="inline-flex text-sm text-primary underline-offset-4 hover:underline">Explore the network vision →</Link>
               </div>
             </div>
             <div className="border border-border bg-background p-4">
@@ -318,7 +317,6 @@ function HomePage() {
           </div>
         </section>
 
-        {/* Intended users */}
         <section className="border-b border-border">
           <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1fr_1.4fr]">
             <div>
@@ -341,7 +339,6 @@ function HomePage() {
           </div>
         </section>
 
-        {/* Principles */}
         <section id="principles" className="scroll-mt-16 border-b border-border bg-surface">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <p className="label-mono">Product principles</p>
@@ -360,7 +357,6 @@ function HomePage() {
           </div>
         </section>
 
-        {/* Final CTA */}
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
             <h2 className="max-w-3xl text-3xl leading-tight md:text-5xl">
@@ -379,18 +375,15 @@ function HomePage() {
                 Learn about Sequrin
               </Link>
               <a
-                href="mailto:sbusiso@sequrin.tech"
+                href={PUBLIC_CONTACT_MAILTO}
                 className="rounded-md border border-border-strong px-6 py-3 text-sm transition-colors hover:bg-secondary"
               >
                 Contact
               </a>
             </div>
             <p className="mt-8 text-sm text-muted-foreground">
-              <a
-                href="mailto:sbusiso@sequrin.tech"
-                className="text-foreground underline-offset-4 hover:underline"
-              >
-                sbusiso@sequrin.tech
+              <a href={PUBLIC_CONTACT_MAILTO} className="text-foreground underline-offset-4 hover:underline">
+                {PUBLIC_CONTACT_EMAIL}
               </a>
             </p>
           </div>

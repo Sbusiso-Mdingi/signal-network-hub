@@ -8,13 +8,20 @@ Sequrin is an early-stage healthcare claims-integrity technology product being d
 
 The intended production domain is **https://sequrin.tech**.
 
-Routes:
+Current route structure:
 
-- `/` product overview
+- `/` public overview
+- `/product` product capabilities
+- `/how-it-works` governed workflow
+- `/impact` wider healthcare-resource and capability impact
+- `/for-medical-schemes` medical-scheme value and operating fit
+- `/governance` human oversight, safety and access principles
+- `/network` Secure Integrity Network vision
 - `/about` company, product philosophy, and founder information
-- `/login` application sign-in entry point, currently unavailable while the application environment is offline
+- `/policies` reserved privacy, terms and security policy anchors
+- `/login` compatibility redirect to `https://app.sequrin.tech/sign-in`
 
-Business contact: **sbusiso@sequrin.tech**
+Business contact: **info@sequrin.tech**
 
 ## Product principles
 
@@ -32,7 +39,11 @@ GitHub Pages should be configured to deploy from:
 - Branch: `main`
 - Folder: `/docs`
 
-The custom domain should only be configured after the GitHub Pages deployment has been verified.
+## Application boundary
+
+This repository contains the **public Sequrin website**, not the authenticated Sequrin application or backend services.
+
+Public website sign-in actions route to **https://app.sequrin.tech/sign-in**. The public site does not implement a second authentication system.
 
 ## Application source
 
@@ -57,11 +68,9 @@ Production build:
 bun run build
 ```
 
-Static prerendering is also enabled in `vite.config.ts` for future build-based static deployment if needed.
+Static prerendering is enabled in `vite.config.ts` for future build-based static deployment if needed.
 
 ## Repository scope
-
-This repository contains the **public Sequrin website**, not the full Sequrin claims-integrity application or backend services.
 
 The public product name is **Sequrin**. Legacy internal names from earlier stages of the wider product should not be introduced into this website.
 
