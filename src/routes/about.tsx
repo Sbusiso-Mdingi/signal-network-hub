@@ -10,12 +10,12 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Sequrin, pronounced “Securing,” represents Secure Integrity Network, infrastructure being built to help healthcare claims-integrity teams detect signals and investigate connected activity.",
+          "The story behind Sequrin, a South African healthcare claims-integrity technology venture building connected investigation infrastructure for medical schemes.",
       },
       { property: "og:title", content: "About Sequrin | Secure Integrity Network" },
       {
         property: "og:description",
-        content: "Why Sequrin is being built, what the name means, and who is behind it.",
+        content: "Why Sequrin exists, what the name means, where the product is today, and who is building it.",
       },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "https://sequrin.tech/about" },
@@ -34,21 +34,47 @@ function AboutPage() {
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
             <p className="label-mono">About Sequrin</p>
-            <h1 className="mt-5 max-w-3xl text-4xl leading-[1.1] md:text-6xl">
-              Claims-integrity work is harder when the evidence is fragmented.
+            <h1 className="mt-5 max-w-4xl text-4xl leading-[1.08] md:text-6xl">
+              Built from a belief that claims make more sense in context.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Potentially related behaviour is often spread across individual claims, entities,
-              organisations, datasets and time. Sequrin is being developed to provide
-              infrastructure that helps authorised claims-integrity teams detect investigative
-              signals, understand relationships and support responsible collaboration.
+            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+              Sequrin is a South African healthcare claims-integrity technology venture. It is being
+              built to help medical schemes and authorised integrity teams detect investigative
+              signals, understand connected activity and give investigators better context without
+              turning analytical systems into the authority for consequential decisions.
             </p>
           </div>
         </section>
 
         <section className="border-b border-border bg-surface">
-          <div className="mx-auto max-w-6xl px-6 py-20">
-            <figure className="max-w-3xl">
+          <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <p className="label-mono">Why it exists</p>
+              <h2 className="mt-4 text-3xl md:text-5xl">A claim is a record. A pattern is a relationship.</h2>
+            </div>
+            <div className="space-y-5 text-muted-foreground">
+              <p className="text-lg leading-relaxed text-foreground">
+                Claims-integrity work becomes harder when relevant evidence is fragmented across
+                claims, providers, members, facilities, services and time.
+              </p>
+              <p className="leading-relaxed">
+                Sequrin began with a simple product thesis: an individual claim can look ordinary
+                while the relationships around it tell a very different story. Statistical methods,
+                deterministic rules, machine learning and network analysis can help surface those
+                relationships so that investigators know where deeper attention may be worthwhile.
+              </p>
+              <p className="leading-relaxed">
+                The objective is not to automate judgement. It is to make complex activity easier to
+                investigate, help scarce integrity capacity focus on the right questions, and support
+                more accountable protection of finite healthcare resources.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-border">
+          <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+            <figure className="max-w-4xl">
               <blockquote className="font-display text-3xl leading-snug md:text-4xl">
                 “Detection should create questions worth investigating, not automated verdicts.”
               </blockquote>
@@ -65,15 +91,89 @@ function AboutPage() {
             </div>
             <div className="space-y-5 text-muted-foreground">
               <p className="text-lg leading-relaxed text-foreground">
-                Sequrin represents <span className="text-primary">Secure Integrity Network</span>.
+                The name points directly to the long-term idea behind the company:
+                <span className="text-primary"> Secure Integrity Network</span>.
               </p>
               <p className="leading-relaxed">
-                Individual organisations naturally have visibility into their own claims
-                environment. Some relationships only become apparent when appropriately governed
-                information can be understood across organisational boundaries. Sequrin is being
-                built toward infrastructure that can support that broader claims-integrity view,
-                with governance and accountability designed in from the start.
+                “Sequr” evokes secure, while “in” represents Integrity Network. The name reflects a
+                belief that claims integrity becomes stronger when useful relationships can be
+                understood without giving up the governance that should surround sensitive
+                healthcare information.
               </p>
+              <p className="leading-relaxed">
+                The network is a direction, not a claim that a national or cross-scheme network is
+                already operating. Sequrin's current work is focused on building the analytical,
+                investigative and governance foundation required before broader collaboration should
+                be considered.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-border bg-surface">
+          <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-[0.85fr_1.15fr]">
+            <div>
+              <p className="label-mono">Built in South Africa</p>
+              <h2 className="mt-4 text-3xl md:text-5xl">Starting with the realities of medical-scheme claims integrity.</h2>
+            </div>
+            <div className="space-y-5 text-muted-foreground">
+              <p className="text-lg leading-relaxed text-foreground">
+                Sequrin is being built in South Africa, where healthcare affordability, finite scheme
+                resources and the quality of claims-integrity operations have direct consequences for
+                members and the sustainability of healthcare financing.
+              </p>
+              <p className="leading-relaxed">
+                That local starting point matters. The aim is to build serious analytical and
+                investigative infrastructure that can be evaluated against real operational needs,
+                while also contributing to local capability in software engineering, analytics,
+                investigations, administration and governance as the company grows.
+              </p>
+              <p className="leading-relaxed">
+                Wider healthcare or public-sector applicability may become possible over time, but it
+                would require its own evidence, procurement, privacy, integration and oversight. It is
+                not presented as a current deployment claim.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-border">
+          <div className="mx-auto max-w-6xl px-6 py-20">
+            <div className="max-w-3xl">
+              <p className="label-mono">Current stage</p>
+              <h2 className="mt-4 text-3xl md:text-5xl">Build the foundation before the network.</h2>
+              <p className="mt-5 text-muted-foreground">
+                Sequrin is early-stage. The priority is proving that the product can make claims-integrity
+                work more useful and more accountable before making larger claims about scale.
+              </p>
+            </div>
+            <div className="mt-12 border-y border-border">
+              {[
+                [
+                  "01",
+                  "Product foundation",
+                  "Tenant-scoped signal detection, network context, investigation workflows, access controls and auditability.",
+                ],
+                [
+                  "02",
+                  "Scheme evaluation",
+                  "Work with medical schemes around bounded claims-integrity questions and measure investigative relevance, review efficiency, context quality and confirmed financial effect.",
+                ],
+                [
+                  "03",
+                  "Governed network direction",
+                  "Only after the foundations are proven should broader cross-organisational collaboration be considered, with separate participation, evidence and publication governance.",
+                ],
+              ].map(([number, title, body]) => (
+                <div
+                  key={number}
+                  className="grid gap-4 border-b border-border py-7 last:border-b-0 md:grid-cols-[80px_240px_1fr] md:gap-7"
+                >
+                  <span className="font-display text-3xl text-primary">{number}</span>
+                  <h3 className="text-xl">{title}</h3>
+                  <p className="text-muted-foreground">{body}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -85,7 +185,7 @@ function AboutPage() {
               <div>
                 <img
                   src="/sbusiso-mdingi-founder.jpg"
-                  alt="Sbusiso Mdingi, founder of Sequrin"
+                  alt="Sbusiso Mdingi"
                   width={400}
                   height={400}
                   className="h-32 w-32 border border-border-strong object-cover"
@@ -96,24 +196,23 @@ function AboutPage() {
               <div className="space-y-5 text-muted-foreground">
                 <p className="leading-relaxed">
                   Sbusiso Mdingi has a background in Actuarial Science, with interests spanning
-                  statistical modelling, quantitative risk, machine learning and network analysis.
-                  His work has focused on using data and analytical methods to understand complex
-                  risk relationships rather than treating individual observations in isolation.
+                  quantitative risk, statistical modelling, machine learning and network analysis.
+                  His work has included pricing models, frequency-severity workflows and data-driven
+                  risk tools built to understand complex systems through evidence rather than isolated
+                  observations.
                 </p>
                 <p className="leading-relaxed">
-                  Sbusiso founded Sequrin from an interest in how these methods could be applied to
-                  healthcare claims integrity. Claims that appear ordinary individually can form
-                  more meaningful patterns when relationships between providers, members,
-                  facilities, services and time are considered together. Sequrin is being built
-                  around that idea, combining analytical models, deterministic rules and network
-                  intelligence to help claims-integrity teams identify activity worth investigating.
+                  Sequrin grew from a question at the intersection of those interests and healthcare:
+                  what changes when claims are treated not only as individual transactions, but as
+                  connected observations within a wider risk system? That question became the basis
+                  for a platform combining analytical signals, relationship intelligence and an
+                  investigator-centred workflow.
                 </p>
                 <p className="leading-relaxed">
-                  A central principle behind Sequrin is that analytical detection should support
-                  professional judgement rather than replace it. The platform is designed to surface
-                  investigative signals and make complex relationships easier to examine, while
-                  leaving consequential decisions with authorised human investigators and the
-                  organisations responsible for them.
+                  The founder's objective is to build useful claims-integrity infrastructure without
+                  confusing analytical confidence with decision authority. Sequrin is designed to
+                  help people see more, investigate better and make accountable decisions through the
+                  processes that already carry that responsibility.
                 </p>
               </div>
             </div>
@@ -123,9 +222,11 @@ function AboutPage() {
         <section className="border-b border-border bg-surface">
           <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-end md:justify-between">
             <div>
-              <h2 className="text-3xl md:text-4xl">Interested in Sequrin?</h2>
-              <p className="mt-4 max-w-xl text-muted-foreground">
-                For product, partnership, pilot or other business enquiries.
+              <p className="label-mono">Contact</p>
+              <h2 className="mt-4 text-3xl md:text-4xl">Start with one real claims-integrity question.</h2>
+              <p className="mt-4 max-w-2xl text-muted-foreground">
+                If you work in a medical scheme, claims integrity, investigations, analytics or
+                governance and want to explore where Sequrin could fit, get in touch.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-4">
@@ -136,10 +237,10 @@ function AboutPage() {
                 {PUBLIC_CONTACT_EMAIL}
               </a>
               <Link
-                to="/"
+                to="/for-medical-schemes"
                 className="rounded-md border border-border-strong px-6 py-3 text-sm transition-colors hover:bg-secondary"
               >
-                Back to overview
+                For medical schemes
               </Link>
             </div>
           </div>
