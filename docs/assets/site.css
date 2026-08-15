@@ -55,6 +55,7 @@ a:hover { color: var(--text); }
 .brand-name { font: 600 21px/1 var(--serif); letter-spacing: -0.025em; }
 .desktop-nav { display: flex; align-items: center; gap: 31px; color: var(--muted); font-size: 14px; }
 .desktop-nav a:hover { color: var(--text); }
+.desktop-nav a[aria-current="page"] { color: var(--text); border-bottom: 1px solid var(--primary); padding-bottom: 2px; }
 .nav-signin { border: 1px solid var(--border-strong); border-radius: var(--radius); padding: 7px 15px; color: var(--text); }
 .nav-signin:hover { background: var(--raised); }
 .mobile-nav { display: none; position: relative; }
