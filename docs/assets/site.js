@@ -46,6 +46,35 @@
     });
   });
 
+  Array.prototype.forEach.call(document.querySelectorAll("[data-hero-video]"), function (player) {
+    var video = player.querySelector("[data-hero-video-element]");
+    var button = player.querySelector("[data-hero-video-play]");
+    var source = video && video.querySelector("source[data-src]");
+
+    if (!video || !button || !source) return;
+
+    button.addEventListener("click", function () {
+      if (!source.getAttribute("src")) {
+        source.setAttribute("src", source.getAttribute("data-src"));
+        video.load();
+      }
+
+      button.hidden = true;
+      video.controls = true;
+
+      var playback = video.play();
+      if (playback && typeof playback.catch === "function") {
+        playback.catch(function () {
+          button.hidden = false;
+        });
+      }
+    });
+
+    video.addEventListener("error", function () {
+      button.hidden = false;
+    });
+  });
+
   var top = document.querySelector(".back-to-top");
   if (top) {
     top.addEventListener("click", function (e) {
