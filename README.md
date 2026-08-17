@@ -18,8 +18,7 @@ Current route structure:
 - `/impact` why claims-integrity capability matters
 - `/governance` human oversight, access and decision boundaries
 - `/network` longer-term Secure Integrity Network direction
-- `/privacy` Sequrin Privacy Policy
-- `/policies` website and policy notices
+- `/policies` factual notices for the public website
 - `/login` sign-in handoff to `https://app.sequrin.tech/sign-in`
 
 Business contact: **info@sequrin.tech**
@@ -31,13 +30,9 @@ Business contact: **info@sequrin.tech**
 - Consequential decisions remain subject to accountable human and organisational processes.
 - Sensitive integrity information should be governed, auditable, and available only to authorised users.
 
-## Production source of truth
+## GitHub Pages
 
-The React/TanStack Start application in `src/` is the source of truth for the public website.
-
-Public pages are authored in `src/routes/*.tsx`. The production build prerenders those routes, and `scripts/publish-react-site.mjs` copies the prerendered client output into `docs/` for GitHub Pages.
-
-This means copy, metadata, navigation and page structure should be changed in the React source only. Do not hand-edit generated HTML in `docs/`.
+The `docs/` directory is the production website served by GitHub Pages. Its HTML is generated from the zero-dependency source in `scripts/generate-public-site.mjs` so shared navigation, metadata and footer content stay consistent.
 
 Regenerate and validate the public site with:
 
@@ -47,37 +42,10 @@ npm run check:static-generated
 npm run validate:static
 ```
 
-GitHub Pages should remain configured to deploy from:
+GitHub Pages should be configured to deploy from:
 
 - Branch: `main`
 - Folder: `/docs`
-
-The `public/CNAME` file is copied into the build so the custom domain survives regeneration.
-
-## Application stack
-
-The public website uses:
-
-- TypeScript
-- React 19
-- TanStack Start / TanStack Router
-- Vite
-- Tailwind CSS
-
-Development:
-
-```bash
-bun install
-bun run dev
-```
-
-Production build:
-
-```bash
-bun run build
-```
-
-Node 22.12 or newer is required for the current Vite toolchain.
 
 ## Application boundary
 
@@ -85,9 +53,30 @@ This repository contains the **public Sequrin website**, not the authenticated S
 
 Public website sign-in actions route to **https://app.sequrin.tech/sign-in**. The public site does not implement a second authentication system.
 
-## Legacy static generator
+## Retained application source
 
-`scripts/generate-public-site.mjs` and `scripts/apply-privacy-policy.mjs` are retained temporarily for history/reference only. They are no longer part of the production build path and should not receive new copy changes.
+The original Lovable-generated React implementation remains in the repository for Lovable compatibility. It is not the GitHub Pages deployment source. It uses:
+
+- TypeScript
+- React 19
+- TanStack Start / TanStack Router
+- Vite
+- Tailwind CSS
+
+React development:
+
+```bash
+bun install
+bun run dev
+```
+
+React production build:
+
+```bash
+bun run build
+```
+
+Node 22.12 or newer is required for the current Vite toolchain. Static prerendering remains available for the retained React application, but changes intended for the public deployment must also be made through the static-site generator.
 
 ## Repository scope
 

@@ -20,56 +20,56 @@ export const Route = createFileRoute("/network")({
 const networkConditions = [
   {
     number: "01",
-    title: "Participation has to be deliberate",
-    body: "Being technically able to connect organisations is not enough. Every participant needs clear authority, a defined role and someone accountable for how the shared process is used.",
+    title: "Participation must be authorised",
+    body: "An organisation should not enter a shared integrity process merely because the technology can connect data. Participation needs explicit authority, defined responsibilities and accountable ownership.",
   },
   {
     number: "02",
-    title: "Everyone needs the same evidence bar",
-    body: "A suspicion, a signal and a substantiated finding are three different things. Any shared intelligence has to keep those distinctions clear instead of flattening them into one label.",
+    title: "Evidence standards must be clear",
+    body: "A suspicion, an investigative signal and a substantiated finding are not the same thing. Shared intelligence needs a standard that preserves those distinctions.",
   },
   {
     number: "03",
-    title: "The purpose cannot quietly expand",
-    body: "Information shared for claims integrity should stay there. It should not become a general-purpose profile of a member, provider or organisation just because the data exists.",
+    title: "Purpose must stay limited",
+    body: "Information should be used for a defined claims-integrity purpose rather than becoming an unrestricted data pool or a general-purpose profile of people and providers.",
   },
   {
     number: "04",
-    title: "Investigation is not publication",
-    body: "Reaching a conclusion inside one organisation should not automatically give someone the right to publish it beyond that organisation. Sharing needs a separate decision and its own authority.",
+    title: "Publication must stay separate",
+    body: "An investigator should not automatically gain authority to publish information beyond their organisation. Cross-organisational publication requires its own governed decision.",
   },
   {
     number: "05",
-    title: "There has to be a way to challenge the record",
-    body: "Evidence changes. Conclusions can change with it. Participants need a controlled way to review, correct or withdraw shared information when the record no longer supports it.",
+    title: "Review and correction must exist",
+    body: "Participants need a controlled way to challenge, review, correct or withdraw shared integrity information when evidence changes or an earlier conclusion proves incomplete.",
   },
   {
     number: "06",
-    title: "The important actions need a trail",
-    body: "Who accessed something, who approved publication, what changed and why should all be traceable. A network like this cannot run on memory and informal handovers.",
+    title: "Every important action should be traceable",
+    body: "Access, publication, review and correction should leave an accountable history so collaboration does not become an opaque exchange of allegations.",
   },
 ];
 
 const path = [
   [
     "Now",
-    "Intelligence inside one organisation",
-    "Connect claims and relevant entities inside a workspace governed by that organisation.",
+    "Tenant-scoped intelligence",
+    "Connect claims and entities inside one governed organisational workspace.",
   ],
   [
     "Now",
     "Human-led investigation",
-    "Turn analytical leads into structured investigations with evidence, notes and review history.",
+    "Turn analytical signals into structured investigations with evidence and review history.",
   ],
   [
     "Now",
-    "Access you can account for",
-    "Control who can enter sensitive workflows and keep the important actions traceable.",
+    "Access and auditability",
+    "Control who can enter sensitive workflows and keep important actions traceable.",
   ],
   [
     "Direction",
-    "Governed participation across organisations",
-    "Only after those foundations work do we consider sharing selected integrity intelligence under a separate governance model.",
+    "Governed network participation",
+    "Only then extend selected integrity intelligence across authorised organisations under a separate governance model.",
   ],
 ];
 
@@ -194,17 +194,18 @@ function NetworkPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
             <p className="label-mono">Secure Integrity Network</p>
             <h1 className="mt-5 max-w-5xl text-4xl leading-[1.08] md:text-6xl">
-              Some patterns only make sense once you can see past one organisation.
+              Integrity risks do not stop at the edge of one claim, one provider or one
+              organisation.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Sequrin is pronounced "Securing." The name comes from Secure Integrity Network, the
-              longer-term idea behind the company: helping authorised healthcare organisations see
-              important claims-integrity relationships that no one participant could see on its own.
+              Sequrin is pronounced “Securing”. Its name comes from Secure Integrity Network, a
+              longer-term direction in which authorised healthcare organisations could understand
+              significant claims-integrity relationships that no single participant can see alone.
             </p>
             <div className="mt-9 border-l border-primary pl-5 text-sm leading-relaxed text-muted-foreground md:max-w-3xl">
-              We are not running a national or cross-scheme network today. Right now we're building
-              the analysis, investigation and governance foundations that would have to work before
-              responsible collaboration between organisations is even worth considering.
+              This is a development direction, not a claim that a national or cross-scheme Sequrin
+              network is currently operating. The product today is focused on the analytical,
+              investigative and governance foundation that responsible collaboration would require.
             </div>
           </div>
         </section>
@@ -214,22 +215,22 @@ function NetworkPage() {
             <div>
               <p className="label-mono text-primary">Why a network?</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                If everyone sees one piece, nobody sees the whole pattern.
+                A pattern can be invisible when every organisation sees only its own fragment.
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                One scheme might see a provider relationship. Another might see the same facility
-                appearing in an unusual pattern. A third might be looking at a cluster of claims
-                that seems unrelated. On their own, none of those views necessarily tells you much.
+                One organisation may see a provider relationship. Another may see a recurring
+                facility pattern. A third may see a separate cluster of unusual claims.
+                Individually, those observations may appear unrelated.
               </p>
               <p className="mt-5 leading-relaxed text-muted-foreground">
-                The network idea is to make useful relationships visible across those boundaries
-                without turning every suspicion into a shared conclusion or opening one scheme's
-                entire data estate to another.
+                The network idea is that carefully governed integrity intelligence could make
+                important relationships visible without erasing organisational boundaries or turning
+                suspicion into a shared verdict.
               </p>
               <p className="mt-5 leading-relaxed text-muted-foreground">
                 South Africa has over 70 registered medical schemes, both open and restricted. Each
-                works inside its own governed boundary, which means a pattern spanning several of
-                them may be invisible to every participant looking at its data alone.
+                operates within its own governed boundary. A pattern visible across those boundaries
+                may therefore be entirely invisible to any individual participant.
               </p>
             </div>
             <NetworkDiagram />
@@ -241,30 +242,33 @@ function NetworkPage() {
             <div className="max-w-3xl">
               <p className="label-mono">The distinction matters</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                Connect the context. Do not spread the conclusion.
+                A network should connect context, not spread conclusions.
               </h2>
             </div>
 
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-2">
               <article className="bg-surface p-7 md:p-9">
-                <p className="label-mono text-primary">What we're building toward</p>
+                <p className="label-mono text-primary">The direction</p>
                 <h3 className="mt-4 text-2xl">Governed integrity intelligence</h3>
                 <ul className="mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground">
-                  <li>Useful relationships and integrity context that meet an agreed evidence bar.</li>
-                  <li>Named participants with a clear purpose and defined access.</li>
+                  <li>Relevant relationships and substantiated integrity context.</li>
+                  <li>Defined participants, purposes and access boundaries.</li>
                   <li>Separate authority for investigation, publication and review.</li>
-                  <li>A record of decisions, plus a way to correct them when the evidence changes.</li>
+                  <li>Traceable decisions and mechanisms for correction.</li>
                 </ul>
               </article>
 
               <article className="bg-background p-7 md:p-9">
-                <p className="label-mono">What we are not building</p>
+                <p className="label-mono">What it is not</p>
                 <h3 className="mt-4 text-2xl">A shared blacklist</h3>
                 <ul className="mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground">
-                  <li>No automatic fraud registry built from detection scores.</li>
-                  <li>No unrestricted pooling of scheme data.</li>
-                  <li>No automatic claim rejection or payment hold because something was shared.</li>
-                  <li>No one investigator publishing an allegation to every participant.</li>
+                  <li>Not an automatic fraud registry built from detection scores.</li>
+                  <li>Not unrestricted pooling of scheme data.</li>
+                  <li>Not a mechanism for automatic claim rejection or payment withholding.</li>
+                  <li>
+                    Not a system where one investigator can publish an allegation to every
+                    participant.
+                  </li>
                 </ul>
               </article>
             </div>
@@ -275,12 +279,12 @@ function NetworkPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <p className="label-mono text-primary">Governance before scale</p>
             <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">
-              Sharing across organisations should be harder than working inside one.
+              Cross-organisational intelligence needs a higher bar than an internal investigation.
             </h2>
             <p className="mt-6 max-w-3xl leading-relaxed text-muted-foreground">
-              A bigger network can reveal more, but mistakes also travel further. If access is too
-              broad, the evidence bar is vague or publication is too easy, scale makes the problem
-              worse. So the rules have to be settled before the network grows, not after.
+              The value of a network grows with participation, but so does the consequence of
+              getting access, evidence or publication wrong. Responsible expansion therefore depends
+              on explicit conditions rather than technical connectivity alone.
             </p>
 
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
@@ -306,9 +310,10 @@ function NetworkPage() {
 
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-            <p className="label-mono">How we get there</p>
+            <p className="label-mono">The path</p>
             <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">
-              The network comes last, not first.
+              The network is not the starting point. It is what the foundation is being built
+              toward.
             </h2>
 
             <div className="mt-12 border-y border-border">
@@ -338,20 +343,21 @@ function NetworkPage() {
             <div>
               <p className="label-mono text-primary">Why build toward it?</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                Because some repeat patterns will never fit neatly inside one scheme.
+                Because systemic patterns can require systemic visibility.
               </h2>
             </div>
             <div className="space-y-5 leading-relaxed text-muted-foreground">
               <p>
-                Claims-integrity teams work inside organisational boundaries. The behaviour they're
-                investigating does not always respect those same lines. A carefully governed network
-                could help participating schemes notice recurring structures earlier and start with
-                more context when they investigate.
+                Claims-integrity teams work inside organisational boundaries, but some relationships
+                can span those boundaries. A carefully governed network could help authorised
+                participants recognise recurring structures earlier and investigate them with better
+                context.
               </p>
               <p>
-                But the network is only useful if people can trust how information got there, who can
-                see it, how it can be challenged and what it is allowed to influence. Governance is
-                not the paperwork around the idea. It is the part that makes the idea viable.
+                That potential only matters if the network preserves due process, evidence quality,
+                privacy, organisational authority and human accountability. The governance is
+                therefore not an obstacle to the network. It is what would make the network
+                credible.
               </p>
             </div>
           </div>
@@ -362,12 +368,13 @@ function NetworkPage() {
             <div>
               <p className="label-mono">Build the foundation first</p>
               <h2 className="mt-4 max-w-3xl text-3xl leading-tight md:text-5xl">
-                First prove that Sequrin helps one integrity team do better work.
+                Start with one organisation, one governed workflow and evidence that the model adds
+                value.
               </h2>
               <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-                That's the immediate job: help medical-scheme teams connect signals, relationships
-                and investigation inside a governed workflow, then measure whether it was actually
-                useful. Broader network participation only makes sense after that foundation holds.
+                Sequrin's immediate focus is helping medical-scheme claims-integrity teams connect
+                signals, relationships and investigation. Responsible network participation comes
+                later, after the operating and governance foundation is proven.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 md:justify-end">

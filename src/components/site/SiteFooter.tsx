@@ -58,7 +58,11 @@ export function SiteFooter() {
             {PUBLIC_CONTACT_EMAIL}
           </a>
           <nav aria-label="Policies" className="mt-8 flex flex-wrap gap-x-4 gap-y-2 text-xs">
-            <Link to="/privacy" className="text-muted-foreground hover:text-foreground">
+            <Link
+              to="/policies"
+              hash="privacy"
+              className="text-muted-foreground hover:text-foreground"
+            >
               Privacy
             </Link>
             <Link

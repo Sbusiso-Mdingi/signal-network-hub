@@ -10,11 +10,11 @@
     "dev": "vite dev",
     "build": "vite build",
     "build:dev": "vite build --mode development",
-    "build:static": "vite build && node scripts/publish-react-site.mjs",
+    "build:static": "node scripts/generate-public-site.mjs && node scripts/apply-privacy-policy.mjs",
     "check:static-generated": "npm run build:static && git diff --exit-code -- docs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "validate:static": "node scripts/validate-react-static-site.mjs",
+    "validate:static": "node scripts/validate-static-site.mjs",
     "lint": "eslint .",
     "format": "prettier --write ."
   },

@@ -18,7 +18,6 @@ import { Route as ImpactRouteImport } from './routes/impact'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as NetworkRouteImport } from './routes/network'
 import { Route as PoliciesRouteImport } from './routes/policies'
-import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ProductRouteImport } from './routes/product'
 
 const IndexRoute = IndexRouteImport.update({
@@ -66,11 +65,6 @@ const PoliciesRoute = PoliciesRouteImport.update({
   path: '/policies',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ProductRoute = ProductRouteImport.update({
   id: '/product',
   path: '/product',
@@ -87,7 +81,6 @@ export interface FileRoutesByFullPath {
   '/login': typeof LoginRoute
   '/network': typeof NetworkRoute
   '/policies': typeof PoliciesRoute
-  '/privacy': typeof PrivacyRoute
   '/product': typeof ProductRoute
 }
 export interface FileRoutesByTo {
@@ -100,7 +93,6 @@ export interface FileRoutesByTo {
   '/login': typeof LoginRoute
   '/network': typeof NetworkRoute
   '/policies': typeof PoliciesRoute
-  '/privacy': typeof PrivacyRoute
   '/product': typeof ProductRoute
 }
 export interface FileRoutesById {
@@ -114,7 +106,6 @@ export interface FileRoutesById {
   '/login': typeof LoginRoute
   '/network': typeof NetworkRoute
   '/policies': typeof PoliciesRoute
-  '/privacy': typeof PrivacyRoute
   '/product': typeof ProductRoute
 }
 export interface FileRouteTypes {
@@ -129,7 +120,6 @@ export interface FileRouteTypes {
     | '/login'
     | '/network'
     | '/policies'
-    | '/privacy'
     | '/product'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -142,7 +132,6 @@ export interface FileRouteTypes {
     | '/login'
     | '/network'
     | '/policies'
-    | '/privacy'
     | '/product'
   id:
     | '__root__'
@@ -155,7 +144,6 @@ export interface FileRouteTypes {
     | '/login'
     | '/network'
     | '/policies'
-    | '/privacy'
     | '/product'
   fileRoutesById: FileRoutesById
 }
@@ -169,7 +157,6 @@ export interface RootRouteChildren {
   LoginRoute: typeof LoginRoute
   NetworkRoute: typeof NetworkRoute
   PoliciesRoute: typeof PoliciesRoute
-  PrivacyRoute: typeof PrivacyRoute
   ProductRoute: typeof ProductRoute
 }
 
@@ -238,13 +225,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PoliciesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/product': {
       id: '/product'
       path: '/product'
@@ -265,7 +245,6 @@ const rootRouteChildren: RootRouteChildren = {
   LoginRoute: LoginRoute,
   NetworkRoute: NetworkRoute,
   PoliciesRoute: PoliciesRoute,
-  PrivacyRoute: PrivacyRoute,
   ProductRoute: ProductRoute,
 }
 export const routeTree = rootRouteImport

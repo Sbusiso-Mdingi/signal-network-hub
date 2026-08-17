@@ -11,8 +11,6 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
-const socialImage = "https://sequrin.tech/assets/sequrin-social-preview.jpg";
-
 function NotFoundComponent() {
   return (
     <>
@@ -90,25 +88,15 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sequrin | Healthcare Claims Integrity" },
+      { title: "Sequrin | Healthcare Claims Integrity Network" },
       {
         name: "description",
         content:
-          "Sequrin helps healthcare claims-integrity teams connect analytical signals, relationships and investigation context.",
+          "Sequrin is building infrastructure to help healthcare claims-integrity teams detect signals, investigate connected activity and collaborate responsibly.",
       },
       { property: "og:site_name", content: "Sequrin" },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: socialImage },
-      {
-        property: "og:image:alt",
-        content: "Illustrative Sequrin connected claims interface using synthetic data.",
-      },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: socialImage },
-      {
-        name: "twitter:image:alt",
-        content: "Illustrative Sequrin connected claims interface using synthetic data.",
-      },
     ],
     links: [
       {
@@ -134,7 +122,7 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en-ZA">
+    <html lang="en">
       <head>
         <HeadContent />
       </head>
