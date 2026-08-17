@@ -18,6 +18,7 @@ Current route structure:
 - `/impact` why claims-integrity capability matters
 - `/governance` human oversight, access and decision boundaries
 - `/network` longer-term Secure Integrity Network direction
+- `/privacy` full Sequrin Privacy Policy
 - `/policies` factual notices for the public website
 - `/login` sign-in handoff to `https://app.sequrin.tech/sign-in`
 
