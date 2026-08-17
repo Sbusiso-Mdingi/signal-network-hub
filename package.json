@@ -10,7 +10,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "build:dev": "vite build --mode development",
-    "build:static": "node scripts/generate-public-site.mjs && node scripts/apply-privacy-policy.mjs",
+    "build:static": "node scripts/generate-public-site.mjs && node scripts/apply-privacy-policy.mjs && node scripts/apply-static-copy.mjs",
     "check:static-generated": "npm run build:static && git diff --exit-code -- docs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
@@ -67,7 +67,7 @@
     "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.2.1",
     "tw-animate-css": "^1.3.4",
-    "vaul": "^1.1.2",
+    "vaul": "^3.24.2",
     "zod": "^3.24.2"
   },
   "devDependencies": {
@@ -78,7 +78,7 @@
     "@types/react-dom": "^19.2.0",
     "eslint": "^9.32.0",
     "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-prettier": "^10.1.1",
     "eslint-plugin-react-hooks": "^6.1.1",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^15.15.0",
