@@ -10,7 +10,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "build:dev": "vite build --mode development",
-    "build:static": "node scripts/generate-public-site.mjs && node scripts/apply-privacy-policy.mjs && node scripts/apply-static-copy.mjs && node scripts/apply-homepage-video.mjs",
+    "build:static": "node scripts/generate-public-site.mjs && node scripts/apply-privacy-policy.mjs && node scripts/apply-static-copy.mjs && node scripts/apply-homepage-video.mjs && node scripts/apply-brand-assets.mjs",
     "check:static-generated": "npm run build:static && git diff --exit-code -- docs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
