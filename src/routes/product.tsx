@@ -20,39 +20,39 @@ export const Route = createFileRoute("/product")({
 
 const guardrails = [
   {
-    title: "Signals stay investigative",
-    body: "Analytical output can prioritise attention. It does not establish fraud or make a claims decision.",
+    title: "A signal gives you somewhere to look",
+    body: "Analytical output helps prioritise attention. It does not turn itself into a fraud finding or a claims decision.",
   },
   {
-    title: "Access stays governed",
-    body: "Roles, permissions and organisational boundaries determine who can enter sensitive claims-integrity workflows.",
+    title: "Access follows the job",
+    body: "Roles, permissions and organisation boundaries decide who can reach sensitive claims-integrity work, not simply who has an account.",
   },
   {
-    title: "Actions stay accountable",
-    body: "Important investigative and administrative activity can remain traceable rather than disappearing into an informal process.",
+    title: "The important actions leave a trail",
+    body: "Investigation and administrative activity can be reviewed later instead of disappearing into email threads, spreadsheets and memory.",
   },
   {
-    title: "Consequential decisions stay human",
-    body: "Sequrin does not reject claims, withhold payment or impose sanctions from a detection result.",
+    title: "The consequential calls stay with people",
+    body: "Sequrin does not reject a claim, hold a payment or impose a sanction because a model surfaced something unusual.",
   },
 ];
 
 const operatingFlow = [
-  ["01", "Connect", "Bring relevant claims and integrity data into a governed analytical context."],
+  ["01", "Connect", "Bring the claims and integrity data you actually need into one analytical context."],
   [
     "02",
     "Detect",
-    "Surface unusual activity through rules, statistical methods and network analysis.",
+    "Use rules, statistics, models and network analysis to find activity worth a second look.",
   ],
   [
     "03",
     "Investigate",
-    "Bring signals, relationships, evidence and review history into one structured workspace.",
+    "Review the signal, connected relationships, evidence and case history in one workspace.",
   ],
   [
     "04",
     "Decide",
-    "Keep consequential conclusions and claims decisions with accountable human processes.",
+    "Your authorised process decides what the evidence means and what happens next.",
   ],
 ];
 
@@ -94,20 +94,20 @@ function ProductPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
             <p className="label-mono">Product</p>
             <h1 className="mt-5 max-w-4xl text-4xl leading-[1.08] md:text-6xl">
-              From isolated claims to connected investigation.
+              See the claim. Then see everything connected to it.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Sequrin brings signal detection, relationship intelligence and structured
-              investigation into one governed workspace for medical schemes and authorised
-              claims-integrity teams. It helps teams decide what deserves attention without turning
-              analytical output into an automated claims decision.
+              Sequrin brings detection, relationship intelligence and investigation into one place
+              for medical-scheme integrity teams. The point is simple: help your investigators get
+              from "something looks off" to useful context faster, without handing the actual
+              decision to the software.
             </p>
             <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
-              <span>Signals, not verdicts</span>
+              <span>Find what stands out</span>
               <span aria-hidden="true">•</span>
-              <span>Connected investigative context</span>
+              <span>See what connects</span>
               <span aria-hidden="true">•</span>
-              <span>Human-led decisions</span>
+              <span>Investigate in context</span>
             </div>
           </div>
         </section>
@@ -117,16 +117,15 @@ function ProductPage() {
             <div>
               <p className="label-mono text-primary">01 · Signal detection</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                Surface the activity worth examining.
+                Find what is worth a second look.
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Rules, statistical methods and analytical models can surface unusual activity into a
-                prioritised review queue. Signals help scarce investigative attention move toward
-                patterns that warrant closer examination.
+                Rules, statistics and analytical models look across activity for patterns that stand
+                out. Instead of dropping every anomaly into the same pile, Sequrin helps turn that
+                output into a prioritised queue your investigators can actually work through.
               </p>
               <p className="mt-5 border-l border-primary pl-4 text-sm leading-relaxed text-muted-foreground">
-                A signal is an investigative lead. It does not establish misconduct or change the
-                payment status of a claim.
+                A signal is the start of the question. It is not the answer.
               </p>
             </div>
             <ProductShot
@@ -148,16 +147,16 @@ function ProductPage() {
             <div className="lg:order-2">
               <p className="label-mono text-primary">02 · Network intelligence</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                See relationships individual records can hide.
+                See what one record leaves out.
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Sequrin can connect claims, providers, members, facilities, timing and other
-                relevant relationships into investigative context. Investigators can move beyond a
-                single record and examine the structure around it.
+                A claim can make perfect sense in isolation and still sit inside a pattern that
+                deserves attention. Sequrin connects claims with providers, members, facilities,
+                timing and other relevant relationships so investigators can see the structure
+                around the record, not just the record itself.
               </p>
               <p className="mt-5 border-l border-primary pl-4 text-sm leading-relaxed text-muted-foreground">
-                A relationship is context, not proof of misconduct. Network structure helps
-                investigators ask better questions.
+                A connection is context. Your investigator still has to work out what it means.
               </p>
             </div>
           </div>
@@ -168,16 +167,16 @@ function ProductPage() {
             <div>
               <p className="label-mono text-primary">03 · Investigation workspace</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                Turn a signal into a traceable investigation.
+                Keep the case together once you start digging.
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Authorised investigators can bring signals, connected entities, evidence and review
-                history into a structured case workspace. The investigation becomes a coherent
-                process rather than a collection of disconnected analytical outputs and notes.
+                Signals, connected entities, evidence, notes and review history can live in one
+                structured case workspace. That means less time reconstructing what happened across
+                separate systems and more time understanding whether the evidence actually supports
+                further action.
               </p>
               <p className="mt-5 border-l border-primary pl-4 text-sm leading-relaxed text-muted-foreground">
-                Investigators establish context and remain responsible for findings and
-                consequential decisions.
+                The workspace supports the investigation. The investigator owns the reasoning.
               </p>
             </div>
             <ProductShot
@@ -193,12 +192,12 @@ function ProductPage() {
             <div className="max-w-3xl">
               <p className="label-mono text-primary">04 · Governance and access</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                The product boundary is part of the product.
+                Sensitive work needs more than a login screen.
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Claims-integrity tooling handles sensitive information and can influence where
-                investigators focus. Sequrin is designed so analytical capability sits inside
-                explicit access, organisational and decision boundaries.
+                Claims-integrity teams handle sensitive information and decisions that can have real
+                consequences. So access, authority and auditability are part of the product itself,
+                not a compliance layer we plan to add later.
               </p>
             </div>
 
@@ -215,13 +214,13 @@ function ProductPage() {
 
             <div className="mt-10 border border-border-strong bg-surface p-7 md:p-9">
               <p className="font-display text-2xl leading-snug md:text-3xl">
-                Detection creates a signal. Investigation establishes context. Humans remain
-                accountable for consequential decisions.
+                Sequrin helps you find the question, build the case and keep the work traceable.
+                Your organisation still makes the call.
               </p>
               <p className="mt-5 max-w-4xl text-sm leading-relaxed text-muted-foreground">
-                A detection result cannot itself reject, delay or withhold a claim, impose a
-                sanction, or publish a shared-network notice. Those boundaries are deliberate parts
-                of how Sequrin is designed to operate.
+                That separation matters most when a decision could affect a claim, payment, sanction
+                or future shared-network action. Those decisions stay inside the authorised process
+                that is accountable for them.
               </p>
               <Link
                 to="/governance"
@@ -235,9 +234,9 @@ function ProductPage() {
 
         <section className="border-b border-border bg-surface">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-            <p className="label-mono">One operating flow</p>
+            <p className="label-mono">How the pieces fit</p>
             <h2 className="mt-4 max-w-3xl text-3xl leading-tight md:text-5xl">
-              The pieces work together around investigation.
+              One workflow from raw activity to a decision you can explain.
             </h2>
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-4">
               {operatingFlow.map(([number, title, body]) => (
@@ -262,11 +261,12 @@ function ProductPage() {
             <div>
               <p className="label-mono">For medical schemes</p>
               <h2 className="mt-4 max-w-3xl text-3xl leading-tight md:text-5xl">
-                A clearer operating layer for claims-integrity teams.
+                Want to see how it fits around the way your team already works?
               </h2>
               <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-                See how Sequrin can fit into a medical scheme's claims-integrity operation, from
-                analytical attention through human-led investigation and governed administration.
+                We can start with one bounded claims-integrity question and work from there, using
+                your investigators, your governance boundaries and measures agreed before the pilot
+                begins.
               </p>
               <p className="mt-6 text-sm text-muted-foreground">
                 <a
