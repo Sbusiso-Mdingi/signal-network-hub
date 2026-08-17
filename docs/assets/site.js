@@ -1,5 +1,13 @@
 /* Small, dependency-free enhancements for the static Sequrin site. */
 (function () {
+  var founderCard = document.querySelector(".founder-card");
+  if (founderCard) {
+    var founderStyles = document.createElement("link");
+    founderStyles.rel = "stylesheet";
+    founderStyles.href = "../assets/founder-card.css";
+    document.head.appendChild(founderStyles);
+  }
+
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   var bar = document.querySelector(".scroll-progress span");
