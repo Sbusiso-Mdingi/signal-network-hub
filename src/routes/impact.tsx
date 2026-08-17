@@ -19,31 +19,11 @@ export const Route = createFileRoute("/impact")({
 });
 
 const impactChain = [
-  [
-    "01",
-    "See more clearly",
-    "Connect analytical signals, relationships and investigative context.",
-  ],
-  [
-    "02",
-    "Focus attention",
-    "Help integrity teams prioritise the activity that warrants closer examination.",
-  ],
-  [
-    "03",
-    "Investigate better",
-    "Give authorised people a structured, traceable way to establish context.",
-  ],
-  [
-    "04",
-    "Respond accountably",
-    "Keep findings and consequential decisions inside governed human processes.",
-  ],
-  [
-    "05",
-    "Protect resources",
-    "Reduce avoidable leakage where investigations ultimately substantiate it.",
-  ],
+  ["01", "See the pattern", "Bring signals, relationships and investigation context together."],
+  ["02", "Spend time better", "Point limited investigative capacity at activity worth a closer look."],
+  ["03", "Build the case", "Give authorised investigators a structured way to test what the signal means."],
+  ["04", "Make the call", "Keep findings and consequential decisions inside the scheme's own process."],
+  ["05", "Count what changed", "Measure avoided or recovered leakage only where the evidence supports it."],
 ];
 
 const capabilityRoles = [
@@ -72,19 +52,19 @@ const capabilityRoles = [
 const measurementPoints = [
   {
     title: "Investigative relevance",
-    body: "How often prioritised signals lead to substantive human review, and which analytical methods contribute useful context.",
+    body: "How often a prioritised signal gives an investigator a genuine reason to look closer, and which methods are actually useful.",
   },
   {
     title: "Operational efficiency",
-    body: "How quickly teams can move from a signal to triage, investigation and a documented outcome without weakening governance.",
+    body: "Whether teams can get from signal to useful context and a documented outcome faster, without cutting governance corners.",
   },
   {
     title: "Confirmed financial effect",
-    body: "Scheme-validated recoveries or avoided leakage where the financial effect can be attributed to a completed integrity process.",
+    body: "Recoveries or avoided leakage that the scheme can verify after a completed investigation, not value inferred from a model score.",
   },
   {
     title: "Capability growth",
-    body: "The analytical, investigative, implementation and operational capacity built around stronger claims-integrity processes.",
+    body: "The analytical, investigative, implementation and operational skill built around a stronger claims-integrity function.",
   },
 ];
 
@@ -97,18 +77,18 @@ function ImpactPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
             <p className="label-mono">Impact</p>
             <h1 className="mt-5 max-w-5xl text-4xl leading-[1.08] md:text-6xl">
-              The value of claims integrity is what it helps preserve.
+              The point is not to flag more claims. It is to protect more of what already funds care.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Sequrin is being built to strengthen the operating capability behind healthcare claims
-              integrity. The wider goal is not simply to find unusual claims. It is to help
-              healthcare organisations protect finite resources, use investigative capacity more
-              effectively and build stronger local integrity capability.
+              Sequrin only matters if better context helps integrity teams use their time better and,
+              where the evidence supports it, prevent or recover avoidable leakage. The software is
+              one part of that chain. The investigation and the outcome still have to hold up on
+              their own.
             </p>
             <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
               <span>Protect healthcare resources</span>
               <span aria-hidden="true">•</span>
-              <span>Reduce unnecessary cost pressure</span>
+              <span>Use investigative time well</span>
               <span aria-hidden="true">•</span>
               <span>Build local capability</span>
             </div>
@@ -118,14 +98,14 @@ function ImpactPage() {
         <section className="border-b border-border bg-surface">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <div className="max-w-3xl">
-              <p className="label-mono text-primary">The impact chain</p>
+              <p className="label-mono text-primary">How value shows up</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                Impact begins long before a financial outcome is recorded.
+                The financial result is the end of the chain, not the first metric.
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Sequrin's contribution starts with visibility and investigative focus. Any financial
-                effect comes later, after authorised people establish context and the organisation
-                completes its own governed process.
+                First you have to see something useful, investigate it properly and reach an outcome
+                you can defend. Only then does it make sense to ask what financial effect that work
+                actually had.
               </p>
             </div>
 
@@ -140,9 +120,8 @@ function ImpactPage() {
             </div>
 
             <p className="mt-8 max-w-4xl border-l border-primary pl-4 text-sm leading-relaxed text-muted-foreground">
-              This is an impact pathway, not a guaranteed savings claim. A signal only becomes
-              financially meaningful when investigation and the scheme's own processes substantiate
-              an avoidable loss.
+              We will not turn a model score into a savings number. Financial value only counts when
+              a scheme has investigated the activity and can verify the outcome.
             </p>
           </div>
         </section>
@@ -152,30 +131,29 @@ function ImpactPage() {
             <div>
               <p className="label-mono text-primary">01 · Healthcare resources</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                More of the healthcare pool should serve healthcare.
+                Every avoidable rand lost is money the system cannot use twice.
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Medical-scheme resources are finite. When avoidable claims leakage is absorbed by
-                the same funding system that pays for legitimate care, it competes with the purpose
-                those resources were collected to serve.
+                Medical-scheme resources are finite. When avoidable leakage comes out of the same
+                pool that pays legitimate claims, it competes with the care those contributions were
+                collected to fund.
               </p>
               <p className="mt-5 leading-relaxed text-muted-foreground">
-                Any claim about protected resources needs a defined baseline, an investigated
-                outcome and a clear account of what the product contributed. Sequrin does not yet
-                present that evidence.
+                That does not mean every signal has a rand value attached to it. If we want to say
+                Sequrin protected a certain amount, we need a baseline, a completed investigation
+                and a scheme-validated outcome that shows what actually changed.
               </p>
             </div>
 
             <div className="border border-border-strong bg-surface p-7 md:p-9">
               <p className="font-display text-2xl leading-snug md:text-3xl">
-                Better integrity capability cannot create healthcare funding. It can help protect
-                the funding that already exists.
+                Better claims integrity does not create more healthcare funding. It can help less of
+                the funding already there leak away unnecessarily.
               </p>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Sequrin is designed to improve the visibility, prioritisation and investigative
-                context available to authorised teams. Where that leads to substantiated action, the
-                organisation has a better opportunity to prevent or recover avoidable expenditure
-                through its own lawful processes.
+                Sequrin is built to improve visibility, prioritisation and investigative context.
+                Where that helps a scheme substantiate a real issue, the scheme is in a better
+                position to prevent or recover avoidable expenditure through its own lawful process.
               </p>
             </div>
           </div>
@@ -186,35 +164,35 @@ function ImpactPage() {
             <div>
               <p className="label-mono text-primary">02 · Cost pressure</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                Avoidable leakage is one pressure the system should not have to carry.
+                Claims leakage is not the whole affordability problem. It is one part we can work on.
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Healthcare affordability is shaped by many forces. Claims leakage is only one of
-                them. Sequrin does not promise lower contributions or cheaper healthcare, but
-                stronger integrity processes can help remove one unnecessary source of financial
-                pressure.
+                Medical-aid affordability is shaped by far more than claims integrity. We are not
+                going to pretend one product can make contributions cheap or solve healthcare costs.
+                But avoidable leakage is still a pressure worth reducing when the evidence shows it
+                is there.
               </p>
               <p className="mt-5 leading-relaxed text-muted-foreground">
-                The objective is straightforward: help more of the available pool reach its intended
-                purpose rather than being lost to activity that a proper investigation could have
+                The practical goal is to help more of the available pool reach the purpose it was
+                meant for instead of being lost to activity that a proper investigation could have
                 identified and addressed.
               </p>
               <p className="mt-5 leading-relaxed text-muted-foreground">
-                No single headline estimate can establish the size of a scheme's claims-integrity
-                problem or the value of a particular product. A controlled evaluation should measure
-                the actual question in scope.
+                The size of that opportunity will be different for every scheme. That is why a
+                controlled evaluation should measure the actual problem in scope instead of starting
+                with a headline fraud percentage.
               </p>
             </div>
 
             <div className="grid gap-px border border-border bg-border">
               <div className="bg-background p-7">
-                <p className="label-mono">Not the claim</p>
+                <p className="label-mono">What we will not say</p>
                 <p className="mt-3 text-lg font-medium">"Sequrin will make medical aid cheaper."</p>
               </div>
               <div className="bg-background p-7">
-                <p className="label-mono text-primary">The defensible claim</p>
+                <p className="label-mono text-primary">What we can defend</p>
                 <p className="mt-3 text-lg font-medium">
-                  Better claims integrity can reduce an avoidable source of pressure on healthcare
+                  Better claims integrity can reduce one avoidable source of pressure on healthcare
                   financing.
                 </p>
               </div>
@@ -227,14 +205,13 @@ function ImpactPage() {
             <div className="max-w-4xl">
               <p className="label-mono text-primary">03 · Jobs and capability</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                A healthcare-integrity platform can build capability around the technology, not only
-                inside it.
+                If Sequrin grows, the capability around it has to grow too.
               </h2>
               <p className="mt-6 max-w-3xl leading-relaxed text-muted-foreground">
-                If Sequrin grows, the economic effect is broader than a software licence. Building,
-                operating and implementing the platform can create demand for technical, analytical,
-                operational and administrative work. Medical schemes can also strengthen the people
-                and processes around investigation, governance and data.
+                A software company is not just a licence. Building, securing, implementing and
+                supporting the product takes technical, analytical and operational people. Schemes
+                using stronger integrity tooling also need investigators, data people, governance
+                owners and implementation capability on their side.
               </p>
             </div>
 
@@ -255,7 +232,7 @@ function ImpactPage() {
             </div>
 
             <p className="mt-7 text-sm leading-relaxed text-muted-foreground">
-              These are potential capability effects of growth and adoption, not claims about jobs
+              These are the kinds of roles growth could support. We are not presenting them as jobs
               already created.
             </p>
           </div>
@@ -266,20 +243,21 @@ function ImpactPage() {
             <div>
               <p className="label-mono text-primary">04 · Wider healthcare relevance</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                Claims integrity is not only a private-scheme problem.
+                The same integrity problem exists wherever healthcare claims are paid.
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Any healthcare financing system that processes claims, reimbursements or provider
-                payments needs controls around integrity, investigation and accountability. The
-                structural problem can therefore extend beyond private medical schemes.
+                Private medical schemes are where Sequrin starts, but the underlying problem is not
+                unique to them. Any healthcare financing environment that pays claims,
+                reimbursements or providers needs a way to investigate unusual activity and keep
+                consequential decisions accountable.
               </p>
             </div>
 
             <div className="border border-border-strong bg-background p-7 md:p-9">
-              <p className="label-mono">Future public-sector application</p>
+              <p className="label-mono">Could this apply in the public sector?</p>
               <p className="mt-4 text-xl leading-relaxed">
-                Sequrin could eventually be evaluated for public-health financing environments, but
-                that would be a separate deployment context with its own requirements.
+                Potentially, but that would be a separate use case to prove, not a market we can
+                simply copy the private-scheme product into.
               </p>
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
                 {[
@@ -299,8 +277,9 @@ function ImpactPage() {
                 ))}
               </div>
               <p className="mt-7 border-l border-primary pl-4 text-sm leading-relaxed text-muted-foreground">
-                This is a future applicability case, not a claim that Sequrin is currently deployed
-                in, contracted to or approved for a public healthcare system.
+                Sequrin is not currently deployed in, contracted to or approved for a public
+                healthcare system. Any future public-sector use would need its own evidence,
+                procurement, integration, privacy review and oversight.
               </p>
             </div>
           </div>
@@ -311,12 +290,12 @@ function ImpactPage() {
             <div className="max-w-3xl">
               <p className="label-mono text-primary">Measure, then claim</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                Impact should be demonstrated, not decorated with a percentage.
+                If we cannot measure it properly, we should not market it as impact.
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Sequrin will only make quantitative impact claims when the underlying evidence is
-                defensible and the measurement is properly scoped. Early pilots should establish
-                operational and financial baselines before broader claims are made.
+                Early evaluations should establish a baseline before anyone starts talking about
+                percentages or savings. If Sequrin eventually makes a quantitative impact claim, it
+                should be tied to evidence, a defined scope and an outcome the scheme can verify.
               </p>
             </div>
 
@@ -336,11 +315,12 @@ function ImpactPage() {
             <div>
               <p className="label-mono">For medical schemes</p>
               <h2 className="mt-4 max-w-3xl text-3xl leading-tight md:text-5xl">
-                The impact case starts with a stronger integrity operation.
+                Start by proving that the integrity operation gets better.
               </h2>
               <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-                Explore how Sequrin fits into a medical scheme's workflow, or discuss a controlled
-                introduction designed to establish evidence before making broader impact claims.
+                Before we make a bigger impact claim, we should be able to show that your
+                investigators got more useful context, spent their time better and could verify any
+                financial outcome that followed.
               </p>
               <p className="mt-6 text-sm text-muted-foreground">
                 <a
