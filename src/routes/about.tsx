@@ -69,15 +69,21 @@ function AboutPage() {
         </section>
 
         <section className="border-b border-border bg-surface">
-          <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[220px_1fr] md:py-24">
+          <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-[minmax(260px,320px)_1fr] md:py-24 lg:gap-16">
+            <figure className="aspect-[4/5] w-full max-w-[320px] overflow-hidden rounded-2xl border border-border-strong bg-background">
+              <img
+                src="/sbusiso-mdingi-founder.webp"
+                alt="Sbusiso Mdingi, founder of Sequrin"
+                className="h-full w-full object-cover object-[50%_24%]"
+              />
+            </figure>
             <div>
-              <img src="/sbusiso-mdingi-founder.webp" alt="Sbusiso Mdingi, founder of Sequrin" className="w-40 border border-border-strong" />
-              <p className="label-mono mt-5">Founder</p>
-              <h2 className="mt-2 text-2xl">Sbusiso Mdingi</h2>
-            </div>
-            <div className="space-y-5 leading-relaxed text-muted-foreground">
-              <p>I started Sequrin because of one question I couldn't stop thinking about: what changes if you treat claims not as isolated transactions, but as observations inside a much bigger connected system?</p>
-              <p>That question turned into a platform built around analytical signals, relationship intelligence and the way investigators actually work. My goal is to help people see more and investigate better, then leave the consequential decision with the people and processes that are actually accountable for it.</p>
+              <p className="label-mono">Founder</p>
+              <h2 className="mt-3 text-3xl md:text-5xl">Sbusiso Mdingi</h2>
+              <div className="mt-6 max-w-3xl space-y-5 leading-relaxed text-muted-foreground">
+                <p>I started Sequrin because of one question I couldn't stop thinking about: what changes if you treat claims not as isolated transactions, but as observations inside a much bigger connected system?</p>
+                <p>That question turned into a platform built around analytical signals, relationship intelligence and the way investigators actually work. My goal is to help people see more and investigate better, then leave the consequential decision with the people and processes that are actually accountable for it.</p>
+              </div>
             </div>
           </div>
         </section>
