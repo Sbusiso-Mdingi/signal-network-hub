@@ -20,20 +20,20 @@ export const Route = createFileRoute("/for-medical-schemes")({
 
 const schemeOutcomes = [
   {
-    title: "See beyond the individual claim",
-    body: "Bring claim activity into relationship context across providers, members, facilities, timing and other relevant entities so investigators can examine patterns that isolated records may hide.",
+    title: "See past the individual claim",
+    body: "Claim activity gets pulled into relationship context, across providers, members, facilities, timing, and other relevant entities, so investigators can spot patterns that a single record would never show them.",
   },
   {
-    title: "Use investigative capacity where it matters",
-    body: "Prioritised signals can help claims-integrity teams focus scarce review capacity on activity that deserves closer examination instead of treating every unusual record the same way.",
+    title: "Point your investigators at what matters",
+    body: "Prioritised signals help your claims-integrity team spend limited review capacity on activity that actually deserves a closer look, instead of treating every flagged record the same way.",
   },
   {
-    title: "Keep scheme judgement in control",
-    body: "Sequrin does not turn detection into an automated fraud verdict, payment hold or sanction. Evidence, context and accountable scheme processes remain central to consequential decisions.",
+    title: "You keep the judgement calls",
+    body: "Sequrin doesn't turn a detection score into an automatic fraud finding, a payment hold, or a sanction. Evidence, context, and your team's own process stay central to any decision that actually matters.",
   },
   {
-    title: "Create a traceable integrity workflow",
-    body: "Signals, evidence, relationships and investigation history can be brought into one structured operating layer so important work is easier to review, explain and govern.",
+    title: "One place to see the whole investigation",
+    body: "Signals, evidence, relationships, and case history all live in one workspace, so the important work is easier to review, explain, and stand behind later.",
   },
 ];
 
@@ -41,46 +41,46 @@ const evaluationSteps = [
   [
     "01",
     "Define the question",
-    "Agree the claims-integrity problem, scope, data boundaries and evaluation criteria before analysis begins.",
+    "Agree on the claims-integrity problem, the scope, the data boundaries, and how success gets measured, before any analysis starts.",
   ],
   [
     "02",
     "Map the data",
-    "Identify the claims, provider, member, facility and reference fields needed to build a reliable analytical context.",
+    "Work out which claims, provider, member, facility and reference fields we'd actually need for a reliable analysis.",
   ],
   [
     "03",
     "Run a bounded evaluation",
-    "Use an agreed dataset and review window to assess signal relevance, relationship context and investigator usability.",
+    "Use an agreed dataset and review window to test whether the signals, relationships and context are actually useful to your investigators.",
   ],
   [
     "04",
-    "Validate with investigators",
-    "Have scheme subject-matter experts examine surfaced activity and distinguish useful leads from noise.",
+    "Validate with your investigators",
+    "Have your own subject-matter experts look at what got surfaced and tell us honestly what's a real lead and what's just noise.",
   ],
   [
     "05",
-    "Decide the next scope",
-    "Use measured evidence to determine whether deeper integration, broader coverage or no further rollout is justified.",
+    "Decide what's next",
+    "Use what we've measured, not what we've promised, to decide whether deeper integration, wider coverage, or nothing further makes sense.",
   ],
 ];
 
 const measures = [
   [
     "Investigative relevance",
-    "How often surfaced activity gives investigators a useful reason to look closer.",
+    "How often what we surface actually gives your investigators a real reason to look closer.",
   ],
   [
     "Review efficiency",
-    "Whether investigators can reach useful context faster or with fewer disconnected systems and manual steps.",
+    "Whether investigators can get to useful context faster, with fewer disconnected systems and less manual digging.",
   ],
   [
     "Context quality",
-    "Whether relationships, chronology and supporting evidence make analytical output easier to interpret.",
+    "Whether the relationships, timeline and supporting evidence actually make the analysis easier to interpret.",
   ],
   [
     "Confirmed financial effect",
-    "Any verified value associated with scheme-governed outcomes after investigation, measured from evidence rather than assumed model scores.",
+    "Any value your scheme has verified after investigation, measured from evidence, not assumed from a model score.",
   ],
 ];
 
@@ -93,13 +93,14 @@ function ForMedicalSchemesPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
             <p className="label-mono">For medical schemes</p>
             <h1 className="mt-5 max-w-5xl text-4xl leading-[1.08] md:text-6xl">
-              Give claims-integrity teams a connected investigative layer without handing decisions
-              to a black box.
+              A connected view for your integrity team, without handing your decisions to a black
+              box.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Sequrin is designed to sit around the work medical schemes already need to do:
-              identify unusual activity, understand the relationships around it, investigate
-              efficiently and keep consequential decisions with accountable people and processes.
+              Sequrin is built to sit around the work your claims-integrity team is already doing:
+              spotting unusual activity, understanding what's connected to it, investigating
+              efficiently, and keeping the decisions that matter with the people accountable for
+              them.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <a
@@ -123,42 +124,40 @@ function ForMedicalSchemesPage() {
             <div className="max-w-3xl">
               <p className="label-mono text-primary">Where Sequrin fits</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                An integrity layer around your existing claims operation.
+                We sit around your existing claims operation, not on top of it.
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Sequrin is not positioned as a replacement for a medical scheme's core
-                administration, payment or clinical systems. Its role is to help claims-integrity
-                teams connect analytical attention to structured investigation while preserving the
-                scheme's own operational authority. The sector collectively covers approximately 9
-                million beneficiaries (CMS, 2023/24), so even incremental improvements to
-                claims-integrity operations can have meaningful effects when aggregated across that
-                scale.
+                We're not trying to replace your core administration, payment, or clinical systems.
+                Our job is to help your integrity team connect analytical attention to structured
+                investigation, while your scheme keeps operational authority. Around 9 million
+                people rely on medical schemes across the sector (CMS, 2023/24), so even a small
+                improvement to how claims integrity works can add up fast at that scale.
               </p>
             </div>
 
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-3">
               <article className="bg-background p-7 md:p-8">
-                <p className="label-mono text-muted-foreground">Existing environment</p>
+                <p className="label-mono text-muted-foreground">Stays with you</p>
                 <h3 className="mt-4 text-2xl">Claims and reference data</h3>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                  Claims, provider, member, facility and related integrity data remain part of the
-                  scheme's operating environment and governed data estate.
+                  Claims, provider, member, facility, and related integrity data stay inside your
+                  own operating environment and governed data estate.
                 </p>
               </article>
               <article className="bg-background p-7 md:p-8">
-                <p className="label-mono text-primary">Sequrin</p>
+                <p className="label-mono text-primary">What we do</p>
                 <h3 className="mt-4 text-2xl">Detection and investigation</h3>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                  Rules, statistical methods and network analysis surface signals, then
-                  investigators review connected context inside a structured workspace.
+                  Rules, statistics and network analysis surface signals, then investigators review
+                  connected context inside one structured workspace.
                 </p>
               </article>
               <article className="bg-background p-7 md:p-8">
-                <p className="label-mono text-muted-foreground">Scheme authority</p>
+                <p className="label-mono text-muted-foreground">Stays your call</p>
                 <h3 className="mt-4 text-2xl">Consequential decisions</h3>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                  Claim outcomes, sanctions, recoveries and other consequential actions remain with
-                  authorised scheme processes, not the detection layer.
+                  Claim outcomes, sanctions, recoveries, and every other consequential action stay
+                  with your own authorised process, not with our detection layer.
                 </p>
               </article>
             </div>
@@ -167,9 +166,9 @@ function ForMedicalSchemesPage() {
 
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-            <p className="label-mono">What a scheme gets</p>
+            <p className="label-mono">What you actually get</p>
             <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">
-              Better investigative context without weakening accountability.
+              Better context for your investigators, without giving up accountability.
             </h2>
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-2">
               {schemeOutcomes.map((item) => (
@@ -185,19 +184,18 @@ function ForMedicalSchemesPage() {
         <section className="border-b border-border bg-surface">
           <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-[0.82fr_1.18fr] md:py-24">
             <div>
-              <p className="label-mono text-primary">A controlled first evaluation</p>
+              <p className="label-mono text-primary">Start small, on purpose</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                Start with evidence, not a transformation programme.
+                This isn't a transformation programme. It's a test.
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                A sensible first engagement does not require a scheme to redesign its claims
-                operation around Sequrin. It can begin with a bounded question, an agreed dataset,
-                real investigator review and explicit success criteria.
+                You don't need to redesign your claims operation around Sequrin to find out if it
+                helps. A first engagement can start with one bounded question, an agreed dataset,
+                real investigator review, and clear criteria for what "worked" actually means.
               </p>
               <p className="mt-6 border-l border-primary pl-4 text-sm leading-relaxed text-muted-foreground">
-                The purpose of an evaluation is to learn whether Sequrin adds useful investigative
-                value in the scheme's own context. It should be possible to conclude that it does
-                not.
+                The point of a pilot is to find out honestly whether Sequrin adds real value inside
+                your scheme. It should be entirely possible for the answer to be no.
               </p>
             </div>
 
@@ -220,44 +218,45 @@ function ForMedicalSchemesPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <div className="grid gap-12 md:grid-cols-2">
               <div>
-                <p className="label-mono">What we would need from a scheme</p>
+                <p className="label-mono">What we'd need from you</p>
                 <h2 className="mt-4 text-3xl leading-tight md:text-4xl">
-                  Enough context to test the product properly.
+                  Enough to actually give the product a fair test.
                 </h2>
                 <ul className="mt-8 space-y-4 text-sm leading-relaxed text-muted-foreground">
                   <li className="border-l border-border-strong pl-4">
-                    A clearly defined claims-integrity question or review objective.
+                    A clear claims-integrity question or review objective, not "show us what you've
+                    got."
                   </li>
                   <li className="border-l border-border-strong pl-4">
-                    Relevant claims and reference data with stable identifiers for the entities
-                    being analysed.
+                    Relevant claims and reference data, with stable identifiers for whatever we're
+                    analysing.
                   </li>
                   <li className="border-l border-border-strong pl-4">
-                    Claims-integrity or forensic subject-matter experts who can judge whether
-                    surfaced activity is genuinely useful.
+                    Claims-integrity or forensic people on your side who can judge whether what
+                    surfaces is genuinely useful.
                   </li>
                   <li className="border-l border-border-strong pl-4">
-                    A governance owner who can define access, data-handling and decision boundaries.
+                    Someone who owns governance and can define access and data-handling boundaries.
                   </li>
                   <li className="border-l border-border-strong pl-4">
-                    Agreed evaluation measures before outcomes are interpreted.
+                    Agreement on what we're measuring, before we start interpreting results.
                   </li>
                 </ul>
               </div>
 
               <div className="border border-border-strong bg-surface p-7 md:p-9">
-                <p className="label-mono text-primary">What Sequrin does not need</p>
+                <p className="label-mono text-primary">What we don't need</p>
                 <h2 className="mt-4 text-3xl leading-tight md:text-4xl">
-                  Control of your claims decisions.
+                  Control over your claims decisions.
                 </h2>
                 <p className="mt-6 leading-relaxed text-muted-foreground">
-                  Analytical access should not require surrendering adjudication authority. Sequrin
-                  can surface investigative signals and connected context without becoming the
-                  system that decides whether a member, provider or claim is sanctioned.
+                  Giving us access to analyse your data doesn't mean handing over adjudication
+                  authority. Sequrin can surface signals and connected context without becoming the
+                  system that decides whether a member, provider, or claim gets sanctioned.
                 </p>
                 <ul className="mt-7 space-y-3 text-sm text-muted-foreground">
                   <li>• No automatic claim rejection from a detection result.</li>
-                  <li>• No automatic payment withholding from a detection result.</li>
+                  <li>• No automatic payment hold from a detection result.</li>
                   <li>• No automatic fraud finding or sanction.</li>
                   <li>• No automatic publication into a shared network.</li>
                 </ul>
@@ -274,10 +273,10 @@ function ForMedicalSchemesPage() {
 
         <section className="border-b border-border bg-surface">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-            <p className="label-mono">How value should be measured</p>
+            <p className="label-mono">How we'd measure it</p>
             <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">
-              A scheme should be able to ask whether Sequrin actually improved the integrity
-              operation.
+              You should be able to ask, honestly, whether Sequrin made your integrity operation
+              better.
             </h2>
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-2">
               {measures.map(([title, body]) => (
@@ -288,9 +287,9 @@ function ForMedicalSchemesPage() {
               ))}
             </div>
             <p className="mt-8 max-w-4xl border-l border-primary pl-4 text-sm leading-relaxed text-muted-foreground">
-              Sequrin should not be sold to a scheme on an unsupported fraud-savings percentage or a
-              promise that contributions will fall. Quantitative claims should follow measured
-              outcomes, defensible baselines and the scheme's own validated evidence.
+              We won't sell you on a made-up fraud-savings percentage or promise your contributions
+              will drop. Any number we put in front of you should come from measured outcomes and a
+              baseline your own team has validated.
             </p>
           </div>
         </section>
@@ -300,12 +299,12 @@ function ForMedicalSchemesPage() {
             <div>
               <p className="label-mono">Next step</p>
               <h2 className="mt-4 max-w-3xl text-3xl leading-tight md:text-5xl">
-                Bring one claims-integrity question. We can start there.
+                Bring us one claims-integrity question. That's a good place to start.
               </h2>
               <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-                The most useful first conversation is not about buying a national platform. It is
-                about whether a bounded Sequrin evaluation can answer a real investigative question
-                inside your scheme's governance boundaries.
+                This isn't a pitch for a national platform. It's a conversation about whether a
+                bounded evaluation can answer one real investigative question inside your scheme's
+                own governance boundaries.
               </p>
               <p className="mt-6 text-sm text-muted-foreground">
                 <a
