@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
-import { NetworkVisual } from "@/components/site/NetworkVisual";
+import { HeroVideo } from "@/components/site/HeroVideo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -53,9 +53,7 @@ function HomePage() {
                 <Link to="/product" className="rounded-md border border-border-strong px-6 py-3 text-sm">Explore the product</Link>
               </div>
             </div>
-            <div className="border border-border bg-surface p-4">
-              <NetworkVisual className="w-full" />
-            </div>
+            <HeroVideo className="w-full" />
           </div>
         </section>
 
