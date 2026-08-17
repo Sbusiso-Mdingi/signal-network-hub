@@ -14,7 +14,7 @@
     "check:static-generated": "npm run build:static && git diff --exit-code -- docs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "validate:static": "node scripts/validate-static-site.mjs",
+    "validate:static": "node scripts/validate-react-static-site.mjs",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
