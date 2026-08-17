@@ -61,26 +61,37 @@
 
     if (!video || !button || !source) return;
 
+    var hidePlayOverlay = function () {
+      button.hidden = true;
+      button.style.display = "none";
+      button.setAttribute("aria-hidden", "true");
+    };
+
+    var showPlayOverlay = function () {
+      button.hidden = false;
+      button.style.removeProperty("display");
+      button.removeAttribute("aria-hidden");
+    };
+
     button.addEventListener("click", function () {
       if (!source.getAttribute("src")) {
         source.setAttribute("src", source.getAttribute("data-src"));
         video.load();
       }
 
-      button.hidden = true;
+      hidePlayOverlay();
       video.controls = true;
 
       var playback = video.play();
       if (playback && typeof playback.catch === "function") {
         playback.catch(function () {
-          button.hidden = false;
+          showPlayOverlay();
         });
       }
     });
 
-    video.addEventListener("error", function () {
-      button.hidden = false;
-    });
+    video.addEventListener("playing", hidePlayOverlay);
+    video.addEventListener("error", showPlayOverlay);
   });
 
   var top = document.querySelector(".back-to-top");
