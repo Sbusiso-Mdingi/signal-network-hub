@@ -51,37 +51,37 @@ const capabilities = [
   {
     id: "01",
     title: "Signal detection",
-    body: "Statistical methods, models and deterministic rules surface unusual activity as investigative signals, not verdicts.",
+    body: "Rules, statistics and models look for activity that stands out. What they find is a lead worth checking, not a verdict.",
   },
   {
     id: "02",
     title: "Network intelligence",
-    body: "Relationships between claims, providers, members, facilities and events help reveal patterns that individual records may hide.",
+    body: "See how a claim connects to other claims, providers, members and facilities — the relationships a single record won't show you.",
   },
   {
     id: "03",
     title: "Investigation workspace",
-    body: "Authorised teams can examine evidence, connected entities and investigative context through a structured workflow.",
+    body: "Evidence, connected entities and case notes live in one workspace, so investigators aren't piecing a case together across five tabs.",
   },
   {
     id: "04",
     title: "Governance and access",
-    body: "Roles, permissions, organisational boundaries and auditable administration keep sensitive integrity work controlled and accountable.",
+    body: "Roles, permissions and organisation boundaries are built in from the start, not bolted on because someone asked.",
   },
 ];
 
 const impactPoints = [
   {
     title: "Protect finite healthcare resources",
-    body: "Avoidable claims leakage places pressure on the same pools that fund member care. Better integrity capability helps schemes protect those resources.",
+    body: "Claims leakage draws from the same pool that pays for care. Catching it earlier means less of that pool disappears before it does its job.",
   },
   {
     title: "Focus investigative capacity",
-    body: "Connected context can help scarce investigative time move toward patterns that warrant closer attention instead of treating every record in isolation.",
+    body: "Investigators only have so many hours. Connected context should point that time at the activity actually worth chasing.",
   },
   {
     title: "Strengthen local capability",
-    body: "A stronger claims-integrity operating layer can support more specialised analytical, investigative and technical capability across healthcare.",
+    body: "Every scheme that builds this kind of capability strengthens the broader pool of analytical and investigative skill in South African healthcare.",
   },
 ];
 
@@ -95,13 +95,14 @@ function HomePage() {
             <div>
               <p className="label-mono">Healthcare claims integrity</p>
               <h1 className="mt-5 text-4xl leading-[1.08] md:text-6xl">
-                Claims integrity works better when patterns connect.
+                A claim can look fine on its own. The pattern around it might not.
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                Sequrin is a healthcare claims-integrity platform designed for medical schemes and
-                authorised integrity teams. It connects analytical signals, relationships and
-                investigative context so suspicious activity can be examined as a pattern, not just
-                a collection of isolated claims.
+                We're building tools for medical schemes and claims-integrity teams to see how
+                claims connect — through shared providers, timing, members, facilities — so a
+                review isn't just one record in isolation. It's still early. What exists today is a
+                working product and a clear idea of where it's going, not a finished national
+                system.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-4">
                 <Link
@@ -118,11 +119,11 @@ function HomePage() {
                 </a>
               </div>
               <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
-                <span>Signals, not verdicts</span>
+                <span>We surface leads</span>
                 <span aria-hidden="true">•</span>
-                <span>Human-led investigation</span>
+                <span>You investigate</span>
                 <span aria-hidden="true">•</span>
-                <span>Governed access</span>
+                <span>Access stays locked down</span>
               </div>
             </div>
             <div className="border border-border bg-surface p-4">
@@ -136,12 +137,13 @@ function HomePage() {
             <div>
               <p className="label-mono">The problem</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                A claim can look ordinary on its own.
+                Risk usually isn't visible in one claim. It's visible across a few.
               </h2>
               <p className="mt-6 max-w-lg leading-relaxed text-muted-foreground">
-                Risk often emerges through recurrence, timing, shared entities and network
-                relationships. Sequrin helps investigators move from isolated records to connected
-                context without turning an analytical signal into a conclusion.
+                Most of the useful signal isn't in any single claim, it's in the pattern across
+                several: the same provider showing up too often, timing that doesn't add up, a
+                member connected to a cluster of related activity. We're building Sequrin to
+                surface that kind of context without jumping to conclusions on your behalf.
               </p>
             </div>
             <div className="grid gap-px border border-border bg-border sm:grid-cols-2">
@@ -160,8 +162,8 @@ function HomePage() {
               ))}
               <div className="bg-background p-6 sm:col-span-2">
                 <p className="text-sm leading-relaxed">
-                  The value is not declaring misconduct. It is seeing the broader pattern early
-                  enough to ask a better investigative question.
+                  This isn't about calling something fraud. It's about noticing it early enough to
+                  actually ask the right question.
                 </p>
               </div>
             </div>
@@ -174,7 +176,7 @@ function HomePage() {
               <div>
                 <p className="label-mono">The product</p>
                 <h2 className="mt-4 max-w-3xl text-3xl leading-tight md:text-5xl">
-                  One operating layer for connected claims-integrity work.
+                  Everything an investigator needs, in one place.
                 </h2>
               </div>
               <Link
@@ -205,14 +207,14 @@ function HomePage() {
                 [
                   "02",
                   "Detect",
-                  "Surface patterns that deserve attention through rules, models and network analysis.",
+                  "Rules, models and network analysis surface what deserves a second look.",
                 ],
                 [
                   "03",
                   "Investigate",
                   "Review evidence, relationships and context through an authorised workflow.",
                 ],
-                ["04", "Decide", "Keep consequential decisions with accountable human processes."],
+                ["04", "Decide", "The call stays with your team, through your process."],
               ].map(([number, title, body]) => (
                 <div key={number} className="bg-surface p-6">
                   <p className="label-mono text-primary">{number}</p>
@@ -234,12 +236,13 @@ function HomePage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <p className="label-mono">Why it matters</p>
             <h2 className="mt-4 max-w-3xl text-3xl leading-tight md:text-5xl">
-              Better integrity capability protects more than a claims process.
+              This isn't just about catching bad claims.
             </h2>
             <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-              Claims leakage, fragmented investigation and limited analytical capacity all compete
-              with finite healthcare resources. Sequrin is designed to strengthen the operating
-              capability behind claims integrity.
+              Every rand lost to claims leakage is a rand that didn't go toward care. We're
+              building Sequrin because the operational side of claims integrity, the tooling, the
+              visibility, the investigative capacity, has real room to get better, and better
+              tooling here has a real effect on how far scheme funds actually stretch.
             </p>
 
             <div className="mt-14 grid gap-px border border-border bg-border md:grid-cols-3">
@@ -251,9 +254,8 @@ function HomePage() {
               ))}
             </div>
             <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Approximately 9 million South Africans depend on medical schemes for access to private
-              healthcare (CMS, 2023/24). These finite pools are what stronger integrity processes
-              are designed to help protect.
+              Around 9 million South Africans rely on medical schemes for private healthcare access
+              (CMS, 2023/24). That's the scale stronger integrity processes are meant to protect.
             </p>
             <Link
               to="/impact"
@@ -270,8 +272,8 @@ function HomePage() {
               <p className="label-mono">Accountable by design</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">Signals are not verdicts.</h2>
               <p className="mt-6 max-w-lg leading-relaxed text-muted-foreground">
-                Sequrin helps people investigate. It does not replace the judgement, evidence or
-                accountability required for consequential claims decisions.
+                We help people investigate faster and with better context. We don't make the call
+                for them, that's not what this is for.
               </p>
               <Link
                 to="/governance"
@@ -287,10 +289,10 @@ function HomePage() {
               </p>
               <ul className="mt-8 space-y-4 text-muted-foreground">
                 {[
-                  "Suspicious activity is a reason to investigate, not a finding of fraud.",
-                  "Sequrin does not reject claims, withhold payment or impose sanctions.",
-                  "Sensitive integrity work remains subject to governed access and organisational boundaries.",
-                  "Important investigative and administrative actions should remain auditable.",
+                  "Something unusual is a reason to look, not a verdict.",
+                  "We don't reject claims, hold payments, or hand out sanctions. That's not our job.",
+                  "Sensitive work stays behind access controls and organisation boundaries.",
+                  "The important stuff, investigations, admin actions, leaves a paper trail.",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 leading-relaxed">
                     <span aria-hidden="true" className="mt-2.5 h-px w-4 shrink-0 bg-primary" />
@@ -307,21 +309,19 @@ function HomePage() {
             <div>
               <p className="label-mono">Secure Integrity Network</p>
               <h2 className="mt-4 max-w-2xl text-3xl leading-tight md:text-5xl">
-                The long-term direction behind the name Sequrin.
+                Why the name is "Sequrin."
               </h2>
               <div className="mt-6 max-w-2xl space-y-5 leading-relaxed text-muted-foreground">
                 <p>
-                  Today, Sequrin is focused on helping authorised teams understand claims-integrity
-                  activity within a governed operating environment.
+                  Right now, Sequrin works inside one organisation at a time, no data crosses
+                  scheme boundaries.
                 </p>
                 <p>
-                  The broader vision is a Secure Integrity Network: infrastructure for responsible,
-                  governed integrity intelligence across organisational boundaries where that is
-                  appropriate and permitted.
-                </p>
-                <p className="border-l border-primary pl-4 text-sm">
-                  This is a development direction, not an operating national network or shared
-                  blacklist.
+                  The name points at something bigger, though: a future where schemes could see
+                  integrity patterns that cross those boundaries, with the right access rules and
+                  evidence standards in place. We're not there. That groundwork, the governance,
+                  the access model, the evidence bar, has to come first, and it's what we're
+                  actually building right now.
                 </p>
               </div>
               <Link
@@ -342,8 +342,8 @@ function HomePage() {
               </div>
               <div className="bg-background p-8">
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  Sequrin is pronounced “Securing”. The name reflects the idea of protecting
-                  healthcare integrity through connected, governed intelligence.
+                  Sequrin is pronounced "Securing." It's a nod to what we're actually trying to do,
+                  protect claims integrity through context people can trust, not guess at.
                 </p>
               </div>
             </div>
@@ -358,8 +358,9 @@ function HomePage() {
                 See where Sequrin fits into your claims-integrity operation.
               </h2>
               <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-                Explore the product, understand the operating model, or get in touch to discuss a
-                controlled introduction using appropriate data and governance boundaries.
+                Want to see how this could work for your team? Have a look at the product, or just
+                email us, we're happy to talk through what a careful first pilot would actually
+                look like.
               </p>
               <p className="mt-6 text-sm text-muted-foreground">
                 <a
