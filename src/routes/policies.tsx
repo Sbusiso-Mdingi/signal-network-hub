@@ -6,10 +6,11 @@ import { PUBLIC_CONTACT_EMAIL, PUBLIC_CONTACT_MAILTO } from "@/lib/siteLinks";
 export const Route = createFileRoute("/policies")({
   head: () => ({
     meta: [
-      { title: "Website notices | Sequrin" },
+      { title: "Privacy and website notices | Sequrin" },
       {
         name: "description",
-        content: "Privacy, website-use and contact information for the public Sequrin website.",
+        content:
+          "Privacy, data-protection, website-use and contact information for Sequrin, including access to the full Sequrin Privacy Policy.",
       },
     ],
     links: [{ rel: "canonical", href: "https://sequrin.tech/policies/" }],
@@ -20,18 +21,20 @@ export const Route = createFileRoute("/policies")({
 const policies = [
   {
     id: "privacy",
-    title: "Privacy on this website",
-    body: "The public website does not currently provide a contact form or use analytics, advertising trackers or cookies. Hosting and network providers may process routine technical request data needed to deliver and protect the service under their own terms.",
+    title: "Privacy and data protection",
+    body: "Sequrin processes personal information within a privacy and governance framework designed for South Africa's healthcare claims-integrity environment. Depending on the processing context, Sequrin may act as a Responsible Party for its own operations or as an Operator processing customer-controlled information on behalf of a medical scheme or other authorised customer. Sequrin does not sell personal information and does not reuse identifiable or pseudonymised customer claims data to train or improve its own general models.",
+    href: "/privacy/",
+    linkLabel: "Read the full Sequrin Privacy Policy",
   },
   {
     id: "email",
     title: "Email contact",
-    body: "Email is intended for business, partnership and website enquiries. Never send patient, member, claim, clinical, credential or other sensitive information to the public inbox.",
+    body: "Email is intended for business, partnership and website enquiries. Never send patient, member, claim, clinical, credential or other sensitive information to the public inbox unless Sequrin has expressly provided an authorised secure method for doing so.",
   },
   {
     id: "terms",
     title: "Informational use",
-    body: "This website describes an early-stage company and technology under development. Its content is general information, not clinical, legal, financial or claims-decision advice.",
+    body: "This website describes an early-stage company and technology under development. Its content is general information, not clinical, legal, financial or claims-decision advice. Customer-specific processing, security and retention terms may be supplemented by applicable agreements.",
   },
   {
     id: "security",
@@ -47,13 +50,15 @@ function PoliciesPage() {
       <main id="main" tabIndex={-1}>
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-            <p className="label-mono">Website notices</p>
+            <p className="label-mono">Privacy and website notices</p>
             <h1 className="mt-5 max-w-3xl text-4xl leading-[1.08] md:text-6xl">
-              How this public website operates.
+              Privacy, accountability and responsible use.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              These notices cover the public website at sequrin.tech. They do not cover the
-              authenticated Sequrin application or any future customer agreement.
+            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+              These notices summarise how the public website operates and provide access to
+              Sequrin&apos;s full Privacy Policy, which addresses the public website, the
+              authenticated Sequrin service and Sequrin&apos;s role when processing information for
+              authorised customers.
             </p>
           </div>
         </section>
@@ -63,7 +68,17 @@ function PoliciesPage() {
               {policies.map((policy) => (
                 <section id={policy.id} key={policy.id} className="scroll-mt-24 py-8">
                   <h2 className="text-2xl md:text-3xl">{policy.title}</h2>
-                  <p className="mt-3 max-w-2xl text-muted-foreground">{policy.body}</p>
+                  <p className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">
+                    {policy.body}
+                  </p>
+                  {policy.href ? (
+                    <a
+                      href={policy.href}
+                      className="mt-4 inline-flex text-sm text-primary underline-offset-4 hover:underline"
+                    >
+                      {policy.linkLabel} →
+                    </a>
+                  ) : null}
                 </section>
               ))}
             </div>
@@ -75,6 +90,14 @@ function PoliciesPage() {
               >
                 {PUBLIC_CONTACT_EMAIL}
               </a>
+              . Privacy enquiries may be directed to the Information Officer at{" "}
+              <a
+                href="mailto:sbusiso@sequrin.tech"
+                className="text-foreground underline-offset-4 hover:underline"
+              >
+                sbusiso@sequrin.tech
+              </a>
+              .
             </p>
           </div>
         </section>
