@@ -20,62 +20,62 @@ export const Route = createFileRoute("/governance")({
 const principles = [
   {
     number: "01",
-    title: "Signals are investigative, not determinative",
-    body: "Rules, models, statistical methods and network analysis may surface activity worth examining. Their output is a signal, not a finding of fraud or misconduct.",
+    title: "A signal is a lead, not a finding",
+    body: "Rules, models, statistics and network analysis can surface activity worth examining. What comes out is a signal. It's not a finding of fraud or misconduct, and we don't treat it like one.",
   },
   {
     number: "02",
-    title: "Detection has no claims authority",
-    body: "A detection result cannot itself reject, delay, redirect or withhold a claim or benefit payment, and cannot impose a sanction.",
+    title: "Detection has no say over a claim",
+    body: "A detection result can't reject, delay, redirect or withhold a claim or benefit payment on its own, and it can't impose a sanction either.",
   },
   {
     number: "03",
-    title: "Consequential judgement remains human",
-    body: "Evidence, context and accountable organisational processes remain responsible for conclusions and consequential decisions.",
+    title: "The judgement calls stay human",
+    body: "Evidence, context and your organisation's own accountable process are what actually produce a conclusion and any consequential decision.",
   },
   {
     number: "04",
-    title: "Access follows role and organisation",
-    body: "Sensitive claims-integrity information should only be available to appropriately authorised people within controlled organisational boundaries.",
+    title: "Access follows role, not login",
+    body: "Sensitive claims-integrity information should only reach people who are actually authorised for it, inside clear organisational boundaries.",
   },
   {
     number: "05",
-    title: "Important actions should be traceable",
-    body: "Investigation history, access decisions and significant administrative actions should support review, accountability and auditability.",
+    title: "The important stuff leaves a trail",
+    body: "Investigation history, access decisions and significant administrative actions should be reviewable and auditable, not just remembered.",
   },
   {
     number: "06",
-    title: "Collaboration requires separate governance",
-    body: "Cross-organisational sharing is not an informal extension of an investigation. Any shared-network action requires its own governed process.",
+    title: "Sharing across organisations needs its own rules",
+    body: "Cross-organisational sharing isn't a casual extension of one investigation. Anything that reaches a shared network needs its own governed process.",
   },
 ];
 
 const accessControls = [
   [
     "Organisation boundary",
-    "Operational data and workforce access remain scoped to the relevant organisation rather than becoming globally visible by default.",
+    "Operational data and staff access stay scoped to your organisation. It doesn't become globally visible by default just because it's in the system.",
   ],
   [
     "Explicit authority",
-    "Access to sensitive functions should follow assigned responsibilities rather than broad platform membership alone.",
+    "Reaching sensitive functions follows what someone's actually responsible for, not just whether they have an account.",
   ],
   [
     "Administrative separation",
-    "Managing access is distinct from making investigative findings, reducing the chance that one workflow silently grants another form of authority.",
+    "Managing access and making an investigative finding are two different jobs, so one workflow can't quietly grant the other kind of authority.",
   ],
   [
-    "Traceable change",
-    "Important role, permission and administrative changes should leave evidence that can be reviewed later.",
+    "A trail that holds up",
+    "Meaningful role, permission and admin changes leave something you can go back and check later.",
   ],
 ];
 
 const collaborationRequirements = [
-  "Clear participation and access rules",
+  "Clear rules on who can participate and access what",
   "Defined evidence and publication standards",
-  "Purpose limitation and data-governance controls",
-  "Separation between investigation and network publication",
-  "Correction, challenge and review mechanisms",
-  "Auditability across participating organisations",
+  "Purpose limits and real data-governance controls",
+  "A hard line between investigation and network publication",
+  "A way to correct, challenge and review a finding",
+  "Auditability that works across every participating organisation",
 ];
 
 function GovernancePage() {
@@ -87,12 +87,13 @@ function GovernancePage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
             <p className="label-mono">Governance</p>
             <h1 className="mt-5 max-w-4xl text-4xl leading-[1.08] md:text-6xl">
-              Governance is not a disclaimer. It is part of the operating model.
+              Governance isn't a disclaimer we tacked on. It's part of how this is built.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Claims-integrity technology works in a sensitive environment. Sequrin is designed so
-              analytical capability, access, investigation and collaboration each operate inside
-              explicit boundaries rather than collapsing into one automated decision system.
+              Claims-integrity work touches sensitive information and decisions with real
+              consequences. We've deliberately kept analysis, access, investigation and
+              collaboration as separate things, rather than folding them into one system that
+              decides everything on its own.
             </p>
           </div>
         </section>
@@ -101,7 +102,7 @@ function GovernancePage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <p className="label-mono text-primary">Core principles</p>
             <h2 className="mt-4 max-w-3xl text-3xl leading-tight md:text-5xl">
-              Six boundaries shape how Sequrin should be used.
+              Six lines we don't let Sequrin cross.
             </h2>
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
               {principles.map((principle) => (
@@ -120,37 +121,38 @@ function GovernancePage() {
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <div className="max-w-3xl">
-              <p className="label-mono text-primary">Decision boundary</p>
+              <p className="label-mono text-primary">Where the line actually sits</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                Analytics can prioritise attention. They do not inherit decision authority.
+                Analytics can point at something. They can't decide what it means.
               </h2>
             </div>
 
             <div className="mt-12 grid gap-px border border-border bg-border lg:grid-cols-2">
               <article className="bg-surface p-7 md:p-9">
                 <p className="label-mono">Analytical layer</p>
-                <h3 className="mt-4 text-2xl">What Sequrin may help surface</h3>
+                <h3 className="mt-4 text-2xl">What Sequrin might surface</h3>
                 <ul className="mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground">
-                  <li>Unusual claim or entity behaviour worth closer examination.</li>
-                  <li>Relationships between providers, members, facilities, claims and timing.</li>
+                  <li>Claim or entity behaviour that looks unusual and is worth a closer look.</li>
+                  <li>Relationships across providers, members, facilities, claims and timing.</li>
                   <li>Priority signals that help investigators decide where to spend attention.</li>
                   <li>
-                    Structured evidence and chronology that can support a human investigation.
+                    Structured evidence and a timeline that can actually support an investigation.
                   </li>
                 </ul>
               </article>
 
               <article className="bg-background p-7 md:p-9">
-                <p className="label-mono text-primary">Accountable authority</p>
-                <h3 className="mt-4 text-2xl">What remains outside detection</h3>
+                <p className="label-mono text-primary">Where a person has to step in</p>
+                <h3 className="mt-4 text-2xl">What stays outside detection, always</h3>
                 <ul className="mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground">
-                  <li>Determining that a person or provider committed fraud or misconduct.</li>
+                  <li>Deciding that a person or provider actually committed fraud or misconduct.</li>
                   <li>
                     Rejecting, delaying, withholding, redirecting or recovering a claim payment.
                   </li>
-                  <li>Imposing a sanction, contractual consequence or other adverse action.</li>
+                  <li>Imposing a sanction, a contractual consequence, or any other adverse action.</li>
                   <li>
-                    Publishing a shared-network notice or equivalent cross-organisational warning.
+                    Publishing a shared-network notice or anything like a cross-organisational
+                    warning.
                   </li>
                 </ul>
               </article>
@@ -158,7 +160,8 @@ function GovernancePage() {
 
             <div className="mt-8 border border-border-strong bg-surface p-7 md:p-9">
               <p className="font-display text-2xl leading-snug md:text-3xl">
-                Detection creates a reason to investigate. It does not create permission to punish.
+                Detection gives you a reason to look closer. It doesn't give you permission to
+                punish.
               </p>
             </div>
           </div>
@@ -170,12 +173,12 @@ function GovernancePage() {
               <div>
                 <p className="label-mono text-primary">Access governance</p>
                 <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                  Sensitive access should be deliberate, scoped and reviewable.
+                  Sensitive access should be deliberate, and reviewable after the fact.
                 </h2>
                 <p className="mt-6 leading-relaxed text-muted-foreground">
-                  Sequrin separates identity from operational authority. Being able to sign in does
-                  not, by itself, mean a person should be able to see every investigation,
-                  administer every user or perform every privileged action.
+                  We keep identity and operational authority separate. Being able to log in
+                  shouldn't, on its own, mean someone can see every investigation, administer every
+                  user, or take every privileged action.
                 </p>
               </div>
 
@@ -193,30 +196,30 @@ function GovernancePage() {
 
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-            <p className="label-mono text-primary">Investigation and publication</p>
+            <p className="label-mono text-primary">Investigation vs. publication</p>
             <h2 className="mt-4 max-w-3xl text-3xl leading-tight md:text-5xl">
-              A finding inside one organisation is not automatically a network publication.
+              A finding inside your organisation isn't automatically a network publication.
             </h2>
             <p className="mt-6 max-w-3xl leading-relaxed text-muted-foreground">
-              Sequrin deliberately separates investigation from cross-organisational publication. An
-              investigator may gather evidence, record context and reach an internal conclusion
-              through the organisation's accountable process. That does not grant direct authority
-              to publish a shared network notice.
+              We keep investigation and cross-organisational publication deliberately separate. An
+              investigator can gather evidence, build context, and reach a conclusion through your
+              organisation's own accountable process. That doesn't hand them the authority to
+              publish a shared network notice on top of it.
             </p>
 
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-4">
               {[
-                ["01", "Signal", "Analytical activity is surfaced for review."],
-                ["02", "Investigate", "Authorised people examine evidence and context."],
+                ["01", "Signal", "Analytical activity surfaces for review."],
+                ["02", "Investigate", "Authorised people look at evidence and context."],
                 [
                   "03",
                   "Conclude internally",
-                  "The organisation applies its own accountable decision process.",
+                  "Your organisation runs it through its own accountable process.",
                 ],
                 [
                   "04",
                   "Govern separately",
-                  "Any future shared-network publication follows an additional governed process.",
+                  "Any future shared-network publication follows its own separate, governed process.",
                 ],
               ].map(([number, title, body]) => (
                 <article key={number} className="bg-background p-6">
@@ -234,12 +237,12 @@ function GovernancePage() {
             <div>
               <p className="label-mono text-primary">Secure Integrity Network</p>
               <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                Network collaboration needs a higher governance bar, not a lower one.
+                Collaborating across organisations needs a higher bar, not a lower one.
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                The longer-term Secure Integrity Network vision is not a shared blacklist.
-                Cross-organisational integrity intelligence would need additional rules, controls
-                and accountability beyond those required inside a single medical scheme.
+                The longer-term Secure Integrity Network idea isn't a shared blacklist.
+                Cross-organisational intelligence would need more rules and more accountability
+                than anything required inside a single medical scheme, not less.
               </p>
               <Link
                 to="/network"
@@ -250,7 +253,7 @@ function GovernancePage() {
             </div>
 
             <div className="border border-border bg-background p-7 md:p-9">
-              <p className="label-mono">Any future network model should require</p>
+              <p className="label-mono">Any future network model would need</p>
               <div className="mt-6 grid gap-4 md:grid-cols-2">
                 {collaborationRequirements.map((item) => (
                   <div
@@ -269,14 +272,14 @@ function GovernancePage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
-                <p className="label-mono">Governance in one sentence</p>
+                <p className="label-mono">Governance, in one sentence</p>
                 <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">
-                  Sequrin can help people see more clearly, but authority remains with accountable
-                  people and governed organisations.
+                  Sequrin can help you see more clearly. The authority stays with your people and
+                  your organisation.
                 </h2>
                 <p className="mt-6 max-w-3xl leading-relaxed text-muted-foreground">
-                  That boundary is not a limitation added after the product was built. It is part of
-                  what the product is intended to be.
+                  That's not a limit we bolted on after the product was built. It's what the
+                  product was meant to be from the start.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 lg:justify-end">
