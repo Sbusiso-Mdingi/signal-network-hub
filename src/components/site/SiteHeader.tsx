@@ -4,6 +4,7 @@ import { APP_SIGN_IN_URL } from "@/lib/siteLinks";
 import { Wordmark } from "./Brand";
 
 const navigation = [
+  { label: "Home", to: "/" },
   { label: "Product", to: "/product" },
   { label: "How It Works", to: "/how-it-works" },
   { label: "For Medical Schemes", to: "/for-medical-schemes" },
