@@ -8,6 +8,22 @@
     document.head.appendChild(founderStyles);
   }
 
+  Array.prototype.forEach.call(document.querySelectorAll(".desktop-nav, .mobile-panel"), function (nav) {
+    var hasHome = Array.prototype.some.call(nav.querySelectorAll("a"), function (link) {
+      return link.textContent.trim().toLowerCase() === "home";
+    });
+
+    if (!hasHome) {
+      var homeLink = document.createElement("a");
+      homeLink.href = "/";
+      homeLink.textContent = "Home";
+      if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+        homeLink.setAttribute("aria-current", "page");
+      }
+      nav.insertBefore(homeLink, nav.firstChild);
+    }
+  });
+
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   var bar = document.querySelector(".scroll-progress span");
