@@ -1,11 +1,32 @@
 /* Small, dependency-free enhancements for the static Sequrin site. */
 (function () {
+  var enterpriseNumber = "2026/662912/07";
+  var legalName = "Sequrin Technologies";
+
   var founderCard = document.querySelector(".founder-card");
   if (founderCard) {
     var founderStyles = document.createElement("link");
     founderStyles.rel = "stylesheet";
     founderStyles.href = "../assets/founder-card.css";
     document.head.appendChild(founderStyles);
+
+    if (founderCard.textContent.indexOf(enterpriseNumber) === -1) {
+      var founderCopy = founderCard.querySelector("div");
+      if (founderCopy) {
+        var companyNote = document.createElement("p");
+        companyNote.textContent =
+          "Sequrin is being developed through Sequrin Technologies, a South African registered company (Enterprise No. " +
+          enterpriseNumber +
+          ").";
+        founderCopy.appendChild(companyNote);
+      }
+    }
+  }
+
+  var footerCopyright = document.querySelector(".footer-bottom-inner > span");
+  if (footerCopyright && footerCopyright.textContent.indexOf(enterpriseNumber) === -1) {
+    footerCopyright.textContent =
+      "© 2026 Sequrin. All rights reserved. · " + legalName + " · Enterprise No. " + enterpriseNumber;
   }
 
   Array.prototype.forEach.call(document.querySelectorAll(".desktop-nav, .mobile-panel"), function (nav) {
