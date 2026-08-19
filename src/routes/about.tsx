@@ -83,6 +83,7 @@ function AboutPage() {
               <div className="mt-6 max-w-3xl space-y-5 leading-relaxed text-muted-foreground">
                 <p>I started Sequrin because of one question I couldn't stop thinking about: what changes if you treat claims not as isolated transactions, but as observations inside a much bigger connected system?</p>
                 <p>That question turned into a platform built around analytical signals, relationship intelligence and the way investigators actually work. My goal is to help people see more and investigate better, then leave the consequential decision with the people and processes that are actually accountable for it.</p>
+                <p className="text-sm">Sequrin is being developed through Sequrin Technologies, a South African registered company (Enterprise No. 2026/662912/07).</p>
               </div>
             </div>
           </div>
