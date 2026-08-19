@@ -13,7 +13,7 @@ export const Route = createFileRoute("/product")({
           "See how Sequrin brings claims signals, connected relationships and investigation context into one workspace for medical-scheme integrity teams.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://sequrin.tech/product/" }],
+    links: [{ rel: "canonical", href: "https://sequrin.com/product/" }],
   }),
   component: ProductPage,
 });
