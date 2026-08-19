@@ -10,10 +10,10 @@ export const Route = createFileRoute("/login")({
       { name: "description", content: "Continue to the secure Sequrin application sign-in." },
       { property: "og:title", content: "Sign in | Sequrin" },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://sequrin.tech/login" },
+      { property: "og:url", content: "https://sequrin.com/login" },
       { name: "robots", content: "noindex" },
     ],
-    links: [{ rel: "canonical", href: "https://sequrin.tech/login" }],
+    links: [{ rel: "canonical", href: "https://sequrin.com/login" }],
   }),
   component: LoginRedirectPage,
 });
