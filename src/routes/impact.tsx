@@ -13,7 +13,7 @@ export const Route = createFileRoute("/impact")({
           "See why Sequrin is focused on helping claims-integrity teams use investigative time better and protect finite healthcare resources.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://sequrin.tech/impact/" }],
+    links: [{ rel: "canonical", href: "https://sequrin.com/impact/" }],
   }),
   component: ImpactPage,
 });
