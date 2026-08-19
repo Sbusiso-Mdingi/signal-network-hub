@@ -2,6 +2,60 @@
 (function () {
   var enterpriseNumber = "2026/662912/07";
   var legalName = "Sequrin Technologies";
+  var legacyDomain = "sequrin.tech";
+  var canonicalDomain = "sequrin.com";
+
+  function migrateDomain(value) {
+    return typeof value === "string" ? value.split(legacyDomain).join(canonicalDomain) : value;
+  }
+
+  /*
+   * Domain migration safety net.
+   *
+   * The static Pages bundle is committed output. During the sequrin.tech ->
+   * sequrin.com cut-over, normalise any legacy absolute URL or contact address
+   * left in an older generated page while the source/build pipeline catches up.
+   */
+  Array.prototype.forEach.call(
+    document.querySelectorAll('link[rel="canonical"], meta[property="og:url"], meta[property="og:image"], meta[name="twitter:image"]'),
+    function (element) {
+      if (element.tagName === "LINK") {
+        element.setAttribute("href", migrateDomain(element.getAttribute("href")));
+      } else {
+        element.setAttribute("content", migrateDomain(element.getAttribute("content")));
+      }
+    },
+  );
+
+  Array.prototype.forEach.call(
+    document.querySelectorAll("a[href], form[action], img[src], source[src], source[data-src], video[poster]"),
+    function (element) {
+      ["href", "action", "src", "data-src", "poster"].forEach(function (attribute) {
+        if (element.hasAttribute(attribute)) {
+          element.setAttribute(attribute, migrateDomain(element.getAttribute(attribute)));
+        }
+      });
+    },
+  );
+
+  Array.prototype.forEach.call(document.querySelectorAll('script[type="application/ld+json"]'), function (script) {
+    script.textContent = migrateDomain(script.textContent);
+  });
+
+  if (document.body && document.createTreeWalker) {
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var textNodes = [];
+    var current;
+    while ((current = walker.nextNode())) {
+      var parentName = current.parentElement && current.parentElement.tagName;
+      if (parentName && !/^(SCRIPT|STYLE|NOSCRIPT|CODE|PRE)$/.test(parentName) && current.nodeValue.indexOf(legacyDomain) !== -1) {
+        textNodes.push(current);
+      }
+    }
+    textNodes.forEach(function (node) {
+      node.nodeValue = migrateDomain(node.nodeValue);
+    });
+  }
 
   var founderCard = document.querySelector(".founder-card");
   if (founderCard) {
