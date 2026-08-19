@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
           "Sequrin is a South African healthcare claims-integrity company building connected investigation tools for medical schemes.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://sequrin.tech/" }],
+    links: [{ rel: "canonical", href: "https://sequrin.com/" }],
   }),
   component: HomePage,
 });
@@ -49,7 +49,7 @@ function HomePage() {
                 so an investigation starts with more than one record in isolation.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
-                <a href="mailto:info@sequrin.tech?subject=Sequrin%20evaluation%20discussion" className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground">Discuss an evaluation</a>
+                <a href="mailto:info@sequrin.com?subject=Sequrin%20evaluation%20discussion" className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground">Discuss an evaluation</a>
                 <Link to="/product" className="rounded-md border border-border-strong px-6 py-3 text-sm">Explore the product</Link>
               </div>
             </div>
@@ -122,7 +122,7 @@ function HomePage() {
         <section className="border-b border-border bg-surface">
           <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-end md:justify-between">
             <div><p className="label-mono">Start with a real question</p><h2 className="mt-4 text-3xl md:text-4xl">Bring us one claims-integrity problem worth testing.</h2><p className="mt-4 max-w-2xl text-muted-foreground">A useful first conversation is about the question, the data you have and what would count as evidence that Sequrin actually helped.</p></div>
-            <div className="flex gap-3"><a href="mailto:info@sequrin.tech?subject=Sequrin%20evaluation%20discussion" className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground">Discuss an evaluation</a><Link to="/for-medical-schemes" className="rounded-md border border-border-strong px-6 py-3 text-sm">For medical schemes</Link></div>
+            <div className="flex gap-3"><a href="mailto:info@sequrin.com?subject=Sequrin%20evaluation%20discussion" className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground">Discuss an evaluation</a><Link to="/for-medical-schemes" className="rounded-md border border-border-strong px-6 py-3 text-sm">For medical schemes</Link></div>
           </div>
         </section>
       </main>
