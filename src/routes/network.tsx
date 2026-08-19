@@ -12,7 +12,7 @@ export const Route = createFileRoute("/network")({
           "Learn about Sequrin's longer-term Secure Integrity Network direction and the governance needed for responsible cross-organisation claims-integrity collaboration.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://sequrin.tech/network/" }],
+    links: [{ rel: "canonical", href: "https://sequrin.com/network/" }],
   }),
   component: NetworkPage,
 });
