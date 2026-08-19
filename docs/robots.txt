@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sequrin.tech/sitemap.xml
+Sitemap: https://sequrin.com/sitemap.xml
