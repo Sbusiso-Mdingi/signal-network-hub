@@ -6,7 +6,7 @@ Sequrin is an early-stage South African company developing healthcare claims-int
 
 ## Public site
 
-The intended production domain is **https://sequrin.tech**.
+The production domain is **https://sequrin.com**.
 
 Current route structure:
 
@@ -20,9 +20,9 @@ Current route structure:
 - `/network` longer-term Secure Integrity Network direction
 - `/privacy` full Sequrin Privacy Policy
 - `/policies` factual notices for the public website
-- `/login` sign-in handoff to `https://app.sequrin.tech/sign-in`
+- `/login` sign-in handoff to `https://app.sequrin.com/sign-in`
 
-Business contact: **info@sequrin.tech**
+Business contact: **info@sequrin.com**
 
 ## Product principles
 
@@ -40,12 +40,15 @@ Two post-generation layers preserve content that should not be overwritten by th
 - `scripts/apply-privacy-policy.mjs` applies the full Sequrin privacy-policy integration.
 - `scripts/apply-static-copy.mjs` applies the final human-written public copy while preserving the static site's existing layout and visual system.
 
+The final `scripts/enforce-public-domain.mjs` step normalises generated public output to the canonical `sequrin.com` domain and prevents the retired `.tech` domain from being reintroduced into deployable Pages files.
+
 For public-site copy changes, treat the static site as authoritative. Update the relevant committed `docs/` page and keep `scripts/apply-static-copy.mjs` in sync so a later static build reproduces the same copy. The retained React routes should mirror the static copy, not drive the GitHub Pages deployment.
 
 Regenerate and validate the public site with:
 
 ```bash
 npm run build:static
+npm run check:domain
 npm run check:static-generated
 npm run validate:static
 ```
@@ -54,12 +57,13 @@ GitHub Pages should be configured to deploy from:
 
 - Branch: `main`
 - Folder: `/docs`
+- Custom domain: `sequrin.com`
 
 ## Application boundary
 
 This repository contains the **public Sequrin website**, not the authenticated Sequrin application or backend services.
 
-Public website sign-in actions route to **https://app.sequrin.tech/sign-in**. The public site does not implement a second authentication system.
+Public website sign-in actions route to **https://app.sequrin.com/sign-in**. The public site does not implement a second authentication system.
 
 ## Retained application source
 
@@ -85,6 +89,10 @@ bun run build
 ```
 
 Node 22.12 or newer is required for the current Vite toolchain. Static prerendering remains available for the retained React application, but changes intended for the public deployment must also be reflected in the static-site copy layer.
+
+## Domain migration
+
+`sequrin.com` is the canonical public and business-identity domain. The former `sequrin.tech` domain should be retained only for controlled redirects during migration and must not be treated as a second canonical site.
 
 ## Repository scope
 
