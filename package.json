@@ -15,7 +15,7 @@
     "check:domain": "node scripts/enforce-public-domain.mjs --check",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "validate:static": "node scripts/validate-static-site.mjs",
+    "validate:static": "node scripts/run-static-validation.mjs",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
