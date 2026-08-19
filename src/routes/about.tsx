@@ -13,7 +13,7 @@ export const Route = createFileRoute("/about")({
           "The story behind Sequrin, a South African healthcare claims-integrity company building connected investigation tools for medical schemes.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://sequrin.tech/about/" }],
+    links: [{ rel: "canonical", href: "https://sequrin.com/about/" }],
   }),
   component: AboutPage,
 });
