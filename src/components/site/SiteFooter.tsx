@@ -58,33 +58,24 @@ export function SiteFooter() {
             {PUBLIC_CONTACT_EMAIL}
           </a>
           <nav aria-label="Policies" className="mt-8 flex flex-wrap gap-x-4 gap-y-2 text-xs">
-            <Link
-              to="/policies"
-              hash="privacy"
-              className="text-muted-foreground hover:text-foreground"
-            >
+            <a href="/privacy/" className="text-muted-foreground hover:text-foreground">
               Privacy
-            </Link>
-            <Link
-              to="/policies"
-              hash="terms"
-              className="text-muted-foreground hover:text-foreground"
-            >
+            </a>
+            <a href="/paia/" className="text-muted-foreground hover:text-foreground">
+              PAIA
+            </a>
+            <a href="/terms/" className="text-muted-foreground hover:text-foreground">
               Terms
-            </Link>
-            <Link
-              to="/policies"
-              hash="security"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              Security
-            </Link>
+            </a>
+            <a href="/cookies/" className="text-muted-foreground hover:text-foreground">
+              Cookies
+            </a>
           </nav>
         </div>
       </div>
       <div className="border-t border-border">
         <p className="mx-auto max-w-6xl px-6 py-6 text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Sequrin. All rights reserved. · Sequrin Technologies · Enterprise No. 2026/662912/07
+          © {new Date().getFullYear()} Sequrin Technologies (Pty) Ltd · Enterprise No. 2026/662912/07
         </p>
       </div>
     </footer>

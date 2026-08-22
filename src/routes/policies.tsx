@@ -13,7 +13,7 @@ export const Route = createFileRoute("/policies")({
           "Privacy, website-use, security and contact notices for Sequrin, with access to the full Sequrin Privacy Policy.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://sequrin.tech/policies/" }],
+    links: [{ rel: "canonical", href: "https://sequrin.com/policies/" }],
   }),
   component: PoliciesPage,
 });
@@ -23,8 +23,8 @@ const notices = [
     id: "privacy",
     title: "Privacy",
     paragraphs: [
-      "Sequrin handles different information in different roles. For our own website and business activity, we may be the Responsible Party. When a medical scheme or another authorised customer gives us claims data to process for its own claims-integrity work, we will ordinarily act as its Operator.",
-      "We do not sell personal information, and we do not use identifiable or pseudonymised customer claims data to train or improve Sequrin's own general models.",
+      "The current public website is informational and has no contact form, visitor account, advertising tracker or non-essential analytics in the reviewed build. Hosting and network providers may process routine request and security data.",
+      "Sequrin currently uses synthetic and development data in product demonstrations. Any future customer-controlled claims evaluation requires separate legal, privacy, security and contractual approval.",
     ],
     link: { href: "/privacy/", label: "Read the full Sequrin Privacy Policy" },
   },
@@ -37,10 +37,11 @@ const notices = [
   },
   {
     id: "terms",
-    title: "About the information on this site",
+    title: "Terms and public claims",
     paragraphs: [
-      "This website describes an early-stage company and a product that is still being developed and evaluated. It is general information, not clinical, legal, financial or claims-decision advice, and it does not create a customer relationship on its own. A customer agreement may add more specific terms around data, security, retention and use of the service.",
+      "This website describes an early-stage company and a product under development. It is not evidence of a production deployment, customer, regulatory approval, certification, detection accuracy or financial outcome. Read the full website terms for the governing public-use conditions.",
     ],
+    link: { href: "/terms/", label: "Read the website terms" },
   },
   {
     id: "security",
@@ -53,7 +54,7 @@ const notices = [
     id: "application",
     title: "Application sign in",
     paragraphs: [
-      "The Sign in link takes invited users to the separately hosted Sequrin application at app.sequrin.tech. The public website does not ask you to enter workspace credentials.",
+      "The Sign in link takes invited, authorised users to the separately hosted Sequrin application. The public website does not ask visitors to enter workspace credentials.",
     ],
   },
 ];
@@ -74,7 +75,7 @@ function PoliciesPage() {
               information across the public website, the authenticated service and customer-controlled
               claims data in much more detail.
             </p>
-            <p className="label-mono mt-6">Last updated 17 August 2026</p>
+            <p className="label-mono mt-6">Last updated 22 August 2026</p>
           </div>
         </section>
 
@@ -109,8 +110,8 @@ function PoliciesPage() {
               <p className="label-mono">Questions</p>
               <h2 className="mt-4 text-3xl md:text-4xl">Need the detailed version?</h2>
               <p className="mt-4 max-w-2xl text-muted-foreground">
-                For privacy matters, contact Sbusiso Mdingi, Sequrin's Information Officer, at
-                {" "}<a href="mailto:sbusiso@sequrin.tech" className="text-foreground underline-offset-4 hover:underline">sbusiso@sequrin.tech</a>.
+                Privacy, PAIA, legal and security enquiries can be sent to
+                {" "}<a href={PUBLIC_CONTACT_MAILTO} className="text-foreground underline-offset-4 hover:underline">{PUBLIC_CONTACT_EMAIL}</a>.
               </p>
             </div>
             <div className="flex gap-3">

@@ -3,8 +3,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const oldSocialImage = "https://sequrin.tech/assets/sequrin-social-preview.jpg";
-const newSocialImage = "https://sequrin.tech/assets/sequrin-social-preview-2026.jpg";
+const oldSocialImage = "https://sequrin.com/assets/sequrin-social-preview.jpg";
+const newSocialImage = "https://sequrin.com/assets/sequrin-social-preview-2026.jpg";
 const oldAlt = "Illustrative Sequrin connected claims interface using synthetic data.";
 const newAlt = "Sequrin healthcare claims integrity brand card.";
 

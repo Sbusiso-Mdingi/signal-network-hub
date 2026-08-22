@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-const VIDEO_SRC = "https://sequrin.tech/assets/sequrin-homepage-explainer.mp4";
+const VIDEO_SRC = "https://sequrin.com/assets/sequrin-homepage-explainer.mp4";
 
 /**
  * React/Lovable mirror of the production static homepage video.

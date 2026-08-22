@@ -13,7 +13,7 @@ export const Route = createFileRoute("/governance")({
           "See the human oversight, access and decision boundaries built into Sequrin's claims-integrity approach.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://sequrin.tech/governance/" }],
+    links: [{ rel: "canonical", href: "https://sequrin.com/governance/" }],
   }),
   component: GovernancePage,
 });
