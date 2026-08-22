@@ -4,9 +4,9 @@ import { fileURLToPath } from "node:url";
 
 const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const checkOnly = process.argv.includes("--check");
-const contactEmail = "info@sequrin.tech";
-const applicationUrl = "https://app.sequrin.tech/sign-in";
-const socialImageUrl = "https://sequrin.tech/assets/sequrin-social-preview.jpg";
+const contactEmail = "info@sequrin.com";
+const applicationUrl = "https://app.sequrin.com/sign-in";
+const socialImageUrl = "https://sequrin.com/assets/sequrin-social-preview-2026.jpg";
 
 const logo = `<svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor">
   <path d="M16 4 L26 10 V22 L16 28 L6 22 V10 Z" stroke-width="1.25" opacity=".45"></path>
@@ -66,7 +66,10 @@ function footer(prefix) {
       <a href="${prefix}impact/">Why it matters</a>
       <a href="${prefix}governance/">Governance</a>
       <a href="${prefix}network/">Long-term direction</a>
-      <a href="${prefix}policies/">Website notices</a>
+      <a href="${prefix}privacy/">Privacy</a>
+      <a href="${prefix}paia/">PAIA</a>
+      <a href="${prefix}terms/">Terms</a>
+      <a href="${prefix}cookies/">Cookies</a>
     </nav>
     <div class="footer-contact">
       <p class="footer-heading">Contact</p>
@@ -76,7 +79,7 @@ function footer(prefix) {
   </div>
   <div class="footer-bottom">
     <div class="container footer-bottom-inner">
-      <span>&copy; 2026 Sequrin. All rights reserved.</span>
+      <span>&copy; 2026 Sequrin Technologies (Pty) Ltd &middot; Enterprise No. 2026/662912/07</span>
       <a class="back-to-top" href="#main">Back to top</a>
     </div>
   </div>
@@ -89,22 +92,24 @@ function structuredData() {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://sequrin.tech/#organisation",
+        "@id": "https://sequrin.com/#organisation",
         name: "Sequrin",
+        legalName: "Sequrin Technologies (Pty) Ltd",
         alternateName: "Sequrin, pronounced Securing",
-        url: "https://sequrin.tech/",
+        url: "https://sequrin.com/",
         email: contactEmail,
-        logo: "https://sequrin.tech/favicon.svg",
+        logo: "https://sequrin.com/favicon.svg",
+        identifier: "2026/662912/07",
         founder: { "@type": "Person", name: "Sbusiso Mdingi" },
         description:
           "An early-stage South African company developing healthcare claims-integrity technology for medical schemes.",
       },
       {
         "@type": "WebSite",
-        "@id": "https://sequrin.tech/#website",
-        url: "https://sequrin.tech/",
+        "@id": "https://sequrin.com/#website",
+        url: "https://sequrin.com/",
         name: "Sequrin",
-        publisher: { "@id": "https://sequrin.tech/#organisation" },
+        publisher: { "@id": "https://sequrin.com/#organisation" },
         inLanguage: "en-ZA",
       },
     ],
@@ -121,7 +126,7 @@ function renderPage({
   preloadImage = false,
 }) {
   const prefix = route === "/" ? "" : "../";
-  const canonical = `https://sequrin.tech${route}`;
+  const canonical = `https://sequrin.com${route}`;
   const assetPrefix = prefix;
   const robots = noindex ? '<meta name="robots" content="noindex,follow">' : "";
   const preload = preloadImage
@@ -157,9 +162,6 @@ ${robots}
   <link rel="icon" href="${assetPrefix}favicon.svg" type="image/svg+xml">
   <link rel="icon" href="${assetPrefix}favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="${assetPrefix}apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
 ${preload}
   <link rel="stylesheet" href="${assetPrefix}assets/site.css">
 ${schema}
@@ -432,14 +434,14 @@ const pages = [
     title: "Website notices | Sequrin",
     description: "Privacy, website-use and contact information for the public Sequrin website.",
     active: "",
-    body: `<section class="page-hero compact-hero"><div class="container narrow"><p class="eyebrow">Website notices</p><h1>How this public website operates.</h1><p class="lead">These notices cover the public website at sequrin.tech. They do not cover the authenticated Sequrin application or any future customer agreement.</p><p class="updated">Last updated 15 August 2026</p></div></section>
+    body: `<section class="page-hero compact-hero"><div class="container narrow"><p class="eyebrow">Website notices</p><h1>How this public website operates.</h1><p class="lead">These notices cover the public website at sequrin.com. They do not cover the authenticated Sequrin application or any future customer agreement.</p><p class="updated">Last updated 15 August 2026</p></div></section>
 
 <section class="section"><div class="container notice-list">
   <article id="privacy"><p class="notice-index">01</p><div><h2>Privacy on this website</h2><p>The public website does not currently provide a contact form or use analytics, advertising trackers or cookies. It is hosted through GitHub Pages. Hosting and network providers may process routine technical request data needed to deliver and protect the service under their own terms and privacy notices.</p><p>You can read the <a class="text-link" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>.</p></div></article>
   <article id="email"><p class="notice-index">02</p><div><h2>Email contact</h2><p>Contact is available at <a class="text-link" href="mailto:${contactEmail}">${contactEmail}</a> for business, partnership and website enquiries. Never send patient, member, claim, clinical, credential or other sensitive information to this address. The public inbox is not a channel for case submissions.</p></div></article>
   <article id="terms"><p class="notice-index">03</p><div><h2>Informational use</h2><p>This website describes an early-stage company and technology under development. Its content is general information, not clinical, legal, financial or claims-decision advice. It does not promise that a capability is available in production or create a customer relationship.</p></div></article>
   <article id="security"><p class="notice-index">04</p><div><h2>Security enquiries</h2><p>General security concerns about the public website can be sent to <a class="text-link" href="mailto:${contactEmail}?subject=Website%20security%20enquiry">${contactEmail}</a>. Do not include sensitive healthcare data, credentials or exploit details in an initial message, and do not test Sequrin systems without written authorisation.</p></div></article>
-  <article id="application"><p class="notice-index">05</p><div><h2>External application sign in</h2><p>The Sign in link opens the separately hosted Sequrin application at app.sequrin.tech. Access is intended for invited, authorised users and is subject to the application's authentication and access controls. The public website does not ask visitors to enter workspace credentials.</p></div></article>
+  <article id="application"><p class="notice-index">05</p><div><h2>External application sign in</h2><p>The Sign in link opens the separately hosted Sequrin application at app.sequrin.com. Access is intended for invited, authorised users and is subject to the application's authentication and access controls. The public website does not ask visitors to enter workspace credentials.</p></div></article>
 </div></section>
 
 <section class="section cta-section"><div class="container cta-grid"><div><p class="eyebrow">Questions</p><h2>Ask about the website or these notices.</h2></div><div class="actions"><a class="button primary" href="mailto:${contactEmail}?subject=Sequrin%20website%20question">Email Sequrin</a><a class="button secondary" href="../">Return home</a></div></div></section>`,
@@ -451,7 +453,7 @@ const pages = [
     description: "Continue to the separately hosted Sequrin application sign-in.",
     active: "",
     noindex: true,
-    body: `<section class="login-section"><div class="login-card"><p class="eyebrow">Application sign in</p><h1>Continue to the Sequrin application.</h1><p>The authenticated workspace is hosted separately at app.sequrin.tech and is intended for invited, authorised users.</p><div class="actions"><a class="button primary" href="${applicationUrl}">Continue to sign in</a><a class="button secondary" href="../">Return to the website</a></div><p class="login-note">The public website does not collect or process workspace credentials.</p></div></section>`,
+    body: `<section class="login-section"><div class="login-card"><p class="eyebrow">Application sign in</p><h1>Continue to the Sequrin application.</h1><p>The authenticated workspace is hosted separately at app.sequrin.com and is intended for invited, authorised users.</p><div class="actions"><a class="button primary" href="${applicationUrl}">Continue to sign in</a><a class="button secondary" href="../">Return to the website</a></div><p class="login-note">The public website does not collect or process workspace credentials.</p></div></section>`,
   },
 ];
 

@@ -11,14 +11,18 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as ForMedicalSchemesRouteImport } from './routes/for-medical-schemes'
 import { Route as GovernanceRouteImport } from './routes/governance'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as ImpactRouteImport } from './routes/impact'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as NetworkRouteImport } from './routes/network'
+import { Route as PaiaRouteImport } from './routes/paia'
 import { Route as PoliciesRouteImport } from './routes/policies'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ProductRouteImport } from './routes/product'
+import { Route as TermsRouteImport } from './routes/terms'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,6 +32,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ForMedicalSchemesRoute = ForMedicalSchemesRouteImport.update({
@@ -60,9 +69,19 @@ const NetworkRoute = NetworkRouteImport.update({
   path: '/network',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PaiaRoute = PaiaRouteImport.update({
+  id: '/paia',
+  path: '/paia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PoliciesRoute = PoliciesRouteImport.update({
   id: '/policies',
   path: '/policies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProductRoute = ProductRouteImport.update({
@@ -70,94 +89,127 @@ const ProductRoute = ProductRouteImport.update({
   path: '/product',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/cookies': typeof CookiesRoute
   '/for-medical-schemes': typeof ForMedicalSchemesRoute
   '/governance': typeof GovernanceRoute
   '/how-it-works': typeof HowItWorksRoute
   '/impact': typeof ImpactRoute
   '/login': typeof LoginRoute
   '/network': typeof NetworkRoute
+  '/paia': typeof PaiaRoute
   '/policies': typeof PoliciesRoute
+  '/privacy': typeof PrivacyRoute
   '/product': typeof ProductRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/cookies': typeof CookiesRoute
   '/for-medical-schemes': typeof ForMedicalSchemesRoute
   '/governance': typeof GovernanceRoute
   '/how-it-works': typeof HowItWorksRoute
   '/impact': typeof ImpactRoute
   '/login': typeof LoginRoute
   '/network': typeof NetworkRoute
+  '/paia': typeof PaiaRoute
   '/policies': typeof PoliciesRoute
+  '/privacy': typeof PrivacyRoute
   '/product': typeof ProductRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/cookies': typeof CookiesRoute
   '/for-medical-schemes': typeof ForMedicalSchemesRoute
   '/governance': typeof GovernanceRoute
   '/how-it-works': typeof HowItWorksRoute
   '/impact': typeof ImpactRoute
   '/login': typeof LoginRoute
   '/network': typeof NetworkRoute
+  '/paia': typeof PaiaRoute
   '/policies': typeof PoliciesRoute
+  '/privacy': typeof PrivacyRoute
   '/product': typeof ProductRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
+    | '/cookies'
     | '/for-medical-schemes'
     | '/governance'
     | '/how-it-works'
     | '/impact'
     | '/login'
     | '/network'
+    | '/paia'
     | '/policies'
+    | '/privacy'
     | '/product'
+    | '/terms'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/cookies'
     | '/for-medical-schemes'
     | '/governance'
     | '/how-it-works'
     | '/impact'
     | '/login'
     | '/network'
+    | '/paia'
     | '/policies'
+    | '/privacy'
     | '/product'
+    | '/terms'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/cookies'
     | '/for-medical-schemes'
     | '/governance'
     | '/how-it-works'
     | '/impact'
     | '/login'
     | '/network'
+    | '/paia'
     | '/policies'
+    | '/privacy'
     | '/product'
+    | '/terms'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  CookiesRoute: typeof CookiesRoute
   ForMedicalSchemesRoute: typeof ForMedicalSchemesRoute
   GovernanceRoute: typeof GovernanceRoute
   HowItWorksRoute: typeof HowItWorksRoute
   ImpactRoute: typeof ImpactRoute
   LoginRoute: typeof LoginRoute
   NetworkRoute: typeof NetworkRoute
+  PaiaRoute: typeof PaiaRoute
   PoliciesRoute: typeof PoliciesRoute
+  PrivacyRoute: typeof PrivacyRoute
   ProductRoute: typeof ProductRoute
+  TermsRoute: typeof TermsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -174,6 +226,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/for-medical-schemes': {
@@ -218,11 +277,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NetworkRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/paia': {
+      id: '/paia'
+      path: '/paia'
+      fullPath: '/paia'
+      preLoaderRoute: typeof PaiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/policies': {
       id: '/policies'
       path: '/policies'
       fullPath: '/policies'
       preLoaderRoute: typeof PoliciesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/product': {
@@ -232,20 +305,31 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  CookiesRoute: CookiesRoute,
   ForMedicalSchemesRoute: ForMedicalSchemesRoute,
   GovernanceRoute: GovernanceRoute,
   HowItWorksRoute: HowItWorksRoute,
   ImpactRoute: ImpactRoute,
   LoginRoute: LoginRoute,
   NetworkRoute: NetworkRoute,
+  PaiaRoute: PaiaRoute,
   PoliciesRoute: PoliciesRoute,
+  PrivacyRoute: PrivacyRoute,
   ProductRoute: ProductRoute,
+  TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

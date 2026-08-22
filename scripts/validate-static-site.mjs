@@ -2,7 +2,7 @@ import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const SITE_ORIGIN = "https://sequrin.tech";
+const SITE_ORIGIN = "https://sequrin.com";
 const NON_INDEXABLE_INDEX_FILES = new Set(["login/index.html"]);
 const TEXT_EXTENSIONS = new Set([".css", ".html", ".js", ".svg", ".txt", ".xml"]);
 const REQUIRED_INDEXABLE_META = [

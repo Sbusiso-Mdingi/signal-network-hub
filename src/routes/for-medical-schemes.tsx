@@ -13,7 +13,7 @@ export const Route = createFileRoute("/for-medical-schemes")({
           "See how a medical scheme can test Sequrin against a real claims-integrity question without handing over claims decisions.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://sequrin.tech/for-medical-schemes/" }],
+    links: [{ rel: "canonical", href: "https://sequrin.com/for-medical-schemes/" }],
   }),
   component: ForMedicalSchemesPage,
 });

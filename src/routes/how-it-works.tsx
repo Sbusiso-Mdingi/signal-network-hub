@@ -12,7 +12,7 @@ export const Route = createFileRoute("/how-it-works")({
           "See how Sequrin moves from claims data to useful investigative context while keeping consequential decisions with accountable people.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://sequrin.tech/how-it-works/" }],
+    links: [{ rel: "canonical", href: "https://sequrin.com/how-it-works/" }],
   }),
   component: HowItWorksPage,
 });
