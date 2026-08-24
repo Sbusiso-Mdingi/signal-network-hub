@@ -13,13 +13,25 @@ on:
       - "scripts/publish-react-site.mjs"
       - "scripts/enforce-public-domain.mjs"
       - ".github/workflows/publish-current-react-pages.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "public/**"
+      - "CNAME"
+      - "vite.config.ts"
+      - "package.json"
+      - "bun.lock"
+      - "scripts/publish-react-site.mjs"
+      - "scripts/enforce-public-domain.mjs"
+      - ".github/workflows/publish-current-react-pages.yml"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: publish-current-react-site
+  group: publish-current-react-site-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -41,6 +53,7 @@ jobs:
         run: bun run build:static
 
       - name: Commit generated Pages output
+        if: github.event_name == 'push'
         run: |
           if git diff --quiet -- docs; then
             echo "docs/ already matches the current React build."
