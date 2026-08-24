@@ -841,6 +841,11 @@ p {
   scroll-margin-top: 92px;
 }
 
+.notice-list.legal-list article {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+}
+
 .notice-list h2 {
   font-size: 29px;
 }

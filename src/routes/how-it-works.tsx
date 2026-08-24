@@ -9,7 +9,7 @@ export const Route = createFileRoute("/how-it-works")({
       {
         name: "description",
         content:
-          "See how Sequrin moves from claims data to useful investigative context while keeping consequential decisions with accountable people.",
+          "Sequrin's four-step claims-integrity workflow connects relevant data, detects unusual activity, supports investigation and records an accountable decision.",
       },
     ],
     links: [{ rel: "canonical", href: "https://sequrin.com/how-it-works/" }],
@@ -18,10 +18,16 @@ export const Route = createFileRoute("/how-it-works")({
 });
 
 const steps = [
-  ["01", "Build a reliable picture", "Bring the claims and reference data you actually need into an analytical context scoped to the organisation doing the work."],
-  ["02", "Look for what stands out", "Rules, statistics, models and relationship analysis surface activity worth a second look. Different methods can contribute evidence without becoming the decision-maker."],
-  ["03", "Investigate with the context attached", "Authorised investigators review the claims, connected entities, timeline, relationships and supporting evidence instead of reconstructing the story from scattered alerts."],
-  ["04", "The call stays with people", "Whatever the investigation concludes goes through the organisation's own accountable process. Sequrin can support the work, but it does not make the consequential decision."],
+  ["01", "Connect the relevant data", "Bring the claims and reference data needed for the question into an analytical context scoped to the organisation doing the work."],
+  ["02", "Detect unusual activity", "Apply rules, statistics, models and relationship analysis to prioritise activity for closer review, with the reason for each signal attached."],
+  ["03", "Investigate in context", "Authorised investigators examine the claims, connected entities, timeline, relationships and supporting evidence without reconstructing the story from scattered alerts."],
+  ["04", "Decide through the accountable process", "Record the investigative outcome and pass any consequential action through the organisation's authorised people, rules and review channels."],
+];
+
+const investigationRecord = [
+  ["Source context", "The relevant claims inputs, identifiers and scope remain visible so an investigator can tell what the analysis covered."],
+  ["Signal rationale", "Triggered rules, scores and connected activity travel with the lead instead of arriving as an unexplained alert."],
+  ["Review history", "Evidence, notes and material case activity create a record that another authorised reviewer can follow later."],
 ];
 
 function HowItWorksPage() {
@@ -33,12 +39,12 @@ function HowItWorksPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
             <p className="label-mono">Approach</p>
             <h1 className="mt-5 max-w-4xl text-4xl leading-[1.08] md:text-6xl">
-              A signal should start an investigation, not end one.
+              Sequrin's four-step claims-integrity workflow
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              We keep analytical detection and consequential claims decisions apart on purpose.
-              Data becomes context, analysis becomes a lead, investigators build the evidence and
-              the people accountable for the outcome are the ones who decide it.
+              This is the canonical path used across the product: connect the data needed for a
+              defined question, detect activity that merits attention, investigate with the context
+              attached, and route the outcome through the organisation's accountable process.
             </p>
           </div>
         </section>
@@ -47,7 +53,7 @@ function HowItWorksPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <p className="label-mono">The workflow</p>
             <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">
-              Four steps, with a hard line between detection and decision.
+              Connect, detect, investigate and decide.
             </h2>
             <div className="mt-12 border-y border-border">
               {steps.map(([number, title, body]) => (
@@ -85,29 +91,17 @@ function HowItWorksPage() {
 
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-            <p className="label-mono">Where the line sits</p>
+            <p className="label-mono">What carries forward</p>
             <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">
-              Analytics can point at something. They cannot decide what it means.
+              Each handoff should add context, not discard it.
             </h2>
-            <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-2">
-              <article className="bg-surface p-8">
-                <p className="label-mono">Sequrin can help with</p>
-                <ul className="mt-6 space-y-3 text-muted-foreground">
-                  <li>Finding unusual activity worth a closer look</li>
-                  <li>Showing relevant relationships across claims and entities</li>
-                  <li>Keeping evidence, context and case history together</li>
-                  <li>Giving investigators a clearer starting point</li>
-                </ul>
-              </article>
-              <article className="bg-background p-8">
-                <p className="label-mono">A person still has to</p>
-                <ul className="mt-6 space-y-3 text-muted-foreground">
-                  <li>Work out what the activity actually means</li>
-                  <li>Weigh and verify the evidence</li>
-                  <li>Reach and record an investigative conclusion</li>
-                  <li>Take any consequential action through the authorised process</li>
-                </ul>
-              </article>
+            <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-3">
+              {investigationRecord.map(([title, body], index) => (
+                <article key={title} className={index % 2 === 0 ? "bg-surface p-8" : "bg-background p-8"}>
+                  <h3 className="text-xl">{title}</h3>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{body}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -116,10 +110,10 @@ function HowItWorksPage() {
           <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="label-mono">For medical schemes</p>
-              <h2 className="mt-4 text-3xl md:text-4xl">Test it against the way your team actually works.</h2>
+              <h2 className="mt-4 text-3xl md:text-4xl">Evaluation criteria for a working integrity team</h2>
               <p className="mt-4 max-w-2xl text-muted-foreground">
-                The question is not whether the demo looks good. It is whether Sequrin gives your
-                investigators better context and a more useful way to work.
+                A medical scheme can assess signal relevance, the usefulness of connected context,
+                noise and the fit with its existing review practice.
               </p>
             </div>
             <div className="flex gap-3">

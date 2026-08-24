@@ -21,5 +21,5 @@ const sections = [
 ];
 
 function TermsPage() {
-  return <PublicLegalPage eyebrow="Website Terms" title="Use this site as information, not as a claims decision." lead="These terms govern sequrin.com, operated by Sequrin Technologies (Pty) Ltd, enterprise number 2026/662912/07." updated="Last updated 22 August 2026" sections={sections} />;
+  return <PublicLegalPage eyebrow="Website Terms" title="Terms of Use for sequrin.com" lead="These terms govern sequrin.com, operated by Sequrin Technologies (Pty) Ltd, enterprise number 2026/662912/07." updated="Last updated 22 August 2026" sections={sections} />;
 }

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PublicLegalPage } from "@/components/site/PublicLegalPage";
 
 export const Route = createFileRoute("/privacy")({
@@ -41,7 +41,14 @@ const sections = [
     title: "Future customer processing",
     paragraphs: [
       "A future controlled claims evaluation requires a documented customer role, purpose, lawful basis, contract, impact assessment, security review, retention, recipients, transfer safeguards, rights route and prior-authorisation assessment where applicable.",
-      "Sequrin does not have standing approval to use identifiable or pseudonymised customer claims for general model training. A risk signal is not a fraud finding or an automatic payment, recovery or sanction decision.",
+      <>
+        Sequrin does not have standing approval to use identifiable or pseudonymised customer claims
+        for general model training. Product decision boundaries are described in Sequrin's{" "}
+        <Link to="/governance" className="text-primary underline-offset-4 hover:underline">
+          Governance principles
+        </Link>
+        .
+      </>,
     ],
   },
   {
@@ -69,8 +76,8 @@ function PrivacyPage() {
   return (
     <PublicLegalPage
       eyebrow="Website Privacy Notice"
-      title="Privacy starts with an accurate description of what exists now."
-      lead="This notice covers sequrin.com and ordinary business communications. It does not claim that Sequrin currently operates a production medical-scheme service."
+      title="Website Privacy Notice"
+      lead="This notice explains how Sequrin Technologies (Pty) Ltd handles information collected through sequrin.com and ordinary business communications."
       updated="Last updated 23 August 2026"
       sections={sections}
     />

@@ -96,8 +96,8 @@ function PaiaPage() {
   return (
     <PublicLegalPage
       eyebrow="PAIA Manual"
-      title="Access to Sequrin records."
-      lead="Prepared under section 51 of the Promotion of Access to Information Act 2 of 2000, as amended, and including relevant POPIA particulars."
+      title="PAIA Manual for Sequrin Technologies (Pty) Ltd"
+      lead="This manual is prepared under section 51 of the Promotion of Access to Information Act 2 of 2000, as amended, and includes relevant POPIA particulars."
       updated="Version 1.1 · 23 August 2026"
       sections={sections}
     />
