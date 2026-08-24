@@ -69,7 +69,7 @@
       if (founderCopy) {
         var companyNote = document.createElement("p");
         companyNote.textContent =
-          "Sequrin is being developed through Sequrin Technologies, a South African registered company (Enterprise No. " +
+          "Sequrin operates through Sequrin Technologies, a South African registered company (Enterprise No. " +
           enterpriseNumber +
           ").";
         founderCopy.appendChild(companyNote);
@@ -83,7 +83,18 @@
       "© 2026 Sequrin. All rights reserved. · " + legalName + " · Enterprise No. " + enterpriseNumber;
   }
 
+  function normaliseLinkLabel(link) {
+    var label = link.textContent.trim();
+    if (label === "Approach") link.textContent = "How It Works";
+    if (label === "For medical schemes") link.textContent = "For Medical Schemes";
+    if (label === "Sign in") link.textContent = "Sign In";
+    if (label === "Why it matters") link.textContent = "Impact";
+    if (label === "Long-term direction") link.textContent = "Secure Integrity Network";
+  }
+
   Array.prototype.forEach.call(document.querySelectorAll(".desktop-nav, .mobile-panel"), function (nav) {
+    Array.prototype.forEach.call(nav.querySelectorAll("a"), normaliseLinkLabel);
+
     var hasHome = Array.prototype.some.call(nav.querySelectorAll("a"), function (link) {
       return link.textContent.trim().toLowerCase() === "home";
     });
@@ -98,6 +109,13 @@
       nav.insertBefore(homeLink, nav.firstChild);
     }
   });
+
+  Array.prototype.forEach.call(document.querySelectorAll(".footer-nav a"), normaliseLinkLabel);
+
+  var footerBrandCopy = document.querySelector(".footer-brand > p");
+  if (footerBrandCopy && footerBrandCopy.textContent.trim() === "Healthcare claims integrity technology, being developed in South Africa.") {
+    footerBrandCopy.textContent = "Healthcare claims integrity technology, built in South Africa.";
+  }
 
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
