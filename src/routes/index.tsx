@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Sequrin is a South African healthcare claims-integrity platform combining detection, network intelligence and investigation workflow for medical schemes.",
+          "Sequrin is a South African healthcare claims-integrity company building connected investigation tools for medical schemes.",
       },
     ],
     links: [{ rel: "canonical", href: "https://sequrin.com/" }],
@@ -44,9 +44,9 @@ function HomePage() {
                 A claim can look fine on its own. The pattern around it might not.
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                Sequrin gives medical schemes and claims-integrity teams a connected view of claims,
-                providers, members, facilities, timing and related activity so an investigation starts
-                with more than one record in isolation.
+                We're building Sequrin for medical schemes and claims-integrity teams to see how
+                claims connect through providers, members, facilities, timing and related activity,
+                so an investigation starts with more than one record in isolation.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <a href="mailto:info@sequrin.com?subject=Sequrin%20evaluation%20discussion" className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground">Discuss an evaluation</a>
@@ -66,7 +66,7 @@ function HomePage() {
               </div>
               <div className="space-y-5 leading-relaxed text-muted-foreground">
                 <p>A claim can look completely ordinary until you notice the same provider, timing, member or facility appearing somewhere else. The pattern is often in the relationships between records.</p>
-                <p>Sequrin pulls that context into view early enough for an investigator to ask a better question.</p>
+                <p>Sequrin is being built to pull that context into view early enough for an investigator to ask a better question.</p>
               </div>
             </div>
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-3">
@@ -101,13 +101,13 @@ function HomePage() {
 
         <section className="border-b border-border bg-surface">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-            <p className="label-mono">Product</p>
-            <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">See more. Investigate better.</h2>
-            <p className="mt-6 max-w-3xl leading-relaxed text-muted-foreground">Sequrin brings claims intelligence, connected relationships and investigation context into a governed workspace for claims-integrity teams.</p>
+            <p className="label-mono">Company stage</p>
+            <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">Build it, test it, then earn the right to scale it.</h2>
+            <p className="mt-6 max-w-3xl leading-relaxed text-muted-foreground">Sequrin is early-stage. The immediate job is to prove that the product gives claims-integrity teams genuinely useful context before making bigger claims about scale or impact.</p>
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-3">
-              <article className="bg-background p-7"><p className="label-mono">Detect</p><h3 className="mt-3 text-xl">Surface what deserves attention</h3><p className="mt-3 text-sm text-muted-foreground">Rules, statistics and models identify unusual activity while keeping the reasons behind a signal close to the claim.</p></article>
-              <article className="bg-background p-7"><p className="label-mono">Connect</p><h3 className="mt-3 text-xl">See the network around the claim</h3><p className="mt-3 text-sm text-muted-foreground">Providers, members, facilities, timing and related claims can be viewed together instead of as isolated records.</p></article>
-              <article className="bg-background p-7"><p className="label-mono">Investigate</p><h3 className="mt-3 text-xl">Carry context into the case</h3><p className="mt-3 text-sm text-muted-foreground">Signals, evidence, relationships, notes and case history stay connected as authorised investigators work through a review.</p></article>
+              <article className="bg-background p-7"><p className="label-mono">Now</p><h3 className="mt-3 text-xl">Working prototype</h3><p className="mt-3 text-sm text-muted-foreground">The browser and desktop experiences are being developed around synthetic and development data.</p></article>
+              <article className="bg-background p-7"><p className="label-mono">Next</p><h3 className="mt-3 text-xl">Controlled evaluation</h3><p className="mt-3 text-sm text-muted-foreground">Start with one bounded claims-integrity question, real investigator review and agreed measures of usefulness.</p></article>
+              <article className="bg-background p-7"><p className="label-mono">Longer term</p><h3 className="mt-3 text-xl">Governed network intelligence</h3><p className="mt-3 text-sm text-muted-foreground">Only after the foundations hold up do we explore responsible collaboration across organisations.</p></article>
             </div>
           </div>
         </section>
@@ -121,7 +121,7 @@ function HomePage() {
 
         <section className="border-b border-border bg-surface">
           <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-end md:justify-between">
-            <div><p className="label-mono">Start with a real question</p><h2 className="mt-4 text-3xl md:text-4xl">Bring us one claims-integrity problem worth evaluating.</h2><p className="mt-4 max-w-2xl text-muted-foreground">A useful first conversation is about the question, the data you have and what would count as evidence that Sequrin helped.</p></div>
+            <div><p className="label-mono">Start with a real question</p><h2 className="mt-4 text-3xl md:text-4xl">Bring us one claims-integrity problem worth testing.</h2><p className="mt-4 max-w-2xl text-muted-foreground">A useful first conversation is about the question, the data you have and what would count as evidence that Sequrin actually helped.</p></div>
             <div className="flex gap-3"><a href="mailto:info@sequrin.com?subject=Sequrin%20evaluation%20discussion" className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground">Discuss an evaluation</a><Link to="/for-medical-schemes" className="rounded-md border border-border-strong px-6 py-3 text-sm">For medical schemes</Link></div>
           </div>
         </section>
