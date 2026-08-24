@@ -53,15 +53,14 @@ function AboutPage() {
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <p className="label-mono">The platform</p>
-            <h2 className="mt-4 text-3xl md:text-5xl">Claims intelligence, connected context and investigation workflow.</h2>
+            <h2 className="mt-4 text-3xl md:text-5xl">Foundation first, network later.</h2>
             <p className="mt-5 max-w-3xl text-muted-foreground">
-              Sequrin brings the analytical and investigative parts of claims integrity into one
-              connected workspace while keeping consequential decisions with authorised people and
-              processes.
+              Sequrin brings claims intelligence, connected context and investigation workflow into
+              one workspace while keeping consequential decisions with authorised people and processes.
             </p>
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-3">
               <article className="bg-surface p-7"><p className="label-mono">Product</p><h3 className="mt-3 text-xl">Connected claims review</h3><p className="mt-3 text-sm text-muted-foreground">Browser and desktop experiences bring claims, related entities, signals and investigation context into a focused review workflow.</p></article>
-              <article className="bg-surface p-7"><p className="label-mono">Analytics</p><h3 className="mt-3 text-xl">Explainable signals</h3><p className="mt-3 text-sm text-muted-foreground">Rules, statistics and models help surface unusual activity while keeping the reasons behind a signal visible to the investigator.</p></article>
+              <article className="bg-surface p-7"><p className="label-mono">Analytics</p><h3 className="mt-3 text-xl">Explainable signals</h3><p className="mt-3 text-sm text-muted-foreground">Rules, statistics and models surface unusual activity while keeping the reasons behind a signal visible to the investigator.</p></article>
               <article className="bg-surface p-7"><p className="label-mono">Governance</p><h3 className="mt-3 text-xl">Human decision ownership</h3><p className="mt-3 text-sm text-muted-foreground">Sequrin supports review and investigation; the medical scheme retains responsibility for consequential decisions and actions.</p></article>
             </div>
           </div>

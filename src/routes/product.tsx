@@ -25,6 +25,7 @@ const features = [
     body: "Claims rarely exist in isolation. Connected views bring providers, members, facilities, timing and related claims into the same picture so investigators can see the relationships around an unusual record, not just the record itself.",
     src: "/assets/product/connected-claims-network.webp",
     alt: "Sequrin network view connecting claim, member and provider records.",
+    caption: "Connected claims network · Synthetic demonstration data.",
   },
   {
     label: "Claims review",
@@ -32,6 +33,7 @@ const features = [
     body: "Claim state, risk context and investigation status can sit together instead of being scattered across separate tools. Investigators can see what surfaced, why it surfaced and where to go next.",
     src: "/assets/product/claims-review-queue.webp",
     alt: "Sequrin claims review queue showing claim and entity context.",
+    caption: "Claims review queue · Synthetic demonstration data.",
   },
   {
     label: "Desktop workspace",
@@ -39,6 +41,7 @@ const features = [
     body: "The desktop workspace is built around focused claims review inside an organisation's own boundary. It gives authorised users a dedicated view of the work without creating a second, disconnected version of the investigation.",
     src: "/assets/product/desktop-overview.webp",
     alt: "Sequrin desktop workspace overview for claims-integrity review.",
+    caption: "Desktop investigation workspace · Synthetic demonstration data.",
   },
   {
     label: "Risk signals",
@@ -46,6 +49,7 @@ const features = [
     body: "Scores are much more useful when the investigator can see the rules, related activity and claim context behind them. Sequrin keeps that reasoning close to the record so a signal starts a review rather than pretending to finish one.",
     src: "/assets/product/desktop-risk-signals.webp",
     alt: "Sequrin desktop risk-signals view showing claim activity and review context.",
+    caption: "Risk-signal context · Synthetic demonstration data.",
   },
 ];
 
@@ -73,7 +77,7 @@ function ProductPage() {
               the software.
             </p>
             <p className="mt-4 max-w-3xl text-xs leading-relaxed text-muted-foreground">
-              Product views shown on this page use synthetic demonstration data.
+              Public product views use synthetic demonstration data.
             </p>
           </div>
         </section>
@@ -96,6 +100,7 @@ function ProductPage() {
                   className="w-full border border-border-strong"
                   loading={index === 0 ? "eager" : "lazy"}
                 />
+                <figcaption className="mt-3 text-xs text-muted-foreground">{feature.caption}</figcaption>
               </figure>
             </div>
           </section>
