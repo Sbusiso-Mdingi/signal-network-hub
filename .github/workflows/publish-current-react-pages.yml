@@ -1,3 +1,4 @@
+# Runner validation: GitHub-owned actions only
 name: Publish current React site
 
 on:
