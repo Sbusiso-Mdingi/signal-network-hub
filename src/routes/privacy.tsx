@@ -32,15 +32,15 @@ const sections = [
     ],
   },
   {
-    title: "Synthetic demonstrations",
+    title: "Product demonstration data",
     paragraphs: [
-      "Current product demonstrations use synthetic and development data. The public site does not invite medical claims, patient details, fraud allegations, credentials or investigation evidence. Do not send that information through the public email address.",
+      "Product views available on the public site use synthetic demonstration data. The public site is not a channel for submitting medical claims, patient details, fraud allegations, credentials or investigation evidence. Do not send that information through the public email address.",
     ],
   },
   {
-    title: "Future customer processing",
+    title: "Customer and evaluation data",
     paragraphs: [
-      "A future controlled claims evaluation requires a documented customer role, purpose, lawful basis, contract, impact assessment, security review, retention, recipients, transfer safeguards, rights route and prior-authorisation assessment where applicable.",
+      "Where Sequrin undertakes a controlled claims evaluation, processing is governed by a documented customer role, purpose, lawful basis, contract, impact assessment, security review, retention approach, recipients, transfer safeguards, rights route and prior-authorisation assessment where applicable.",
       "Sequrin does not have standing approval to use identifiable or pseudonymised customer claims for general model training. A risk signal is not a fraud finding or an automatic payment, recovery or sanction decision.",
     ],
   },
@@ -53,7 +53,7 @@ const sections = [
   {
     title: "Retention and security",
     paragraphs: [
-      "Correspondence and technical logs are retained only for a justified business, security, contractual or legal period and are then deleted or de-identified in accordance with Sequrin's retention rules. Future customer data will follow the applicable customer agreement and approved processing schedule.",
+      "Correspondence and technical logs are retained only for a justified business, security, contractual or legal period and are then deleted or de-identified in accordance with Sequrin's retention rules. Customer and evaluation data is subject to the applicable agreement, approved processing schedule and retention requirements.",
       "Sequrin requires safeguards proportionate to the information and maturity of the relevant service. No public statement should be read as an unevidenced security, privacy or regulatory certification.",
     ],
   },
@@ -69,9 +69,9 @@ function PrivacyPage() {
   return (
     <PublicLegalPage
       eyebrow="Website Privacy Notice"
-      title="Privacy starts with an accurate description of what exists now."
-      lead="This notice covers sequrin.com and ordinary business communications. It does not claim that Sequrin currently operates a production medical-scheme service."
-      updated="Last updated 23 August 2026"
+      title="Privacy and responsible data handling at Sequrin."
+      lead="This notice explains how Sequrin Technologies (Pty) Ltd handles information through sequrin.com and ordinary business communications."
+      updated="Last updated 24 August 2026"
       sections={sections}
     />
   );
