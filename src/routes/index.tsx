@@ -101,13 +101,13 @@ function HomePage() {
 
         <section className="border-b border-border bg-surface">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-            <p className="label-mono">Product workspace</p>
-            <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">Built around the work between a signal and a decision.</h2>
+            <p className="label-mono">Product</p>
+            <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">See more. Investigate better.</h2>
             <p className="mt-6 max-w-3xl leading-relaxed text-muted-foreground">Sequrin brings claims intelligence, connected relationships and investigation context into a governed workspace for claims-integrity teams.</p>
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-3">
-              <article className="bg-background p-7"><p className="label-mono">Claims intelligence</p><h3 className="mt-3 text-xl">Surface activity worth reviewing</h3><p className="mt-3 text-sm text-muted-foreground">Rules, statistics and models help identify unusual activity and keep the reasons behind a signal close to the claim.</p></article>
-              <article className="bg-background p-7"><p className="label-mono">Connected context</p><h3 className="mt-3 text-xl">See the network around the claim</h3><p className="mt-3 text-sm text-muted-foreground">Providers, members, facilities, timing and related claims can be viewed together instead of as isolated records.</p></article>
-              <article className="bg-background p-7"><p className="label-mono">Investigation workflow</p><h3 className="mt-3 text-xl">Carry context into the case</h3><p className="mt-3 text-sm text-muted-foreground">Signals, evidence, relationships, notes and case history stay connected as authorised investigators work through a review.</p></article>
+              <article className="bg-background p-7"><p className="label-mono">Detect</p><h3 className="mt-3 text-xl">Surface what deserves attention</h3><p className="mt-3 text-sm text-muted-foreground">Rules, statistics and models identify unusual activity while keeping the reasons behind a signal close to the claim.</p></article>
+              <article className="bg-background p-7"><p className="label-mono">Connect</p><h3 className="mt-3 text-xl">See the network around the claim</h3><p className="mt-3 text-sm text-muted-foreground">Providers, members, facilities, timing and related claims can be viewed together instead of as isolated records.</p></article>
+              <article className="bg-background p-7"><p className="label-mono">Investigate</p><h3 className="mt-3 text-xl">Carry context into the case</h3><p className="mt-3 text-sm text-muted-foreground">Signals, evidence, relationships, notes and case history stay connected as authorised investigators work through a review.</p></article>
             </div>
           </div>
         </section>
