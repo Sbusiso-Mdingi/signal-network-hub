@@ -20,5 +20,5 @@ const sections = [
 ];
 
 function CookiesPage() {
-  return <PublicLegalPage eyebrow="Cookie and Tracking Statement" title="No non-essential tracking in the reviewed public build." lead="The current sequrin.com build does not set advertising cookies, run non-essential analytics or use a cookie-consent banner." updated="Last updated 22 August 2026" sections={sections} />;
+  return <PublicLegalPage eyebrow="Cookie and Tracking Statement" title="Cookie and Tracking Statement" lead="This statement describes the cookies, analytics and related tracking technologies used by the current sequrin.com build." updated="Last updated 22 August 2026" sections={sections} />;
 }

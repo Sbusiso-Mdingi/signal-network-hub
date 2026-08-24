@@ -10,7 +10,7 @@ export const Route = createFileRoute("/governance")({
       {
         name: "description",
         content:
-          "See the human oversight, access and decision boundaries built into Sequrin's claims-integrity approach.",
+          "Sequrin's governance principles cover investigative signals, role-based access, auditability and accountable claims decisions.",
       },
     ],
     links: [{ rel: "canonical", href: "https://sequrin.com/governance/" }],
@@ -34,13 +34,13 @@ function GovernancePage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
             <p className="label-mono">Governance</p>
             <h1 className="mt-5 max-w-5xl text-4xl leading-[1.08] md:text-6xl">
-              Governance isn't a disclaimer we tacked on. It's part of how this is built.
+              Governance principles for Sequrin investigations
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Claims-integrity work touches sensitive information and decisions with real
-              consequences. We've deliberately kept analysis, access, investigation and decision
-              authority as separate things instead of folding them into one system that decides
-              everything on its own.
+              A signal is a lead, not a finding. Sequrin can surface and organise activity for
+              investigation, while evidence is assessed by authorised people and consequential
+              decisions remain with the medical scheme's accountable processes. Access, casework
+              and significant administrative actions should also be reviewable after the event.
             </p>
           </div>
         </section>
@@ -100,10 +100,9 @@ function GovernancePage() {
         <section className="border-b border-border">
           <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="label-mono">Governance, in one sentence</p>
-              <h2 className="mt-4 max-w-4xl text-3xl md:text-4xl">
-                Sequrin can help you see more clearly. The authority stays with your people and your organisation.
-              </h2>
+              <p className="label-mono">Evaluation planning</p>
+              <h2 className="mt-4 max-w-4xl text-3xl md:text-4xl">Discuss governance requirements for an evaluation.</h2>
+              <p className="mt-4 max-w-2xl text-muted-foreground">We can map roles, access boundaries, evidence handling and decision ownership against the way your organisation already works.</p>
             </div>
             <div className="flex gap-3">
               <Link to="/how-it-works" className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground">See the approach</Link>

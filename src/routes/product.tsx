@@ -10,7 +10,7 @@ export const Route = createFileRoute("/product")({
       {
         name: "description",
         content:
-          "See how Sequrin brings claims signals, connected relationships and investigation context into one workspace for medical-scheme integrity teams.",
+          "A product tour of Sequrin's claims review, network intelligence, risk signals and investigation workspace for medical-scheme integrity teams.",
       },
     ],
     links: [{ rel: "canonical", href: "https://sequrin.com/product/" }],
@@ -43,7 +43,7 @@ const features = [
   {
     label: "Risk signals",
     title: "Show why something surfaced.",
-    body: "Scores are much more useful when the investigator can see the rules, related activity and claim context behind them. Sequrin keeps that reasoning close to the record so a signal starts a review rather than pretending to finish one.",
+    body: "Scores are more useful when the rules, related activity and claim context sit beside them. Sequrin keeps that rationale close to the record, where an investigator can inspect it without switching tools.",
     src: "/assets/product/desktop-risk-signals.webp",
     alt: "Sequrin desktop risk-signals view using synthetic claim activity.",
   },
@@ -64,13 +64,12 @@ function ProductPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
             <p className="label-mono">Product</p>
             <h1 className="mt-5 max-w-4xl text-4xl leading-[1.08] md:text-6xl">
-              See the claim. Then see everything connected to it.
+              The Sequrin claims-integrity workspace
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Sequrin brings detection, relationship intelligence and investigation into one place
-              for medical-scheme integrity teams. The point is simple: help investigators get from
-              “something looks off” to useful context faster, without handing the actual decision to
-              the software.
+              Sequrin brings claims review, relationship intelligence, signal rationale and case
+              context into one place for medical-scheme integrity teams. Each view is designed to
+              reduce the time spent reconstructing an investigation across disconnected systems.
             </p>
           </div>
         </section>
@@ -122,10 +121,10 @@ function ProductPage() {
           <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="label-mono">How it works</p>
-              <h2 className="mt-4 text-3xl md:text-4xl">See how it all fits together.</h2>
+              <h2 className="mt-4 text-3xl md:text-4xl">Follow the product through the investigation workflow.</h2>
               <p className="mt-4 max-w-2xl text-muted-foreground">
-                From the first unusual pattern to the investigation that follows, each part of
-                Sequrin is designed to carry useful context forward.
+                The Approach page shows where each product capability enters the four-step process
+                and what information should move forward with the work.
               </p>
             </div>
             <div className="flex gap-3">

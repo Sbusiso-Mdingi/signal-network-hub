@@ -10,7 +10,7 @@ export const Route = createFileRoute("/impact")({
       {
         name: "description",
         content:
-          "See why Sequrin is focused on helping claims-integrity teams use investigative time better and protect finite healthcare resources.",
+          "Claims-integrity teams can assess Sequrin through signal relevance, review effort, time to context and verified financial outcomes.",
       },
     ],
     links: [{ rel: "canonical", href: "https://sequrin.com/impact/" }],
@@ -19,9 +19,9 @@ export const Route = createFileRoute("/impact")({
 });
 
 const points = [
-  ["See the pattern sooner", "Connected context can reveal recurrence, timing and shared relationships that are easy to miss when every claim is reviewed on its own."],
-  ["Spend investigative time better", "Investigators only have so many hours. Better signals should help them spend that time on activity that genuinely deserves a closer look."],
-  ["Keep the reasoning together", "A structured record of signals, relationships, evidence and case activity makes it easier to understand how an investigation reached its outcome."],
+  ["Shorter path to context", "Measure how long an investigator takes to understand the relevant history and relationships after an item enters review."],
+  ["Better use of review capacity", "Compare the relevance and noise of prioritised work with the team's existing queue, using investigator judgement rather than alert volume."],
+  ["Traceable operational value", "Tie any claimed saving or recovery to a completed case record and the scheme's own verified financial treatment."],
 ];
 
 function ImpactPage() {
@@ -33,13 +33,13 @@ function ImpactPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
             <p className="label-mono">Why it matters</p>
             <h1 className="mt-5 max-w-5xl text-4xl leading-[1.08] md:text-6xl">
-              The point is not to flag more claims. It is to protect more of what already funds care.
+              Measuring the operational value of claims-integrity work
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Sequrin only matters if better context helps integrity teams use their time better and,
-              where the evidence supports it, prevent or recover avoidable leakage. The software is
-              one part of that chain. The investigation and the outcome still have to stand on their
-              own.
+              A claims-integrity product should be judged by what changes in the work: whether useful
+              context arrives sooner, whether scarce review time is better directed and whether any
+              resulting financial effect can be verified. The standards for interpreting signals
+              are set out in our <Link to="/governance" className="text-primary underline-offset-4 hover:underline">governance principles</Link>.
             </p>
           </div>
         </section>
@@ -82,10 +82,10 @@ function ImpactPage() {
           <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="label-mono">Start with evidence</p>
-              <h2 className="mt-4 text-3xl md:text-4xl">Pick one result you can actually check.</h2>
+              <h2 className="mt-4 text-3xl md:text-4xl">Define the evaluation measures before testing.</h2>
               <p className="mt-4 max-w-2xl text-muted-foreground">
-                A useful first evaluation starts with a clear question and baseline, then lets the
-                evidence decide whether Sequrin helped.
+                The medical-schemes page sets out the inputs needed for a bounded comparison with
+                current practice.
               </p>
             </div>
             <div className="flex gap-3">

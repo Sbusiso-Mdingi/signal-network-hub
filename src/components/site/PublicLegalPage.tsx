@@ -1,9 +1,10 @@
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
+import type { ReactNode } from "react";
 
 type LegalSection = {
   title: string;
-  paragraphs: Array<string>;
+  paragraphs: Array<ReactNode>;
 };
 
 type PublicLegalPageProps = {
@@ -30,17 +31,14 @@ export function PublicLegalPage({ eyebrow, title, lead, updated, sections }: Pub
         <section className="border-b border-border bg-surface">
           <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
             <div className="divide-y divide-border border-y border-border">
-              {sections.map((section, index) => (
-                <section key={section.title} className="grid gap-5 py-8 md:grid-cols-[70px_1fr]">
-                  <p className="label-mono">{String(index + 1).padStart(2, "0")}</p>
-                  <div>
-                    <h2 className="text-2xl md:text-3xl">{section.title}</h2>
-                    {section.paragraphs.map((paragraph) => (
-                      <p key={paragraph} className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">
-                        {paragraph}
-                      </p>
-                    ))}
-                  </div>
+              {sections.map((section) => (
+                <section key={section.title} className="py-8">
+                  <h2 className="text-2xl md:text-3xl">{section.title}</h2>
+                  {section.paragraphs.map((paragraph, index) => (
+                    <p key={`${section.title}-${index}`} className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">
+                      {paragraph}
+                    </p>
+                  ))}
                 </section>
               ))}
             </div>
