@@ -102,7 +102,7 @@ function structuredData() {
         identifier: "2026/662912/07",
         founder: { "@type": "Person", name: "Sbusiso Mdingi" },
         description:
-          "An early-stage South African company developing healthcare claims-integrity technology for medical schemes.",
+          "A South African healthcare technology company building claims-integrity software for medical schemes.",
       },
       {
         "@type": "WebSite",
@@ -153,12 +153,12 @@ ${robots}
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:alt" content="Illustrative Sequrin connected claims interface using synthetic data.">
+  <meta property="og:image:alt" content="Sequrin healthcare claims-integrity product interface.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${title}">
   <meta name="twitter:description" content="${description}">
   <meta name="twitter:image" content="${socialImageUrl}">
-  <meta name="twitter:image:alt" content="Illustrative Sequrin connected claims interface using synthetic data.">
+  <meta name="twitter:image:alt" content="Sequrin healthcare claims-integrity product interface.">
   <link rel="icon" href="${assetPrefix}favicon.svg" type="image/svg+xml">
   <link rel="icon" href="${assetPrefix}favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="${assetPrefix}apple-touch-icon.png">
@@ -178,25 +178,22 @@ ${footer(prefix)}
 `;
 }
 
-const syntheticCaption =
-  "Illustrative Sequrin interface using synthetic data. Product under development.";
-
 const pages = [
   {
     route: "/",
     output: "docs/index.html",
     title: "Sequrin | Healthcare claims integrity",
     description:
-      "Sequrin is an early-stage South African company developing claims-integrity technology for medical schemes.",
+      "Sequrin builds connected claims-integrity software for medical schemes and investigation teams.",
     active: "",
     preloadImage: true,
     body: `<section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <div class="status-line"><span class="status-dot" aria-hidden="true"></span>Early-stage company &middot; South Africa</div>
+      <div class="status-line"><span class="status-dot" aria-hidden="true"></span>South African healthcare technology</div>
       <p class="eyebrow">Healthcare claims integrity</p>
       <h1>See the relationships behind suspicious claims activity.</h1>
-      <p class="lead">Sequrin is developing claims-integrity technology for medical schemes. It connects analytical signals, relationships and investigation context so authorised teams can see patterns that individual records may miss.</p>
+      <p class="lead">Sequrin gives medical schemes and claims-integrity teams a connected view across providers, members, facilities, timing and related activity, so an investigation can begin with the surrounding context instead of one record in isolation.</p>
       <div class="actions">
         <a class="button primary" href="mailto:${contactEmail}?subject=Sequrin%20evaluation%20discussion">Discuss an evaluation</a>
         <a class="button secondary" href="product/">Explore the product</a>
@@ -204,8 +201,8 @@ const pages = [
     </div>
     <figure class="product-frame hero-product">
       <div class="frame-label">Connected claims view</div>
-      <img src="assets/product/connected-claims-network.webp" width="1265" height="712" fetchpriority="high" decoding="async" alt="Sequrin network view connecting synthetic claim, member and provider tokens.">
-      <figcaption>${syntheticCaption}</figcaption>
+      <img src="assets/product/connected-claims-network.webp" width="1265" height="712" fetchpriority="high" decoding="async" alt="Sequrin network view connecting claim, member and provider records.">
+      <figcaption>Current Sequrin interface shown with demonstration data.</figcaption>
     </figure>
   </div>
 </section>
@@ -246,14 +243,14 @@ const pages = [
 <section class="section surface">
   <div class="container stage-layout">
     <div class="section-heading">
-      <p class="eyebrow">Company stage</p>
-      <h2>A working product, with claims kept in proportion.</h2>
-      <p>Sequrin is an early-stage company. The website shows a working prototype and a focused development direction, not evidence of a live medical-scheme deployment or proven financial outcomes.</p>
+      <p class="eyebrow">Product maturity</p>
+      <h2>A working product with a controlled path to scale.</h2>
+      <p>Sequrin's browser and desktop experiences already bring claims review, signal rationale and relationship context into one investigation environment. The next milestone is a controlled evaluation that measures usefulness against a scheme-defined question.</p>
     </div>
     <div class="stage-list">
-      <article><p class="stage-label">Now</p><h3>Working prototype</h3><p>Browser and desktop interfaces support product development with synthetic and development data.</p></article>
-      <article><p class="stage-label">Next</p><h3>Controlled evaluation</h3><p>Test a bounded claims-integrity question with explicit governance and success criteria.</p></article>
-      <article><p class="stage-label">Longer term</p><h3>Governed network intelligence</h3><p>Explore responsible collaboration across participating organisations if the foundations are validated.</p></article>
+      <article><p class="stage-label">Current</p><h3>Connected investigation product</h3><p>Browser and desktop experiences support claims review, signal rationale and relationship context.</p></article>
+      <article><p class="stage-label">Evaluation</p><h3>Scheme-led testing</h3><p>Measure relevance, time to context and workflow fit against an agreed claims-integrity question.</p></article>
+      <article><p class="stage-label">Direction</p><h3>Governed network intelligence</h3><p>Broader collaboration depends on validated product, privacy and governance foundations.</p></article>
     </div>
   </div>
 </section>
@@ -277,14 +274,15 @@ const pages = [
     output: "docs/product/index.html",
     title: "Claims integrity product | Sequrin",
     description:
-      "Explore the claims signals, network context and investigation workflows being developed by Sequrin.",
+      "Explore Sequrin's connected claims review, network context and investigation workflow.",
     active: "product",
     body: `<section class="page-hero">
   <div class="container narrow">
-    <div class="status-line"><span class="status-dot" aria-hidden="true"></span>Working prototype</div>
+    <div class="status-line"><span class="status-dot" aria-hidden="true"></span>Current product</div>
     <p class="eyebrow">Product</p>
     <h1>One workspace for signals, relationships and investigation context.</h1>
-    <p class="lead">Sequrin is developing a claims-integrity workspace for authorised medical-scheme teams. It is intended to help analysts and investigators move from an unusual claim to the wider context needed for careful review.</p>
+    <p class="lead">Sequrin brings claims review, relationship intelligence, signal rationale and case context into one place for medical-scheme integrity teams. Each view is designed to reduce the time spent reconstructing an investigation across disconnected systems.</p>
+    <p class="updated">The interface views below show the current Sequrin product using demonstration data.</p>
   </div>
 </section>
 
@@ -292,19 +290,19 @@ const pages = [
   <div class="container feature-list">
     <article class="feature-row" id="network-intelligence">
       <div class="feature-copy"><p class="eyebrow">Network intelligence</p><h2>Relationship context, not isolated records.</h2><p>Connected views can show how claims, provider tokens, member tokens and other relevant entities relate. Investigators can inspect a cluster without treating proximity as proof.</p></div>
-      <figure class="product-frame"><img src="../assets/product/connected-claims-network.webp" width="1265" height="712" loading="eager" decoding="async" alt="Sequrin network view connecting synthetic claim, member and provider tokens."><figcaption>${syntheticCaption}</figcaption></figure>
+      <figure class="product-frame"><img src="../assets/product/connected-claims-network.webp" width="1265" height="712" loading="eager" decoding="async" alt="Sequrin network view connecting claim, member and provider records."></figure>
     </article>
     <article class="feature-row reverse" id="claims-review">
       <div class="feature-copy"><p class="eyebrow">Claims review</p><h2>A queue with reasons to look closer.</h2><p>Claim states, risk bands and investigation status can be reviewed together. The aim is to help teams prioritise attention and reach the supporting context faster.</p></div>
-      <figure class="product-frame"><img src="../assets/product/claims-review-queue.webp" width="1265" height="712" loading="lazy" decoding="async" alt="Sequrin claims review queue using synthetic claim and entity tokens."><figcaption>${syntheticCaption}</figcaption></figure>
+      <figure class="product-frame"><img src="../assets/product/claims-review-queue.webp" width="1265" height="712" loading="lazy" decoding="async" alt="Sequrin claims review queue with claim and entity references."></figure>
     </article>
     <article class="feature-row" id="desktop-workspace">
-      <div class="feature-copy"><p class="eyebrow">Desktop workspace</p><h2>A focused view for authorised work.</h2><p>The desktop prototype is being designed for organisation-bound claims review, clear local state and controlled access. It complements the browser workspace rather than suggesting a separate source of truth.</p></div>
-      <figure class="product-frame desktop-frame"><img src="../assets/product/desktop-overview.webp" width="1265" height="810" loading="lazy" decoding="async" alt="Sequrin desktop overview using an illustrative medical scheme and synthetic claim totals."><figcaption>${syntheticCaption}</figcaption></figure>
+      <div class="feature-copy"><p class="eyebrow">Desktop workspace</p><h2>A focused view for authorised work.</h2><p>The desktop workspace supports organisation-bound claims review, clear local state and controlled access. It complements the browser workspace rather than creating a separate source of truth.</p></div>
+      <figure class="product-frame desktop-frame"><img src="../assets/product/desktop-overview.webp" width="1265" height="810" loading="lazy" decoding="async" alt="Sequrin desktop overview with a claims-integrity summary."></figure>
     </article>
     <article class="feature-row reverse" id="risk-signals">
       <div class="feature-copy"><p class="eyebrow">Risk signals</p><h2>Explain why activity needs review.</h2><p>Risk views can place score bands, triggered rules and related activity beside the claim record. The output remains a review aid that requires investigation.</p></div>
-      <figure class="product-frame desktop-frame"><img src="../assets/product/desktop-risk-signals.webp" width="1265" height="810" loading="lazy" decoding="async" alt="Sequrin desktop risk-signals view using synthetic claim activity."><figcaption>${syntheticCaption}</figcaption></figure>
+      <figure class="product-frame desktop-frame"><img src="../assets/product/desktop-risk-signals.webp" width="1265" height="810" loading="lazy" decoding="async" alt="Sequrin desktop risk-signals view showing claim activity."></figure>
     </article>
   </div>
 </section>
@@ -390,7 +388,7 @@ const pages = [
 
 <section class="section"><div class="container comparison-grid"><article><p class="comparison-label">Sequrin is being designed to</p><ul><li>Surface leads for authorised review</li><li>Explain relevant patterns and relationships</li><li>Support structured evidence gathering</li><li>Respect organisation and role boundaries</li></ul></article><article><p class="comparison-label">Sequrin is not presented as</p><ul><li>An automatic fraud determination</li><li>A claims rejection or payment engine</li><li>A shared blacklist</li><li>A substitute for legal or clinical judgement</li></ul></article></div></section>
 
-<section class="section surface"><div class="container governance-grid"><div><p class="eyebrow">Current stage</p><h2>Principles still need operating evidence.</h2></div><div class="prose-lg"><p>These are product and evaluation principles for an early-stage system. Security, privacy, access and audit claims should be tested against the final deployment design and the requirements of each participating organisation.</p><p>The website does not claim regulatory approval, certification or a completed production control environment.</p></div></div></section>
+<section class="section surface"><div class="container governance-grid"><div><p class="eyebrow">Operating evidence</p><h2>Principles must hold up in practice.</h2></div><div class="prose-lg"><p>Security, privacy, access and audit controls should be tested against each deployment design and the requirements of the participating organisation.</p><p>Governance claims become meaningful through documented operation, review and evidence.</p></div></div></section>
 
 <section class="section cta-section"><div class="container cta-grid"><div><p class="eyebrow">The operating approach</p><h2>See where governance enters the workflow.</h2></div><div class="actions"><a class="button primary" href="../how-it-works/">See the approach</a><a class="button secondary" href="mailto:${contactEmail}">Ask a governance question</a></div></div></section>`,
   },
@@ -416,15 +414,15 @@ const pages = [
     output: "docs/about/index.html",
     title: "About Sequrin",
     description:
-      "Sequrin is an early-stage South African company developing technology for healthcare claims integrity.",
+      "Meet the South African company and founder building Sequrin's claims-integrity product.",
     active: "about",
-    body: `<section class="page-hero"><div class="container narrow"><p class="eyebrow">About Sequrin</p><h1>Building better infrastructure for claims integrity.</h1><p class="lead">Sequrin is an early-stage South African healthcare technology company. It is developing tools to help medical schemes identify suspicious relationships and claims activity earlier, then investigate them with clearer context.</p></div></section>
+    body: `<section class="page-hero"><div class="container narrow"><p class="eyebrow">About Sequrin</p><h1>Building better infrastructure for claims integrity.</h1><p class="lead">Sequrin Technologies builds investigation software for medical-scheme claims-integrity teams. The company is founder-led and based in South Africa, with a product centred on connected claims intelligence, explainable signals and a practical workspace for authorised review.</p></div></section>
 
 <section class="section surface"><div class="container intro-grid"><div><p class="eyebrow">Why Sequrin exists</p><h2>Better questions need connected evidence.</h2></div><div class="prose-lg"><p>Healthcare funding is finite, while claims activity can be complex and fragmented. Sequrin starts from the view that connected context can help integrity teams ask better questions and use investigative capacity more carefully.</p><p>The purpose is not to label people or automate suspicion. It is to make relevant relationships easier for authorised investigators to examine.</p></div></div></section>
 
-<section class="section"><div class="container stage-layout"><div class="section-heading"><p class="eyebrow">Where the company is now</p><h2>Developing and testing the foundations.</h2><p>Current work covers the product, technical architecture and governance model. The company is not presenting this site as evidence of production deployments, medical-scheme customers or proven outcomes.</p></div><div class="stage-list"><article><p class="stage-label">Product</p><h3>Working prototype</h3><p>Browser and desktop experiences are being developed around claims review and relationship context.</p></article><article><p class="stage-label">Evaluation</p><h3>Evidence-led next step</h3><p>The intended next step is a controlled, bounded evaluation with an appropriate organisation.</p></article><article><p class="stage-label">Direction</p><h3>Broader collaboration later</h3><p>Any future cross-organisation network would depend on validated product and governance foundations.</p></article></div></div></section>
+<section class="section"><div class="container stage-layout"><div class="section-heading"><p class="eyebrow">Where the company is now</p><h2>Product built; operating evidence next.</h2><p>The product already spans browser and desktop investigation experiences. The next step is controlled evaluation with an appropriate organisation, using a bounded question and agreed success measures.</p></div><div class="stage-list"><article><p class="stage-label">Product</p><h3>Connected claims review</h3><p>Browser and desktop experiences bring signals, relationships and case context into one workflow.</p></article><article><p class="stage-label">Evaluation</p><h3>Evidence-led next step</h3><p>A controlled evaluation can measure relevance, time to context and workflow fit.</p></article><article><p class="stage-label">Direction</p><h3>Broader collaboration later</h3><p>Cross-organisation intelligence depends on validated product and governance foundations.</p></article></div></div></section>
 
-<section class="section surface"><div class="container founder-card"><figure><img src="../assets/sbusiso-mdingi-founder.webp" width="640" height="640" loading="lazy" decoding="async" alt="Sbusiso Mdingi, founder of Sequrin."></figure><div><p class="eyebrow">Founder</p><h2>Sbusiso Mdingi</h2><p>Sbusiso Mdingi founded Sequrin and is building the company from South Africa around a focused question: how can connected claims context support earlier, more careful investigation?</p><p>The company remains early-stage. Its credibility should come from the clarity of the problem, the quality of the product and the evidence produced through responsible evaluation.</p></div></div></section>
+<section class="section surface"><div class="container founder-card"><figure><img src="../assets/sbusiso-mdingi-founder.webp" width="640" height="640" loading="lazy" decoding="async" alt="Sbusiso Mdingi, founder of Sequrin."></figure><div><p class="eyebrow">Founder</p><h2>Sbusiso Mdingi</h2><p>Sbusiso Mdingi founded Sequrin and is building the company from South Africa around a focused question: how can connected claims context support earlier, more careful investigation?</p><p>That question shapes the product, the company’s evaluation approach and the evidence it intends to build with participating organisations.</p></div></div></section>
 
 <section class="section cta-section"><div class="container cta-grid"><div><p class="eyebrow">Contact</p><h2>Start with one claims-integrity question.</h2><p>For company, product, research or evaluation enquiries, contact Sequrin directly.</p></div><div class="actions"><a class="button primary" href="mailto:${contactEmail}">Contact Sequrin</a><a class="button secondary" href="../product/">Explore the product</a></div></div></section>`,
   },
@@ -439,7 +437,7 @@ const pages = [
 <section class="section"><div class="container notice-list">
   <article id="privacy"><p class="notice-index">01</p><div><h2>Privacy on this website</h2><p>The public website does not currently provide a contact form or use analytics, advertising trackers or cookies. It is hosted through GitHub Pages. Hosting and network providers may process routine technical request data needed to deliver and protect the service under their own terms and privacy notices.</p><p>You can read the <a class="text-link" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>.</p></div></article>
   <article id="email"><p class="notice-index">02</p><div><h2>Email contact</h2><p>Contact is available at <a class="text-link" href="mailto:${contactEmail}">${contactEmail}</a> for business, partnership and website enquiries. Never send patient, member, claim, clinical, credential or other sensitive information to this address. The public inbox is not a channel for case submissions.</p></div></article>
-  <article id="terms"><p class="notice-index">03</p><div><h2>Informational use</h2><p>This website describes an early-stage company and technology under development. Its content is general information, not clinical, legal, financial or claims-decision advice. It does not promise that a capability is available in production or create a customer relationship.</p></div></article>
+  <article id="terms"><p class="notice-index">03</p><div><h2>Product information and public claims</h2><p>This website describes Sequrin's current product capabilities and longer-term direction. Its content is general information, not clinical, legal, financial or claims-decision advice, and it does not create a customer relationship.</p></div></article>
   <article id="security"><p class="notice-index">04</p><div><h2>Security enquiries</h2><p>General security concerns about the public website can be sent to <a class="text-link" href="mailto:${contactEmail}?subject=Website%20security%20enquiry">${contactEmail}</a>. Do not include sensitive healthcare data, credentials or exploit details in an initial message, and do not test Sequrin systems without written authorisation.</p></div></article>
   <article id="application"><p class="notice-index">05</p><div><h2>External application sign in</h2><p>The Sign in link opens the separately hosted Sequrin application at app.sequrin.com. Access is intended for invited, authorised users and is subject to the application's authentication and access controls. The public website does not ask visitors to enter workspace credentials.</p></div></article>
 </div></section>

@@ -10,7 +10,7 @@ export const Route = createFileRoute("/for-medical-schemes")({
       {
         name: "description",
         content:
-          "See how a medical scheme can test Sequrin against a real claims-integrity question without handing over claims decisions.",
+          "For medical schemes considering a bounded Sequrin evaluation: scope, data requirements, investigator involvement and useful measures.",
       },
     ],
     links: [{ rel: "canonical", href: "https://sequrin.com/for-medical-schemes/" }],
@@ -24,11 +24,10 @@ const outcomes = [
   ["Keep the investigation together", "Signals, relationships, evidence and case history can stay in one operating view instead of being pieced together across disconnected tools."],
 ];
 
-const steps = [
-  ["01", "Define", "Agree on the claims-integrity question, the scope and what success would look like."],
-  ["02", "Map", "Work out which claims and reference fields are actually needed to test the question properly."],
-  ["03", "Test", "Run the bounded evaluation and let your investigators judge what is useful and what is noise."],
-  ["04", "Decide", "Use what was measured, not what was promised, to decide whether anything further makes sense."],
+const evaluationDesign = [
+  ["A bounded scope", "Choose one claims-integrity question and document the dataset, time period, participants and access conditions needed to examine it."],
+  ["Investigator review", "Have the people who do the work assess which signals were relevant, which relationships added context and where the product created friction."],
+  ["Comparable measures", "Agree a baseline before the evaluation, then compare relevance, noise, time to context and verified operational outcomes."],
 ];
 
 function ForMedicalSchemesPage() {
@@ -40,12 +39,12 @@ function ForMedicalSchemesPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
             <p className="label-mono">For medical schemes</p>
             <h1 className="mt-5 max-w-5xl text-4xl leading-[1.08] md:text-6xl">
-              A connected view for your integrity team, without handing your decisions to a black box.
+              Evaluating Sequrin in a medical-scheme integrity team
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Sequrin is built to sit around the claims-integrity work your team is already doing:
-              spotting unusual activity, understanding what's connected to it, investigating
-              efficiently and keeping the decisions that matter with the people accountable for them.
+              Sequrin is designed to complement the claims-integrity work already under way in a
+              medical scheme. A useful evaluation tests whether connected context improves a defined
+              review task under the scheme's own operating and governance conditions.
             </p>
             <div className="mt-9 flex gap-3">
               <a href={PUBLIC_CONTACT_MAILTO} className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground">Discuss an evaluation</a>
@@ -59,11 +58,11 @@ function ForMedicalSchemesPage() {
             <div className="grid gap-12 md:grid-cols-2">
               <div>
                 <p className="label-mono">Where Sequrin fits</p>
-                <h2 className="mt-4 text-3xl md:text-5xl">We sit around your existing claims operation, not on top of it.</h2>
+                <h2 className="mt-4 text-3xl md:text-5xl">An investigation layer alongside existing claims systems</h2>
               </div>
               <div className="space-y-5 leading-relaxed text-muted-foreground">
-                <p>Sequrin is not trying to replace your core administration, payment or clinical systems. Its job is to help your integrity team move from analytical attention to useful investigation context faster.</p>
-                <p>Your scheme keeps the judgement calls. Sequrin helps surface and organise what may deserve attention.</p>
+                <p>Sequrin is not a replacement for core administration, payment or clinical systems. It is an investigation layer for authorised integrity teams that need to work across claims, relationships and evidence without losing the thread of a case.</p>
+                <p>Roles and decision boundaries remain subject to the scheme's existing controls; <Link to="/governance" className="text-primary underline-offset-4 hover:underline">see our governance principles</Link>.</p>
               </div>
             </div>
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-3">
@@ -81,19 +80,18 @@ function ForMedicalSchemesPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <p className="label-mono">Start small, on purpose</p>
             <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">
-              This is not a transformation programme. It is a test.
+              Design an evaluation that can produce a credible answer.
             </h2>
             <p className="mt-6 max-w-3xl leading-relaxed text-muted-foreground">
-              You do not need to redesign your claims operation around Sequrin to find out whether it
-              helps. Start with one bounded question, an agreed dataset, real investigator review and
-              clear criteria for what “worked” actually means.
+              The evaluation should fit inside a defined operational boundary and be small enough to
+              compare with current practice. Sequrin's product workflow is documented on the
+              Approach page; the work here is to establish the conditions for testing it fairly.
             </p>
-            <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-4">
-              {steps.map(([number, title, body]) => (
-                <article key={number} className="bg-surface p-6">
-                  <p className="label-mono text-primary">{number}</p>
-                  <h3 className="mt-3 text-xl">{title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{body}</p>
+            <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-3">
+              {evaluationDesign.map(([title, body]) => (
+                <article key={title} className="bg-surface p-7">
+                  <h3 className="text-xl">{title}</h3>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{body}</p>
                 </article>
               ))}
             </div>
@@ -120,10 +118,10 @@ function ForMedicalSchemesPage() {
           <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="label-mono">A practical next step</p>
-              <h2 className="mt-4 text-3xl md:text-4xl">Bring one question worth testing.</h2>
+              <h2 className="mt-4 text-3xl md:text-4xl">Plan an initial evaluation discussion.</h2>
               <p className="mt-4 max-w-2xl text-muted-foreground">
-                The point of a pilot is to find out honestly whether Sequrin adds useful investigative
-                value inside your scheme. It should be entirely possible for the answer to be no.
+                Bring a concrete review objective and a rough picture of the available data. We can
+                use the conversation to identify what a fair, bounded test would require.
               </p>
             </div>
             <div className="flex gap-3">

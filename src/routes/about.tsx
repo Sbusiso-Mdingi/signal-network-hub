@@ -27,13 +27,13 @@ function AboutPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
             <p className="label-mono">About Sequrin</p>
             <h1 className="mt-5 max-w-4xl text-4xl leading-[1.08] md:text-6xl">
-              A claim makes more sense once you can see what's around it.
+              A South African company focused on connected claims intelligence
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Sequrin is a South African healthcare claims-integrity company. We're building it to
-              help medical schemes and their integrity teams spot patterns worth investigating and
-              give investigators better context without turning the software into the thing that
-              makes the call.
+              Sequrin Technologies builds investigation software for medical schemes and
+              claims-integrity teams. The founder-led company is focused on connected claims
+              intelligence, explainable signals and a practical workspace for developing and
+              reviewing cases.
             </p>
           </div>
         </section>
@@ -42,28 +42,21 @@ function AboutPage() {
           <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:py-24">
             <div>
               <p className="label-mono">Why Sequrin exists</p>
-              <h2 className="mt-4 text-3xl md:text-5xl">A claim is a record. A pattern is a relationship.</h2>
+              <h2 className="mt-4 text-3xl md:text-5xl">Claims investigations need a connected field of view.</h2>
             </div>
             <div className="space-y-5 leading-relaxed text-muted-foreground">
-              <p>Claims-integrity work gets hard when the evidence that actually matters is scattered across claims, providers, members, facilities, services and time.</p>
-              <p>Sequrin started from a simple observation: a claim can look completely normal on its own while the relationships around it tell a different story. The aim is to pull those relationships into view so investigators know where it is actually worth spending time.</p>
+              <p>Integrity teams often have the records they need but not a coherent way to move between them. A provider history may sit in one system, claim detail in another, and investigation notes somewhere else entirely.</p>
+              <p>Sequrin grew from the idea that those fragments should be examined as a connected system. The product direction follows from that premise: preserve the relationships, show the analytical rationale and give investigators a usable place to develop the case.</p>
             </div>
           </div>
         </section>
 
         <section className="border-b border-border">
-          <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-            <p className="label-mono">Where we are now</p>
-            <h2 className="mt-4 text-3xl md:text-5xl">Foundation first, network later.</h2>
-            <p className="mt-5 max-w-3xl text-muted-foreground">
-              Sequrin is early-stage. Right now the priority is proving that the product actually
-              makes claims-integrity work more useful and more accountable before we make bigger
-              claims about scale.
-            </p>
-            <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-3">
-              <article className="bg-surface p-7"><p className="label-mono">Product</p><h3 className="mt-3 text-xl">Working prototype</h3><p className="mt-3 text-sm text-muted-foreground">Browser and desktop experiences are being developed around connected claims review and investigation context.</p></article>
-              <article className="bg-surface p-7"><p className="label-mono">Evaluation</p><h3 className="mt-3 text-xl">Test it properly</h3><p className="mt-3 text-sm text-muted-foreground">The next step is a bounded evaluation with real investigators and clear measures of whether the product helped.</p></article>
-              <article className="bg-surface p-7"><p className="label-mono">Direction</p><h3 className="mt-3 text-xl">Broader collaboration later</h3><p className="mt-3 text-sm text-muted-foreground">Only once the foundations are proven do we look seriously at cross-organisation integrity intelligence.</p></article>
+          <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:py-24">
+            <div><p className="label-mono">How the company is building</p><h2 className="mt-4 text-3xl md:text-5xl">Close to the work, careful about the claims.</h2></div>
+            <div className="space-y-5 leading-relaxed text-muted-foreground">
+              <p>Development centres on the working habits of investigators: what they need to understand a signal, how they move through related records, and what must remain visible when another person reviews the case.</p>
+              <p>The product already spans browser and desktop investigation experiences. The next meaningful company milestone is a controlled evaluation that can show where it helps, where it creates noise and what needs to change.</p>
             </div>
           </div>
         </section>
@@ -82,7 +75,7 @@ function AboutPage() {
               <h2 className="mt-3 text-3xl md:text-5xl">Sbusiso Mdingi</h2>
               <div className="mt-6 max-w-3xl space-y-5 leading-relaxed text-muted-foreground">
                 <p>I started Sequrin because of one question I couldn't stop thinking about: what changes if you treat claims not as isolated transactions, but as observations inside a much bigger connected system?</p>
-                <p>That question turned into a platform built around analytical signals, relationship intelligence and the way investigators actually work. My goal is to help people see more and investigate better, then leave the consequential decision with the people and processes that are actually accountable for it.</p>
+                <p>That question turned into a platform built around analytical signals, relationship intelligence and the way investigators actually work. My job now is to test that premise rigorously with the people who understand claims-integrity work from the inside.</p>
                 <p className="text-sm">Sequrin is being developed through Sequrin Technologies, a South African registered company (Enterprise No. 2026/662912/07).</p>
               </div>
             </div>
@@ -93,7 +86,7 @@ function AboutPage() {
           <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="label-mono">Contact</p>
-              <h2 className="mt-4 text-3xl md:text-4xl">Bring us one real claims-integrity question.</h2>
+              <h2 className="mt-4 text-3xl md:text-4xl">Contact the Sequrin team.</h2>
               <p className="mt-4 max-w-2xl text-muted-foreground">If you work in a medical scheme, claims integrity, investigations, analytics or governance and want to see where Sequrin might fit, get in touch.</p>
             </div>
             <div className="flex gap-3">

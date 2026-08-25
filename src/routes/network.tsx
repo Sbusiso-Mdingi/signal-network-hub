@@ -9,7 +9,7 @@ export const Route = createFileRoute("/network")({
       {
         name: "description",
         content:
-          "Learn about Sequrin's longer-term Secure Integrity Network direction and the governance needed for responsible cross-organisation claims-integrity collaboration.",
+          "The Secure Integrity Network is Sequrin's longer-term direction for governed cross-organisation claims-integrity collaboration; it is not a live service today.",
       },
     ],
     links: [{ rel: "canonical", href: "https://sequrin.com/network/" }],
@@ -32,7 +32,7 @@ function NetworkPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
             <p className="label-mono">Secure Integrity Network</p>
             <h1 className="mt-5 max-w-5xl text-4xl leading-[1.08] md:text-6xl">
-              Some patterns only make sense once you can see past one organisation.
+              Sequrin's direction for cross-organisation integrity intelligence
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground">
               Sequrin is pronounced “Securing”. The name comes from Secure Integrity Network, the
@@ -47,7 +47,7 @@ function NetworkPage() {
           <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:py-24">
             <div>
               <p className="label-mono">What exists today</p>
-              <h2 className="mt-4 text-3xl md:text-5xl">Build the foundation first.</h2>
+              <h2 className="mt-4 text-3xl md:text-5xl">The network is a future direction.</h2>
             </div>
             <div className="space-y-5 leading-relaxed text-muted-foreground">
               <p>
@@ -55,9 +55,9 @@ function NetworkPage() {
                 relationships and investigation context inside their own organisation.
               </p>
               <p>
-                The broader network comes later. We are not running a national cross-scheme network
-                today, and we are not building a shortcut that turns local suspicion into a shared
-                conclusion.
+                Sequrin is not running a national cross-scheme network today. Any future shared
+                service would require a distinct operating model, participant agreements and the
+                controls described in our <Link to="/governance" className="text-primary underline-offset-4 hover:underline">governance principles</Link>.
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ function NetworkPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <p className="label-mono">What a network would need</p>
             <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">
-              More participation means a higher bar, not a lower one.
+              Participation requires a higher governance standard.
             </h2>
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-3">
               {requirements.map(([title, body]) => (
@@ -84,13 +84,13 @@ function NetworkPage() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <p className="label-mono">The line we would keep</p>
             <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">
-              Connect the context. Do not spread the conclusion.
+              Controlled publication, evidence standards and correction rights
             </h2>
             <p className="mt-6 max-w-3xl leading-relaxed text-muted-foreground">
-              A useful network should help authorised participants recognise relationships they
-              could not see alone. It should not become an unrestricted data pool, an automatic
-              fraud register or a place where one investigator can publish an allegation to
-              everyone else.
+              A future network would need to help authorised participants recognise relevant
+              relationships without creating an unrestricted data pool or automatic fraud register.
+              Shared information would require an identified publisher, an evidence basis, defined
+              recipients and a practical route to challenge or correct the record.
             </p>
           </div>
         </section>
@@ -99,11 +99,10 @@ function NetworkPage() {
           <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="label-mono">Where we are now</p>
-              <h2 className="mt-4 text-3xl md:text-4xl">Start with the claims-integrity workspace.</h2>
+              <h2 className="mt-4 text-3xl md:text-4xl">Explore the current product scope.</h2>
               <p className="mt-4 max-w-2xl text-muted-foreground">
-                The immediate job is simpler: make analysis and investigation useful inside one
-                organisation, prove that it works, and build the governance that anything broader
-                would depend on.
+                The product page covers the organisation-bound workspace available for demonstration
+                and evaluation; the About page explains the company and longer-term direction.
               </p>
             </div>
             <div className="flex gap-3">
