@@ -190,7 +190,6 @@ const pages = [
     body: `<section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <div class="status-line"><span class="status-dot" aria-hidden="true"></span>South African healthcare technology</div>
       <p class="eyebrow">Healthcare claims integrity</p>
       <h1>See the relationships behind suspicious claims activity.</h1>
       <p class="lead">Sequrin gives medical schemes and claims-integrity teams a connected view across providers, members, facilities, timing and related activity, so an investigation can begin with the surrounding context instead of one record in isolation.</p>
@@ -278,7 +277,6 @@ const pages = [
     active: "product",
     body: `<section class="page-hero">
   <div class="container narrow">
-    <div class="status-line"><span class="status-dot" aria-hidden="true"></span>Current product</div>
     <p class="eyebrow">Product</p>
     <h1>One workspace for signals, relationships and investigation context.</h1>
     <p class="lead">Sequrin brings claims review, relationship intelligence, signal rationale and case context into one place for medical-scheme integrity teams. Each view is designed to reduce the time spent reconstructing an investigation across disconnected systems.</p>
