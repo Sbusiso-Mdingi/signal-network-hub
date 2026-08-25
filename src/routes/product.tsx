@@ -24,28 +24,28 @@ const features = [
     title: "See what a single record leaves out.",
     body: "Claims rarely exist in isolation. Connected views bring providers, members, facilities, timing and related claims into the same picture so investigators can see the relationships around an unusual record, not just the record itself.",
     src: "/assets/product/connected-claims-network.webp",
-    alt: "Sequrin network view connecting synthetic claim, member and provider tokens.",
+    alt: "Sequrin network view connecting claim, member and provider records.",
   },
   {
     label: "Claims review",
     title: "A queue that tells you why something is worth a look.",
     body: "Claim state, risk context and investigation status can sit together instead of being scattered across separate tools. Investigators can see what surfaced, why it surfaced and where to go next.",
     src: "/assets/product/claims-review-queue.webp",
-    alt: "Sequrin claims review queue using synthetic claim and entity tokens.",
+    alt: "Sequrin claims review queue with claim and entity references.",
   },
   {
     label: "Desktop workspace",
     title: "Keep the work in one place.",
     body: "The desktop workspace is built around focused claims review inside an organisation's own boundary. It gives authorised users a dedicated view of the work without creating a second, disconnected version of the investigation.",
     src: "/assets/product/desktop-overview.webp",
-    alt: "Sequrin desktop overview using an illustrative medical scheme and synthetic claim totals.",
+    alt: "Sequrin desktop overview with a claims-integrity summary.",
   },
   {
     label: "Risk signals",
     title: "Show why something surfaced.",
     body: "Scores are more useful when the rules, related activity and claim context sit beside them. Sequrin keeps that rationale close to the record, where an investigator can inspect it without switching tools.",
     src: "/assets/product/desktop-risk-signals.webp",
-    alt: "Sequrin desktop risk-signals view using synthetic claim activity.",
+    alt: "Sequrin desktop risk-signals view showing claim activity.",
   },
 ];
 
@@ -71,6 +71,9 @@ function ProductPage() {
               context into one place for medical-scheme integrity teams. Each view is designed to
               reduce the time spent reconstructing an investigation across disconnected systems.
             </p>
+            <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+              The interface views below show the current Sequrin product using demonstration data.
+            </p>
           </div>
         </section>
 
@@ -92,9 +95,6 @@ function ProductPage() {
                   className="w-full border border-border-strong"
                   loading={index === 0 ? "eager" : "lazy"}
                 />
-                <figcaption className="mt-3 text-xs text-muted-foreground">
-                  Illustrative Sequrin interface using synthetic data. Product under development.
-                </figcaption>
               </figure>
             </div>
           </section>

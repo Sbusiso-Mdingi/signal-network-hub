@@ -101,8 +101,8 @@ function NetworkPage() {
               <p className="label-mono">Where we are now</p>
               <h2 className="mt-4 text-3xl md:text-4xl">Explore the current product scope.</h2>
               <p className="mt-4 max-w-2xl text-muted-foreground">
-                The product page covers the organisation-bound workspace now under development;
-                the About page explains the company stage and longer-term direction.
+                The product page covers the organisation-bound workspace available for demonstration
+                and evaluation; the About page explains the company and longer-term direction.
               </p>
             </div>
             <div className="flex gap-3">

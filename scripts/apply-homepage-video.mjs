@@ -9,8 +9,8 @@ const captionsPath = path.join(root, "docs/assets/sequrin-hero-video.vtt");
 
 const currentHeroMedia = `<figure class="product-frame hero-product">
       <div class="frame-label">Connected claims view</div>
-      <img src="assets/product/connected-claims-network.webp" width="1265" height="712" fetchpriority="high" decoding="async" alt="Sequrin network view connecting synthetic claim, member and provider tokens.">
-      <figcaption>Illustrative Sequrin interface using synthetic data. Product under development.</figcaption>
+      <img src="assets/product/connected-claims-network.webp" width="1265" height="712" fetchpriority="high" decoding="async" alt="Sequrin network view connecting claim, member and provider records.">
+      <figcaption>Current Sequrin interface shown with demonstration data.</figcaption>
     </figure>`;
 
 const videoHeroMedia = `<figure class="product-frame hero-product" data-hero-video style="transform:none;">

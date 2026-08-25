@@ -37,9 +37,9 @@ function HomePage() {
                 A claim can look fine on its own. The pattern around it might not.
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                We're building Sequrin for medical schemes and claims-integrity teams to see how
-                claims connect through providers, members, facilities, timing and related activity,
-                so an investigation starts with more than one record in isolation.
+                Sequrin gives medical schemes and claims-integrity teams a connected view across
+                providers, members, facilities, timing and related activity, so an investigation
+                can begin with the surrounding context instead of one record in isolation.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <a href="mailto:info@sequrin.com?subject=Sequrin%20evaluation%20discussion" className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground">Discuss an evaluation</a>
@@ -85,13 +85,13 @@ function HomePage() {
 
         <section className="border-b border-border bg-surface">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-            <p className="label-mono">Company stage</p>
-            <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">Build it, test it, then earn the right to scale it.</h2>
-            <p className="mt-6 max-w-3xl leading-relaxed text-muted-foreground">Sequrin is early-stage. The immediate job is to prove that the product gives claims-integrity teams genuinely useful context before making bigger claims about scale or impact.</p>
+            <p className="label-mono">Product maturity</p>
+            <h2 className="mt-4 max-w-4xl text-3xl leading-tight md:text-5xl">A working product with a controlled path to scale.</h2>
+            <p className="mt-6 max-w-3xl leading-relaxed text-muted-foreground">Sequrin has active browser and desktop investigation experiences. The next milestone is to measure their usefulness with claims-integrity teams under defined operating and governance conditions.</p>
             <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-3">
-              <article className="bg-background p-7"><p className="label-mono">Now</p><h3 className="mt-3 text-xl">Working prototype</h3><p className="mt-3 text-sm text-muted-foreground">The browser and desktop experiences are being developed around synthetic and development data.</p></article>
-              <article className="bg-background p-7"><p className="label-mono">Next</p><h3 className="mt-3 text-xl">Controlled evaluation</h3><p className="mt-3 text-sm text-muted-foreground">Start with one bounded claims-integrity question, real investigator review and agreed measures of usefulness.</p></article>
-              <article className="bg-background p-7"><p className="label-mono">Longer term</p><h3 className="mt-3 text-xl">Governed network intelligence</h3><p className="mt-3 text-sm text-muted-foreground">Only after the foundations hold up do we explore responsible collaboration across organisations.</p></article>
+              <article className="bg-background p-7"><p className="label-mono">Current</p><h3 className="mt-3 text-xl">Connected investigation product</h3><p className="mt-3 text-sm text-muted-foreground">Browser and desktop interfaces bring claims review, signal rationale and relationship context into one workspace.</p></article>
+              <article className="bg-background p-7"><p className="label-mono">Evaluation</p><h3 className="mt-3 text-xl">Scheme-led testing</h3><p className="mt-3 text-sm text-muted-foreground">A bounded evaluation can compare signal relevance, time to context and workflow fit with current practice.</p></article>
+              <article className="bg-background p-7"><p className="label-mono">Direction</p><h3 className="mt-3 text-xl">Governed network intelligence</h3><p className="mt-3 text-sm text-muted-foreground">Cross-organisation collaboration remains a longer-term direction built on validated product and governance foundations.</p></article>
             </div>
           </div>
         </section>

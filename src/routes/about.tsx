@@ -30,10 +30,10 @@ function AboutPage() {
               A South African company focused on connected claims intelligence
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Sequrin Technologies is building investigation software for medical schemes and
-              claims-integrity teams. The company is early-stage, founder-led and currently focused
-              on turning a working prototype into a product that can be evaluated against real
-              operating needs.
+              Sequrin Technologies builds investigation software for medical schemes and
+              claims-integrity teams. The founder-led company is focused on connected claims
+              intelligence, explainable signals and a practical workspace for developing and
+              reviewing cases.
             </p>
           </div>
         </section>
@@ -56,7 +56,7 @@ function AboutPage() {
             <div><p className="label-mono">How the company is building</p><h2 className="mt-4 text-3xl md:text-5xl">Close to the work, careful about the claims.</h2></div>
             <div className="space-y-5 leading-relaxed text-muted-foreground">
               <p>Development centres on the working habits of investigators: what they need to understand a signal, how they move through related records, and what must remain visible when another person reviews the case.</p>
-              <p>The prototype uses synthetic and development data. The next meaningful company milestone is not a bigger feature list; it is a controlled evaluation that can show where the product helps, where it creates noise and what needs to change.</p>
+              <p>The product already spans browser and desktop investigation experiences. The next meaningful company milestone is a controlled evaluation that can show where it helps, where it creates noise and what needs to change.</p>
             </div>
           </div>
         </section>

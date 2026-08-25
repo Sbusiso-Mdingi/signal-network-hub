@@ -37,9 +37,9 @@ const notices = [
   },
   {
     id: "terms",
-    title: "Terms and public claims",
+    title: "Product information and public claims",
     paragraphs: [
-      "This website describes an early-stage company and a product under development. It is not evidence of a production deployment, customer, regulatory approval, certification, detection accuracy or financial outcome. Read the full website terms for the governing public-use conditions.",
+      "This website describes Sequrin's current product capabilities and longer-term direction. Interface views and public material do not promise a specific customer deployment, regulatory approval, certification, detection accuracy or financial outcome. Read the full website terms for the governing public-use conditions.",
     ],
     link: { href: "/terms/", label: "Read the website terms" },
   },
