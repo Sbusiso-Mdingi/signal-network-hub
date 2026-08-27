@@ -74,6 +74,13 @@ const startupProgrammes = [
     logo: "https://dqpcjghenxt8u.cloudfront.net/images/sanity/retool-favicon-light-128x128.svg",
     logoClassName: "h-8 w-8",
   },
+  {
+    name: "MongoDB for Startups",
+    label: "MongoDB",
+    href: "https://www.mongodb.com/solutions/startups",
+    logo: "https://cdn.simpleicons.org/mongodb/47A248",
+    logoClassName: "h-8 w-8",
+  },
 ];
 
 function HomePage() {
@@ -151,7 +158,7 @@ function HomePage() {
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-14 md:py-16">
             <h2 className="text-2xl md:text-3xl">Startup programmes</h2>
-            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-7">
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">
               {startupProgrammes.map((programme) => (
                 <a
                   key={programme.name}

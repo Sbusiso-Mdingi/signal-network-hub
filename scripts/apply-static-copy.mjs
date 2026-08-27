@@ -66,6 +66,7 @@ const pages = {
       <a class="programme-logo" href="https://neo4j.com/startup-program/" rel="external" aria-label="Neo4j Startup Program, official programme page"><img src="https://cdn.simpleicons.org/neo4j/4581C3" alt="Neo4j Startup Program logo" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span aria-hidden="true">Neo4j</span></a>
       <a class="programme-logo" href="https://amplitude.com/startups" rel="external" aria-label="Amplitude Scholarship Program, official programme page"><img src="https://framerusercontent.com/images/vqninpQZmsdOKgDIl5C4C1e3Q.svg" alt="Amplitude Scholarship Program logo" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span aria-hidden="true">Amplitude</span></a>
       <a class="programme-logo" href="https://retool.com/startups" rel="external" aria-label="Retool for Startups, official programme page"><img src="https://dqpcjghenxt8u.cloudfront.net/images/sanity/retool-favicon-light-128x128.svg" alt="Retool for Startups logo" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span aria-hidden="true">Retool</span></a>
+      <a class="programme-logo" href="https://www.mongodb.com/solutions/startups" rel="external" aria-label="MongoDB for Startups, official programme page"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB for Startups logo" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span aria-hidden="true">MongoDB</span></a>
     </div>
   </div>
 </section>
