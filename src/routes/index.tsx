@@ -24,6 +24,58 @@ const capabilities = [
   ["03", "Investigate in context", "Bring the signal, evidence, relationships and case history together instead of rebuilding the story across separate tools."],
 ];
 
+const startupProgrammes = [
+  {
+    name: "AWS Activate",
+    label: "Activate",
+    href: "https://aws.amazon.com/activate/",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+    logoClassName: "h-9 w-12 object-contain",
+  },
+  {
+    name: "Sentry Startup Program",
+    label: "Sentry",
+    href: "https://sentry.io/for/startups/",
+    logo: "https://cdn.simpleicons.org/sentry/362D59",
+    logoClassName: "h-8 w-8",
+  },
+  {
+    name: "HubSpot for Startups",
+    label: "HubSpot",
+    href: "https://www.hubspot.com/startups",
+    logo: "https://cdn.simpleicons.org/hubspot/FF7A59",
+    logoClassName: "h-8 w-8",
+  },
+  {
+    name: "Customer.io Startup Program",
+    label: "Customer.io",
+    href: "https://customer.io/solutions/startups",
+    logo: "https://customer.io/favicon.svg",
+    logoClassName: "h-9 w-9 rounded-md",
+  },
+  {
+    name: "Neo4j Startup Program",
+    label: "Neo4j",
+    href: "https://neo4j.com/startup-program/",
+    logo: "https://cdn.simpleicons.org/neo4j/4581C3",
+    logoClassName: "h-8 w-8",
+  },
+  {
+    name: "Amplitude Scholarship Program",
+    label: "Amplitude",
+    href: "https://amplitude.com/startups",
+    logo: "https://framerusercontent.com/images/vqninpQZmsdOKgDIl5C4C1e3Q.svg",
+    logoClassName: "h-8 w-8",
+  },
+  {
+    name: "Retool for Startups",
+    label: "Retool",
+    href: "https://retool.com/startups",
+    logo: "https://dqpcjghenxt8u.cloudfront.net/images/sanity/retool-favicon-light-128x128.svg",
+    logoClassName: "h-8 w-8",
+  },
+];
+
 function HomePage() {
   return (
     <div className="min-h-screen">
@@ -92,6 +144,35 @@ function HomePage() {
               <article className="bg-background p-7"><p className="label-mono">Current</p><h3 className="mt-3 text-xl">Connected investigation product</h3><p className="mt-3 text-sm text-muted-foreground">Browser and desktop interfaces bring claims review, signal rationale and relationship context into one workspace.</p></article>
               <article className="bg-background p-7"><p className="label-mono">Evaluation</p><h3 className="mt-3 text-xl">Scheme-led testing</h3><p className="mt-3 text-sm text-muted-foreground">A bounded evaluation can compare signal relevance, time to context and workflow fit with current practice.</p></article>
               <article className="bg-background p-7"><p className="label-mono">Direction</p><h3 className="mt-3 text-xl">Governed network intelligence</h3><p className="mt-3 text-sm text-muted-foreground">Cross-organisation collaboration remains a longer-term direction built on validated product and governance foundations.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-border">
+          <div className="mx-auto max-w-6xl px-6 py-14 md:py-16">
+            <h2 className="text-2xl md:text-3xl">Startup programmes</h2>
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-7">
+              {startupProgrammes.map((programme) => (
+                <a
+                  key={programme.name}
+                  href={programme.href}
+                  aria-label={`${programme.name}, official programme page`}
+                  rel="external"
+                  className="flex min-h-24 items-center justify-center gap-2.5 rounded-xl border border-slate-300 bg-slate-50 px-4 py-5 text-slate-950 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-white"
+                >
+                  <img
+                    src={programme.logo}
+                    alt={`${programme.name} logo`}
+                    className={programme.logoClassName}
+                    loading="lazy"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
+                  />
+                  <span aria-hidden="true" className="text-sm font-semibold tracking-tight">
+                    {programme.label}
+                  </span>
+                </a>
+              ))}
             </div>
           </div>
         </section>

@@ -621,6 +621,73 @@ p {
   font-size: 14px;
 }
 
+.programmes-section {
+  padding-block: 62px;
+}
+
+.programmes-section h2 {
+  font-size: clamp(25px, 3vw, 32px);
+}
+
+.programme-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.programme-logo {
+  display: flex;
+  min-width: 0;
+  min-height: 96px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 13px;
+  border: 1px solid #d2dbe0;
+  border-radius: 13px;
+  color: #111c25;
+  background: #f5f8f9;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.programme-logo:hover {
+  border-color: #aebbc3;
+  color: #071019;
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+.programme-logo img {
+  width: 31px;
+  height: 31px;
+  flex: none;
+  object-fit: contain;
+}
+
+.programme-logo.aws img {
+  width: 45px;
+  height: 32px;
+}
+
+.programme-logo.customer-io img {
+  width: 35px;
+  height: 35px;
+  border-radius: 7px;
+}
+
+.programme-logo span {
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+}
+
 .governance-band {
   background: linear-gradient(145deg, rgba(57, 199, 183, 0.04), transparent 45%);
 }
@@ -1022,6 +1089,10 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .programme-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .stage-list article {
     grid-template-columns: 100px 180px 1fr;
   }
@@ -1089,6 +1160,10 @@ p {
   .process-grid,
   .comparison-grid {
     grid-template-columns: 1fr;
+  }
+
+  .programme-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .info-card,
